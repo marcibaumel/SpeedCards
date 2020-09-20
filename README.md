@@ -7,6 +7,6 @@
 # Résztvevők:
 * Korita Zsófia
 * Husoczki Dániel
-* Edll Levente
+* Edl Levente
 * Baumel Márton 
 * Markó Roland
