@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+    <h1>SPEED CARDS csoport tagjai:</h1>
+    <p1>
+        <ul>
+            <li> Baumel Márton: Csapatvezető és Játék designer, Játék fejlesztés</li>
+            <li> Markó Roland: Frontend, software tesztelés, ,Játék fejlesztés</li>
+            <li> Husoczki Dániel: Frontend, Béta tesztek elkészítése, ellenőrzése, Játék fejlesztés</li>
+            <li> Korita Zsófia: Backend, SQL adatbázis kezelése, frissítése, karban tartása ,Játék fejlesztés</li>
+            <li> Edl Levente: Backend, SQL adatbázis és a software közötti kommunikáció biztosítása, Bugfixelés, Játék
+                fejlesztés</li>
+        </ul>
+    </p1>
+    <h1>2.Fejlesztési terv, mérföldkövek, eredmények:
+    </h1>
+    <p1>
+        A projektet 3 +1 féle állapotra bontottuk, hogy montírozni tudjuk az
+        előre haladást.
+        <br></br>
+        <li>1. Alpha Állapot: </li>
+
+        <p1>
+            Ebben az állapbotban a programnak képesnek kell kezelni az adatbázisban lévő
+            elemeket ezenkívül képesnek kell biztosítania egy grafikus felületet, amin letudjuk pakolni a lapokat de a
+            alap játékmechanikák közül csak a körökre osztást és a kártya adatok módosításának a képességét kell csak
+            megvalósítania
+        </p1>
+        <br></br>
+        <li>2. Béta Állapot: </li>
+
+        Ebben az állapotban a programnak rendelkeznie kell egy egységes grafikus felülettel és képesnek
+        kell lenünk a gép ellen lejátszani egy próbakört azaz a játékmechanikák közül mindegyiket meg kell valósítani.
+
+        <br></br>
+        <li>3.Kiadási Állapot: </li>
+
+        Ebben a fázisban a játék grafikus felületét kell befejezni és a lapokok/paklik közötti erő
+        egyensúlyt kell stabilizálni.
+
+        <br></br>
+
+        <li>+1 DEMO Állapot: </li>
+
+        Ilyenkor a programnak kell rendelkeznie egy kezdetleges grafikus
+        felülettel, a játékmechanikák alapvető részét biztosítani kell (körökre osztás, kártya kijátszása, kártya adatok
+        módosítása, játékbefejezése) de saját paklit ilyenkor még nem leszünk képesek létrehozni. Próbakört képesnek
+        kell
+        lejátszani a gép ellen.
+    </p1>
+
+    <h1>3. Programozási nyelvek, fejlesztési eszközök:</h1>
+
+    A software Java nyelven fejlesztjük, megírásához az Eclipse IDE
+    fejlesztői környezetet fogjuk használni. A csapatmunka, kódhozzáférés és a párhuzamosítás elősegítése érdekében a
+    GitHub használata mellett döntöttünk. A Software-ben található animációk és grafikus elemek megjelenítéséért a java
+    nyelv egyik könyvtára a JavaFX könyvtár fog felelni, továbbá a softwarehez társítunk egy adatbázis rendszert is ami
+    a játékosok és kártyák adatait fogja tárolni. Ezt az adatbázis rendszert MySQL rendszerben fogjuk kivitelezni, ennek
+    eléréséhez
+    <br></br>
+    pedig PHP MyAdmin felületet fogunk használni. Azért választottuk a MySQL rendszert mivel többfelhasználós és
+    többszálon futó adatbázis kezelő rendszer és platform független vagyis minden platformon el tudja érni a software az
+    adatok betöltésekor. Java nyelvből kezelhető a JDBC (Java DataBase Connectivity) segítségével. A JDBC egy
+    API(Application Programming Interface) amely definiálja az adatbázisok lekérdezéséhez és módosításához szükséges
+    osztályokat és metódusokat. A MySQL adatbázis eléréséhez azért választottunk PhpMyAdmin felületet mivel ez egy
+    grafikus felület és könnyen átlátható ellentétben a consoleos(Parancssori) felülettel.
+
+    <h1>4.Használni tervezett eszközök, technikák: </h1>
+
+    A programot személyi számítógépekre szánjuk, egyelőre csak Windows
+    operációs rendszerre tervezzük teljes mértékben futhatóvá tenni de később szeretnénk Linux-ra és iOS rendszerekre is
+    elérhetővé tenni a kész játékszoftvert. Technikai szempontból szeretnénk megvalósítani az Objektum Orientál
+    Programozás programozási paradigmáit a gyakorlatban. Emelet adatbázis rendszert (MySQL-t) is szeretnénk használni,
+    hogy a kártyák adatai ott tudjuk eltárolni és később használni a program futtatása alatt. Ezenkívül szeretnénk egy
+    verzió kezelő rendszert alkalmazni a Git-et és, hogy megkönnyítsük a használatát a GitHub oldalát tervezzük
+    használni a projekt elvégzése folyamán, hogy nyomon tudjuk követni a forrás fájl változásait és a projekt közben
+    felmerülő feladatok kezelését.
+
+    <h1>5. Leendő produktumok (dokumentumok) és létrejöttük ideje:</h1>
+
+    Adatbázis:
+    <li>A kártyák jellemzőinek tárolása </li>
+    <li>Élettartamtárolása </li>
+    <li>Egyéb tulajdonságok, hatások tárolása </li>
+
+    <br></br>
+    Java:
+    <li>Classok létrehozása </li>
+    <li>Játék mechanikájáért lesz felelős </li>
+    <li>Az adatbázisból szedi a szükséges információt</li>
+    <li>A varázslatok hatását beteszi az adatbázisba, illetve később ki is veszi belőle
+    <li>A meglévő életpontokat kezeli </li>
+    <br></br>
+    JavaFX:
+
+    <li>A játék vizuális részéért lesz felelős </li>
+    <li>Az alap mechanika után kezdjük el a fejlesztését</li>
+
+    <h1>6.Tesztelési követelmények:</h1>
+
+    A szoftver tesztelést a gyakorlatban fogjuk végrehajtani. Ezt úgy tervezzük megoldani,
+    hogy a játék béta állapotát mindenki számára elérhetővé tennénk és aki hibát találna azt játékbeli jutalommal
+    jutalmaznánk.
+    Ezenkívül, hogy minden felhasználónak megértethővé és átláthatóvá tudjuk tenni a szoftvert ezért korcsoport alapján
+    is teszteket szeretnék végezni.
+
+    <h1>7.Bemutatás (demó) és szállítás módja, ideje:</h1>
+
+    A Demó bemutatása a DEMO állapotban az Alpha és a Béta verzió közötti
+    követelmények elérésekor történik, a tesztelések után, ahol a játék már játszható állapotban van, rendelkezik
+    grafikus felülettel, ebben a kezdetleges állapotban még csak a gép ellen tudunk játszani a "történet" módban, még
+    nincs olyan mód ahol más játékosok ellen játszhatnánk. Tudunk kártyákat kijátszani a már létező pakliból de ebben az
+    állapotban viszont még nem vagyunk képesek saját paklit létrehozni. A Demó szállítási módja fizikai adattárolón fog
+    történni, ezenkívül a projekt ezen verziója elérhető lesz a GitHub oldalán lévő projektben egy külön branch-ben is.
+
+    <h1>8.Információ források</h1>
+
+    A játék alapötletét főként három, már létező online kártyajáték adta:
+    <li>1.</li> A Blizzard Entertainment játéka, a <a
+        href="https://playhearthstone.com/enhttps://playhearthstone.com/en--us/us/">Hearthstone</a>
+    <br></br>
+    <li>2.</li> A Yu-Gi-Oh! mese alapján készült, <a
+        href="https://store.steampowered.com/app/601510/YuGiOh_Duel_Links/?l=hungarianhttps://store.steampowered.com/app/601510/YuGiOh_Duel_Links/?l=hungarian">Yu-Gi-Oh!
+        Duel Links</a>
+
+    <br></br>
+    <li>3.</li>
+    A The Witcher RPG játékon alapuló, <a href="https://www.playgwent.com/enhttps://www.playgwent.com/en">GWENT</a>
+    kártyajáték
+    A három játéknak számos közös tulajdonsága van, ilyen az is, hogy mind egy fiktív világban játszódik. A játékokban
+    lévő kitalált karakterekkel és lényekkel tudunk játszani, akár különféle pályákon, más-más ellenfelekkel.
+    Mindháromnak több egyéni tulajdonsága is van, amikből mi ötletet merítve vetettük fel egy teljesen új játék, a
+    SpeedCard ötletét, ami a három játék alapvető játékmechanikája alapján fog felépülni.
+
+</body>
+
+</html>
