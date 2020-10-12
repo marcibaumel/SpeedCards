@@ -79,10 +79,10 @@
       <td width="160">Korita Zsófia</td>
     </tr>
     <tr valign="top">
-      <td width="90">&nbsp;</td>
-      <td width="60">&nbsp;</td>
-      <td width="300">&nbsp;</td>
-      <td width="160">&nbsp;</td>
+      <td width="90">2020.10.12</td>
+      <td width="60">1.1</td>
+      <td width="300">Javítások, további témák kifejtése</td>
+      <td width="160">Korita Zsófia</td>
     </tr>
     <tr valign="top">
       <td width="90">&nbsp;</td>
@@ -135,7 +135,19 @@
 	
 <h1><a name="2"></a>2. Az alkalmazás helye</h1>
 	<h2><a name="21"></a>2.1 Üzleti lehetőségek</h2>
-		<p class="h2">Nincs információ</p>
+		<p class="h2">
+			A projektünkben rejlő üzleti lehetőségek széleskörűek, hiszen egy játékról van szó, és mivel 
+			napjainkban az emberek többsége a szabadidejét játékok játszásával tölti, így a célközönség is nagy.<br>
+			Az igaz, hogy a játékot ingyenesen játszhatóan szeretnénk kiadni, viszont a későbbi frissítések során, 
+			amikor már elérhető a sztory módon kívül a többjátékos mód is tervezzük bevezetni a Boltot, és a mikrotranzakciókat.<br>
+			A Boltban a játékosok pénzért tudnak majd paklikat, kártyákat venni, nyílván ezeket nem akarjuk 
+			eltúlozni ezért nem lehet majd olyan kártyákat és paklikat venni amiket amúgy nem lehetne megszerezni máshogy a játékban.
+			Továbbá a felhasználók tudnak majd kinézeteket/díszítéseket venni a kártyáikra és a pályára is.<br>
+			Tervezünk egy szezon rendszert is bevezetni, amiben a játékosok különféle jutalmakat kaphatnak szintek 
+			elérésével és küldetések teljesítésével. Ennek lenne egy ingyenes része és egy fizetős része, 
+			amit szezon belépő megvásárlásával tudnak majd elérni a játékosok. A jutalmak jobbrésze nyilván a fizetős részben lenne benne,
+			de azokat sem akarjuk kihagyni a jóból akik nem akarják megvenni ezt a Szezon belépőt.<br>
+		</p>
 	<h2><a name="22"></a>2.2 A probléma megfogalmazása</h2>
 		<h3>2.2.1. Játék Koncepció Megfogalmazása</h3>
 			<p class = "h3">
@@ -309,7 +321,28 @@
 	
 <h1><a name="4"></a>4. A végtermék áttekintése</h1>
 	<h2>4.1 A termék kapcsolatai</h2>
-		<p class="h2">Nincs információ</p>
+		<p class="h2">
+			A termék funkcionális komponensei:
+			<ul>
+				<li class="h3">
+					Adatbázis létrehozása és lekérdezése
+				</li>
+				<li class="h3">
+					A felhasználók fiókjainak nyilvántartása
+				</li>
+				<li class="h3">
+					A kártyák és tulajdonságaik nyilvántartása
+				</li>
+				<li class="h3">
+					A felhasználók adatainak védelme
+				</li>
+				<li class="h3">
+					Felhasználók közötti üzenetküldés és barátfelvétel
+				</li>
+			</ul>
+			A rendszer a további frissítések során bővülni fog, így több funkcionális komponens is kerülhet még bele 
+			( pl.: bolt, vásárlás, többjátékos módnál az ellenfelek kiválasztása).
+		</p>
 	<h2><a name="42"></a>4.2. A termék használatának előnyei</h2>
 		<p class="h2">
 			Használati előnyök amit a termék biztosít
@@ -356,9 +389,25 @@
 			</ul>
 		</p>
 	<h2><a name="44"></a>4.4 Költségbecslés</h2>
-		<p class="h2"> Nincs információ</p>
+		<p class="h2">
+			A költségvetés függ:
+			<ul>
+				<li class="h3">Szerver fenntartás valamilyen módon</li>
+				<li class="h3">Programok költsége</li>
+				<li class="h3">Fejlesztők munkabér</li>
+				<li class="h3">Később ha szükséges a külsös cégek/ szabadúszók munkabére</li>
+			</ul>
+		</p>
 	<h2><a name="45"></a>4.5. Installáció</h2>
-		<p class="h2">Nincs információ</p>
+		<p class="h2">
+			A játékot nem kell telepíteni, elegendő csak letölteni és már futtatható formában is van a játék, készen áll a használatra. 
+			Mielőtt azonban letöltjük a játékot előtte ellenőrizzük le hogy a gépünkön van-e Java JRE(Java Runtime Enviroment) telepítve, mivel ugyan a játékot
+			nem kell telepíteni, de a java-t kell, mivel a játék java futtató környezetben fog csak működni , amiért a JVM(Java Virtual Machine) fog felelni.<br>
+			A java-t a https://www.oracle.com/java/technologies/javase-downloads.html oldalról lehet letölteni és telepíteni. <br>
+			A telepítés lépéseiről ugyan ezen az oldalon találtok egy dokumentációt.<br>
+    			A telefonokhoz az installáció úgy történik, hogy a Steam Store-ból lesz letölthető egy szinkronizáló APK ami internet kapcsolattal,
+    			valamint Steam-es bejelentkezés után automatikusan a gépünkről szinkronizálja át és telepíti a játékot telefonunkra.
+		</p>
 <h1><a name="5"></a>5. A végtermék jellemzői, biztosított szolgáltatások</h1>
 	<p class="h1">
 		A termék megjelenési állapotait szétbontottuk különböző fázisokra, hogy követni tudjuk a szoftver fejlődés állapotait és a köztük történt változásokat.
@@ -398,7 +447,24 @@
 			Animációval íratjuk ki a győztes fél nevét és ha az egér bal gombjával nyomunk egyet a képernyőre automatikusan visszadob a játék fő menü képernyőjére.
 		</p>
 <h1><a name="6"></a>6. Korlátozások</h1>
-	<p class="h1">Nincs információ</p>
+	<p class="h1">
+		A játék használatához szükséges:
+		<ul>
+			<li class="h3">Stabil Internet Kapcsolat</li>
+			<li class="h3">Számítógép / Okostelefon</li>
+			<li class="h3">Active Steam Accaunt</li>
+			<li class="h3">Java JRE vagy Java JDK</li>
+		</ul>
+		Ezek a Dolgok szükségesek a játék futtatásához. Az alapjáték minden mai számítógépen elfut. Alap játék rendszerigény:
+		<ul>
+			<li class="h3">CPU: AMD FX-6300 Hexa-core 3.5GHz./ Intel Core i5-4690k 3.5Ghz</li>
+			<li class="h3">Memória: 1 GB 1333MHz Ram.</li>
+			<li class="h3">GPU: 3D modell lekezelést támogató, 512 VRAM-mal rendelkező.</li>
+			<li class="h3">Merevlemez: Legalább 4 GB szabad hellyel rendelkező.</li>
+			<li class="h3">Operációs rendszer: Windows 7 vagy újabb.</li>
+		</ul>
+		A rendszer követelmények nőhetnek a további DLC-kel és azokban szereplő új modellek miatt, de ezen kívül nincs más korlátozási tényező.
+	</p>
 <h1><a name="7"></a>7. Minőségi elvárások</h1>
 	<p class="h1">
 		A játék elsősorban asztali számítógépen, majd a jövőben telefonos applikációként lesz elérhető. Mivel ez egy kártyajáték ezért, sem nagyobb pályákat, sem nagyobb modelleket nem kell gyorsan belöltenie a rendszernek, mint például egy MMO RPG-nél, ezért a játék hardverigénye viszonylag kicsi.<br><br>
@@ -407,7 +473,13 @@
 		Az alap játékfelület letisztul és egyszerű lesz a jó átláthatóság érdekében, így könyebb lesz a felhasználónak tájékozódni a menüben és a harcmezőn is.
 	</p>
 <h1><a name="8"></a>8. Dokumentációkkal kapcsolatos követelmények</h1>
-	<p class="h1">Nincs információ</p>
+	<p class="h1">
+		A dokumentációknak a webes felületen kell, hogy elérhetők legyenek. 
+		Ezek bizonyos időközönként megjelenő "Dev Diary" típusú üzenetek lennének, hogy tudassuk a játékosokkal, hogy is halad a fejlesztés menete.<br>
+		Később a játékban történő változásokról "Patch Notes" formájában jeleznénk a játékosoknak. 
+		Ezekben a bejegyzésekben inkább a játékmenetben történt változásokról esne szó. 
+		Például: egy adott lapnak az értéke/képessége változót-e az előző frissítéshez képest és ha igen az, hogyan változtatta meg az adott lapot.
+	</p>
 <h1><a name="9"></a>9. Kockázat lista</h1>
 	<p class="h1">
 		Az eddigi fejlesztés során nem botlottunk olyan problémá(k)ba, ami a fejlesztés határidejét növelné, viszont a közeljövőben több ilyen kockázat is fel fog merülni becsléseink szerint:</p>
