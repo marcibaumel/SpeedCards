@@ -128,6 +128,12 @@
 				<td width="160">Korita Zsófia</td>
 			</tr>
 			<tr valign="top">
+				<td width="90">2020.10.15</td>
+				<td width="60">1.2</td>
+				<td width="300">Javítások, további témák kifejtése</td>
+				<td width="160">Baumel Márton</td>
+			</tr>
+			<tr valign="top">
 				<td width="90">&nbsp;</td>
 				<td width="60">&nbsp;</td>
 				<td width="300">&nbsp;</td>
@@ -222,6 +228,12 @@
 	<p class="h3">
 		A játékmenetet fázisokra osztottuk, hogy átláthatóan eltudjuk különíteni a különböző
 		folyamatokat és részletesen le tudjuk írni, hogy mi is fog történni az adott fázisban.
+		<br><br>
+		Grafikai Megvalósítás: Alapvetően szeretnénk megőrizni a sci-fi hangulatot de a témailag egy sötétebb hangulatot
+		szeretnénk elérni. Ezt a grafikát a JavaFX könyvtár használatával szeretnék elérni 2D-ben.
+		<br><br>
+		Hangok: Egy statikus aláfestő zenét tervezünk a játék alá és a kártyák kijátszásakor szeretnék plusz
+		hangeffekteket lejátszani.
 	</p>
 	<h4>Fázis 0: Kártya Húzás</h4>
 	<p class="h4">
@@ -304,6 +316,7 @@
 		ha ez alatt az idő alatt nem születik abszolút győztes akkor az győz akinek a támadópontja
 		több. Ha olyan helyzet alakulna ki, hogy 15 kör alatt nincs abszolút győztes és a támadáspont
 		is megegyezne akkor az győz aki a játék egésze alatt a legtöbb támadópontot kiosztotta.
+
 	</p>
 	<h3>2.2.3. Célcsoport</h3>
 	<p class="h3">
@@ -322,6 +335,7 @@
 		Alapvetően minden 4. szint után járna valami csekély jutalom (például: egy
 		kibontható pakli) de aki beruházna egy szezonra akkor annak minden szintlépés utána
 		exkluzív jutalom ütné a markát (például: egyedi kártya hátlap)
+
 	</p>
 	<h2><a name="23"></a>2.3 Az elkészült termék helye</h2>
 	<p class="h2">
@@ -348,12 +362,13 @@
 	<h1><a name="3"></a>3. Érintettek és felhasználók</h1>
 	<p></p>
 	<h2><a name="31"></a>3.1. Az érintettek összefoglalása</h2>
+	<p class="h2">
 	<table border="1" width="90%">
 		<thead>
-			<tr valign="top">
+			<tr valign="center">
 				<th width="90">Elnevezés</th>
 				<th width="60">Leírás</th>
-				<th width="460">Szerep</th>
+				<th width="300">Szerep</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -404,14 +419,70 @@
 				</td>
 			</tr>
 			<tr valign="top">
+				<td width="90">Supporter</td>
+				<td width="60">Fejlesztők és felhasználók közötti kapcsolattartó</td>
+				<td width="300">Amennyiben a felhasználóknak valamilyen szintű problémája adódna, akár játékhiba, akár
+					egyéb, velük kell felvenni a kapcsolatot.</td>
+			</tr>
+			<tr valign="top">
 				<td width="90">&nbsp;</td>
 				<td width="60">&nbsp;</td>
 				<td width="300">&nbsp;</td>
 			</tr>
 		</tbody>
 	</table>
+	</p>
 	<h2><a name="32"></a>3.2. A felhasználók összefoglalása</h2>
-	<p class="h2">Nincs információ</p>
+	<p class="h2">
+	<table border="1" width="90%">
+		<thead>
+			<tr valign="top">
+				<th width="90">Elnevezés</th>
+				<th width="150">Leírás</th>
+				<th width="300">Csoportba tartozók</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr valign="top">
+				<td width="90">Nem fizető játékosok</td>
+				<td width="150">Általában közvetlenül pénzzel nem támogatja a softwaret de híreszteli, ezért több ember
+					szerez tudomást róla. Gyakran csak rövidebb ideig játszanak a játékkal, hamar elveszti érdeklődését
+					és egy másikat keres.</td>
+				<td width="300">Fiatalkorúak, Fiatal felnőttek, Idősek</td>
+			</tr>
+			<tr valign="top">
+				<td width="90">Alkalmanként játszó</td>
+				<td width="150">Meghatározatlan időszakonként előveszi a játéksoftwaret és rövidebb ideig játssza azt,
+					majd megint félre rakja határozatlan ideig</td>
+				<td width="300">Minden korosztály</td>
+			</tr>
+			<tr valign="top">
+				<td width="90">Alkalmanként támogató</td>
+				<td width="150">Bizonyos időszakonként pénzt költenek a játékra, hogy limitált idejű tárgyakra, vagy
+					pedig bizonyos szintű előnyre tegyen szert másokkal szemben. Heti átlagban viszonylag kevés időt
+					játszik, de hosszabb távon akár több száz órát is eltölthet vele.</td>
+				<td width="300">Fiatal felnőttek, Felnőttek, Idősek</td>
+			</tr>
+			<tr valign="top">
+				<td width="90">Lelkes támogató</td>
+				<td width="150">Nagy gyakorisággal, időnként nagy összeget költ a játékra. A cégek legfőbb bevétele az ő
+					támogatásukból jön be. A játékot gyakran játsszák és hosszú ideig.</td>
+				<td width="300">Felnőttek</td>
+			</tr>
+			<tr valign="top">
+				<td width="90">Rajongó</td>
+				<td width="150">Pénzt a játékra nem feltétlenül költ, de rengeteg időt tölt el vele (naponta több órát).
+					Nagyon nehezen veszti el az érdeklődését a rajongott játékkal kapcsolatban</td>
+				<td width="300">Fiatalkorúak, Fiatal felnőttek</td>
+			</tr>
+			<tr valign="top">
+				<td width="90">&nbsp;</td>
+				<td width="150">&nbsp;</td>
+				<td width="300">&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+	</p>
 	<h2><a name="33"></a>3.3 Felhasználói környezet</h2>
 	<p class="h2">
 		Az alkalmazás Java környezetben fog futni A Beta kizárólag pc platformon OS függetlenül
@@ -466,7 +537,9 @@
 	</ul>
 
 	<h2><a name="35"></a>3.5. Felhasználók adatai</h2>
-	<p class="h2">Nincs információ</p>
+	<p class="h2">A felhasználóknak készülni fog egy profil oldal, amit böngészőn keresztül el tudnak érni.
+		Megtekinthető lesz rajta, hogy pillanatnyilag milyen szintű a játékban, tudja módosítani a bejelentkezési
+		adatait, illetve látható lesz rajta a tranzakciós lista is.</p>
 
 	<h1><a name="4"></a>4. A végtermék áttekintése</h1>
 	<h2>4.1 A termék kapcsolatai</h2>
@@ -533,7 +606,11 @@
 		leképeznie.<br><br>
 		A memória követelmény 1 Gigabyte nagyságú lesz, bár ez megint csak változhat a végleges grafika minőségétől.
 		A támogatott operációs rendszerek Windows 7 és újabb verziók, ez a későbbiekben bővülhet egyéb rendszerekre (pl.
-		Android).<br><br>
+		Android).
+		A játékhoz folyamatos internetkapcsolat szükséges, aminek legalább 250 Kb/s gyorsaságúnak kell lenni a megfelelő
+		működéshez. Ez többszörösére növekedhet amennyiben az felhasználó hoz létre egy egyéni (Custom) szervert.
+		Ahhoz, hogy le tudjuk tölteni a szoftvert és játszani tudjunk vele, szükséges egy Steam felhasználófiók, mivel
+		ezen a platformon fogjuk közzétenni.<br><br>
 		Minimum Követelmény:
 	<ul>
 		<li class="h3">CPU: AMD FX-6300 Hexa-core 3.5GHz.</li>
@@ -547,10 +624,12 @@
 	<p class="h2">
 		A költségvetés függ:
 	<ul>
-		<li class="h3">Szerver fenntartás valamilyen módon</li>
-		<li class="h3">Programok költsége</li>
-		<li class="h3">Fejlesztők munkabér</li>
-		<li class="h3">Később ha szükséges a külsös cégek/ szabadúszók munkabére</li>
+		<li class="h3">Szerver fenntartás valamilyen módon (Évente 30.000 Ft)</li>
+		<li class="h3">Programok költsége (Körülbelül 50.000 FT (PhotoShop, IntelliJ, GitHub, stb. előfizetések)</li>
+		<li class="h3">Fejlesztők munkabér (Kezdetben a fejlesztők ingyen dolgoznának de ha játék sikeresnek bizonyul
+			akkor százalékos arányba tervezzük szétosztani a bevételt)</li>
+		<li class="h3">Később ha szükséges a külsös cégek/ szabadúszók munkabére (Előre megállapodva munkától függően
+			10.000-100.000 Ft)</li>
 	</ul>
 	</p>
 	<h2><a name="45"></a>4.5. Installáció</h2>
@@ -785,9 +864,17 @@
 	</p>
 	<h1><a name="8"></a>8. Dokumentációkkal kapcsolatos követelmények</h1>
 	<p class="h1">
+		A weboldalon a H-s sorszámmal ellátott dokumentációk meghatározott időpontban, HTML formátumban fognak
+		megjelenni. Ezeknek a
+		dokumentumoknak a célja, a projekt előrehaladását monitorozni.
+		<br><br>
+		Munkanapló a weboldalon lesz elérhető HTML formátumban, itt lehet nyomon követni ki mit is csinált és ez mennyi
+		időt vett
+		igénybe.
+		<br><br>
 		A dokumentációknak a webes felületen kell, hogy elérhetők legyenek.
 		Ezek bizonyos időközönként megjelenő "Dev Diary" típusú üzenetek lennének, hogy tudassuk a játékosokkal, hogy is
-		halad a fejlesztés menete.<br>
+		halad a fejlesztés menete.<br><br>
 		Később a játékban történő változásokról "Patch Notes" formájában jeleznénk a játékosoknak.
 		Ezekben a bejegyzésekben inkább a játékmenetben történt változásokról esne szó.
 		Például: egy adott lapnak az értéke/képessége változót-e az előző frissítéshez képest és ha igen az, hogyan
