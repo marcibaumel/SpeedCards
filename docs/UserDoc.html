@@ -153,11 +153,7 @@
         <p class="h1"><a href="#5">5. Felhasználó Felület</a></p>
 
         <p class="h1"><a href="#6">6. A Termék Állapotok Jellemzői, Biztosított Szolgáltatások </a></p>
-        <p class="h1"><a href="#61">6.1 Változatok Specifikálása </a></p>
-        <p class="h2"><a href="#611">6.1.1 Alpha Állapot </a></p>
-        <p class="h2"><a href="#612">6.1.2 DEMO Állapot</a></p>
-        <p class="h2"><a href="#613">6.1.3 Béta Állapot</a></p>
-        <p class="h2"><a href="#614">6.1.4 Megjelenési Állapot/ Végtermék </a></p>
+        <p class="h2"><a href="#61">6.1. Megjelenési Állapot</a></p>
 
         <p class="h1"><a href="#7">7. Termék Használatának előnyei</a></p>
 
@@ -250,22 +246,27 @@
     <p class="h1">
         A játékban 3 jól elkülöníthető felület van:
         <br>
-        1, Főmenü
+        <br>
+        <strong>1, Főmenü</strong>
         <br>
         Ha felhasználó elindítja a programot ez lesz az első felület amit a felhasználó látni fog. Itt 3 gomb és egy
         profil gomb helyet foglalni. A Play gombbal tudunk belépni a játékba de előtte szükséges a belépés a profilba de
         ezt külön jelzi is a program. Az Options gombbal tudjuk beállítani a felbontást és a hangerőt. Az Exit gombbal
         tudunk kilépni az alkalmazásból. A Profil gomb a képernyő bal oldalán lesz elérhető, itt látható lesz, hogy
         hanyas szintűek vagyunk de ha rányomunk bejön a Profil Management felület.
+        <br><br>
+        <img src="menu_options.gif" alt="menu-options" style="width:1000px;height:600px;">
         <br>
         <br>
-        2, Profil
+        <strong>2, Profil</strong>
         <br>
         Ha a Főmenübe rányomunk a Profil gombra bejön a Profil Management felület. Itt leszünk képesek managelni a
         profilunkhoz kapcsolódó tevékenységeket: bejelentkezést, regisztrációt és a kijelentkezést.
+        <br><br>
+        <img src="menu_profilOptions.gif" alt="menu-profil" style="width:1000px;height:720px;">
         <br>
         <br>
-        3, Játék Felület
+        <strong>3, Játék Felület</strong>
         <br>
         A sikerült bejelentkezni akkor leszünk képesek elindítani a Play gombbal egy játékot. Ilyenkor a egy 6 felé
         tagolt pályát fogunk kapni, de ez szimmetrikusan megegyezik ezért csak a mi szemszögünkből lévő 3 sávot fogom
@@ -277,15 +278,15 @@
         képesek vagyunk beállítani a játék hangját vagy kiléphetünk a játékba vissza a Főmenübe.
         <br>
         <br>
+        <img src="menu_play.gif" alt="menu-play" style="width:1000px;height:720px;">
+        <br>
+        <br>
     </p>
     <p><br></p>
 
     <h1><a name="6"></a>6. A Termék Állapotok Jellemzői, Biztosított Szolgáltatások</h1>
     <p class="h1">
-    <h2><a name="61"></a>Változatok Specifikálása</h2>
     <p class="h1">
-        A termék megjelenési állapotait szétbontottuk különböző fázisokra, hogy követni tudjuk a szoftver fejlődés
-        állapotait és a köztük történt változásokat.
         <br><br>
         <strong>Alap adatok</strong>:
         <br><br>
@@ -307,145 +308,11 @@
         -Képesség<br>
         -Kijátszási Költsége<br>
         <br><br>
-        Azért van szükség leírni a változatok specifikációját mert a felhasználónak tudnia kell, hogy éppenséggel
-        választott változatnak milyen feladatokat is kell pontosan megvalósítania.
+
         <br><br>
     </p>
 
-    <h2><a name="611"></a>6.1.1 Alpha Állapot</h2>
-    <p class="h1">
-        Ennek a változtatnak biztosítani kell egy nagyon kezdetleges grafikus felületet azaz a koncepcióban ábrázolt
-        képeket kell megvalósítania nagyon kezdetlegesen. A program indításakor egy menübe találjuk magunkat ahol
-        elindíthatjuk a játékot vagy kiléphetünk a programból. A kilépésnél bezáródik a program míg a játék indításakor
-        betölt egy “teszt” játékot. Ebben a állapotban még nincs lehetőségünk saját paklit összerakni hanem az
-        adatbázisban lévő kártyák közül véletlenszerűen kapjuk meg a paklinkat. Ezek után a játék elindul a 0. Játék
-        fázissal azaz a program automatikusan lerakja a “földi” és “légi” egységeket a hozzájuk rendelt sávra. Ezután
-        pedig a megkapjuk a kezdő paklinkat amit 4 db lapból fog állni és emellett megkapjuk az alap elkölthető Kristály
-        számunkat. A mi 4 lapunk számunkra látszik de az ellenfél nem látja őket és mi sem látjuk az ellenfél lapjait.
-        Maximum 8 lap lehet nálunk egyszerre.
-
-        Ha a 0. Fázis befejeződött akkor a 1. Játék Fázisra lép a program ahol is egy random generált számmal fogjuk
-        eldönteni, hogy ki kezdje majd el a 2. Játék Fázist. Ha egyes, az ellenfél kezd ha pedig nulla, akkor mi
-        kezdünk. Ennek az eredményét még a console-ba fogjuk kiíratni. Feltételezzük, hogy a véletlenszerűen generált
-        szám 0 lett ekkor mi kezdjük el a 2. Játék Fázist. Ebben körben tudjuk majd kijátszani a lapokat és a hatásuk a
-        leírásuk alapján érvényesül.
-
-        A lap kijátszása úgy történne meg, hogy a kezünkben lévő lapok egyikére nyomunk és ekkor megjelenik egy felugró
-        ablak amin dönthetünk a kártya használatáról és elolvashatjuk a teljes leírását. A leírás tartalmazza a kártya
-        által végzett változtató folyamatokat. Ilyenkor kijátszhatjuk a megnyitott kártyát vagy vissza is rakhatjuk a
-        kezünkbe. Egy körben több lapot is ki játszhatunk attól függően, hogy mennyi Kristályunk van mert a lapok
-        Kristályba kerülnek. Ha befejezettnek ítéli a felhasználó ezt a fázist akkor a képernyőn fog találni egy gombot
-        amivel befejezheti ezt a fázist. Ha megnyomta ezt gombot akkor a program a 3. Játék Fázisra lép, a Földi
-        Egységünk véletlenszerűen megtámadja az ellenfél földi egységeit. A Földi Egységünknek a támadó pontja levonódik
-        az ellenfél Földi Egységének élet erejéből, de ez fordítva is igaz, azaz az ellenfél egységének a támadó pontja
-        is levonódik a mi egységünk élet erejéből. Ha a valamelyik Földi Egység életereje nullára csökken az a egység
-        eltűnik a mezőről. Ezután ha mindkét oldalon maradt Földi Egység akkor a játék tovább folytatódik a 4. Játék
-        Fázissal ha valamelyik oldalon nem maradt több Földi Egység akkor a 5. Játék Fázis következik. A 4. Játék Fázis
-        értelmében a program 2. Játék Fázistól folytatódik az ellenfél szemszögéből. Ebben az állapotban az ellenfél
-        gépi ellenfél lesz és az ellenfél a kártyát úgy játssza ki, hogy a kezében lévő legkisebb Kristály számmal
-        rendelkező lapot fogja kirakni a pályára és körönként csak 1 lapot fog kijátszani és automatikusan átlép a
-        2.Játék Fázisra. Ha az egyik oldalon nem maradt több Földi Egység akkor a játék átlép az 5. Játék Fázisra. Az
-        győz akinek maradt Földi Egysége, vagy ha megismétlődik a 4. Játék Fázis 10-szer akkor automatikusan mi fogunk
-        még ebben az állapotban győzni amit a consol-ra íratunk ki és a program visszalép a menü képernyőre.
-
-    </p>
-
-    <h2><a name="612"></a>6.1.2 DEMO Állapot</h2>
-    <p class="h1">
-        Ennek a változtatnak biztosítani kell egy kezdetleges grafikus felületet azaz a koncepcióban ábrázolt képeket
-        kell megvalósítania. A program indításakor egy menübe találjuk magunkat ahol elindíthatjuk a játékot vagy
-        kiléphetünk a programból. A kilépésnél bezáródik a program míg a játék indításakor betölt egy “teszt” játékot.
-        Ebben a állapotban még nincs lehetőségünk saját paklit összerakni hanem az adatbázisban lévő kártyák közül
-        véletlenszerűen kapjuk meg a paklinkat. Ezek után a játék elindul a 0. Játék fázissal azaz a program
-        automatikusan lerakja a “földi” és “légi” egységeket a hozzájuk rendelt sávra. Ezután pedig a megkapjuk a kezdő
-        paklinkat amit 4 db lapból fog állni és emellett megkapjuk az alap elkölthető Kristály számunkat. A mi 4 lapunk
-        számunkra látszik de az ellenfél nem látja őket és mi sem látjuk az ellenfél lapjait. Maximum 8 lap lehet nálunk
-        egyszerre.
-
-        Ha a 0. Fázis befejeződött akkor a 1. Játék Fázisra lép a program ahol is egy random generált számmal fogjuk
-        eldönteni, hogy ki kezdje majd el a 2. Játék Fázist. Ha egyes, az ellenfél kezd, ha pedig nulla, akkor mi
-        kezdünk. Ennek az eredményét animációval íratjuk ki a fő képernyőre. Feltételezzük, hogy a véletlenszerűen
-        generált szám 0 lett ekkor mi kezdjük el a 2. Játék Fázist. Ebben körben tudjuk majd kijátszani a lapokat és a
-        hatásuk a leírásuk alapján érvényesül.
-
-        A lap kijátszása úgy történne meg, hogy a kezünkben lévő lapok egyikére nyomunk és ekkor megjelenik egy felugró
-        ablak, amin dönthetünk a kártya használatáról és elolvashatjuk a teljes leírását. A leírás tartalmazza a kártya
-        által végzett változtató folyamatokat. Ilyenkor kijátszhatjuk a megnyitott kártyát vagy vissza is rakhatjuk a
-        kezünkbe. Egy körben több lapot is ki játszhatunk attól függően, hogy mennyi Kristályunk van, mert a lapok
-        Kristályba kerülnek. Ha befejezettnek ítéli a felhasználó ezt a fázist, akkor a képernyőn fog találni egy
-        gombot, amivel befejezheti ezt a fázist. Ha megnyomta ezt a gombot akkor a program a 3. Játék Fázisra lép, a
-        Földi Egységünk véletlenszerűen megtámadja az ellenfél földi egységeit. A Földi Egységünknek a támadó pontja
-        levonódik az ellenfél Földi Egységének élet erejéből, de ez fordítva is igaz, azaz az ellenfél egységének a
-        támadó pontja is levonódik a mi egységünk élet erejéből. Ha a valamelyik Földi Egység életereje nullára csökken
-        az az egység eltűnik a mezőről. Ezután ha mindkét oldalon maradt Földi Egység akkor a játék tovább folytatódik a
-        4. Játék Fázissal ha valamelyik oldalon nem maradt több Földi Egység akkor a 5. Játék Fázis következik. A 4.
-        Játék Fázis értelmében a program 2. Játék Fázistól folytatódik az ellenfél szemszögéből. Ebben az állapotban az
-        ellenfél gépi ellenfél lesz és az ellenfél a kártyát úgy játssza ki, hogy az összes felhasználható Kristály
-        mennyiségből, kiszámolja hogy tudja a lapokat úgy kijátszani, hogy a földi egység támadó pontja a legmagasabb
-        legyen és azokat a lapokat fogja kiválasztani és lerakni a mezőre, ezután ha befejezte a lap lerakást
-        automatikusan átlép a 2.Játék Fázisra.
-
-        Ha az egyik oldalon nem maradt több Földi Egység akkor a játék átlép az 5. Játék Fázisra. Az győz akinek maradt
-        Földi Egysége, vagy ha megismétlődik a 4. Játék Fázis 15-ször akkor automatikusan mi fogunk még ebben az
-        állapotban győzni amit a animációval íratunk ki a fő képernyőre és ha az egér bal gombjával nyomunk egyet a
-        képernyőre automatikusan visszadob a játék menü képernyőjére.
-
-    </p>
-
-    <h2><a name="613"></a>Béta Állapot</h2>
-    <p class="h1">
-        A felhasználó be tud jelentkezni a játékba és saját profilt tud létrehozni ahol tapasztalati pontot kap a
-        lejátszott mérkőzésekért.
-
-        Ennek a változtatnak biztosítani kell egy véglegesnek mondható grafikus felületet azaz a koncepcióban ábrázolt
-        képeket kell megvalósítania. A program indításakor egy menübe találjuk magunkat ahol elindíthatjuk a játékot,
-        elérhetjük a beállításokat vagy kiléphetünk a programból. A kilépésnél bezáródik a program míg a játék
-        indításakor betölt egy “teszt” játékot a beállításoknál pedig a hangerejét és a játék fényességét lehet
-        beállítani. Ebben a állapotban még nincs lehetőségünk saját paklit összerakni hanem az adatbázisban lévő
-        kártyapaklik közül tudnák már választani a játék indításakor egy grafikus pakli választó menüben.
-
-        Ezek után a játék elindul a 0. Játék fázissal azaz a program automatikusan lerakja a “földi” és “légi”
-        egységeket a hozzájuk rendelt sávra. Ezután pedig a megkapjuk a kezdő paklinkat amit 4 db lapból fog állni és
-        emellett megkapjuk az alap elkölthető Kristály számunkat. A mi 4 lapunk számunkra látszik de az ellenfél nem
-        látja őket és mi sem látjuk az ellenfél lapjait. Maximum 8 lap lehet nálunk egyszerre.
-
-        Ha a 0. Fázis befejeződött akkor a 1. Játék Fázisra lép a program ahol is egy random generált számmal fogjuk
-        eldönteni, hogy ki kezdje majd el a 2. Játék Fázist. Ha egyes, az ellenfél kezd ha pedig nulla, akkor mi
-        kezdünk. Ennek az eredményét animációval íratjuk ki a fő képernyőre. Feltételezzük, hogy a véletlenszerűen
-        generált szám 0 lett ekkor mi kezdjük el a 2. Játék Fázist. Ebben körben tudjuk majd kijátszani a lapokat és a
-        hatásuk a leírásuk alapján érvényesül.
-
-        A lap kijátszása úgy történne meg, hogy a kezünkben lévő lapok egyikére nyomunk és ekkor megjelenik egy felugró
-        ablak amin dönthetünk a kártya használatáról és elolvashatjuk a teljes leírását. A leírás tartalmazza a kártya
-        által végzett változtató folyamatokat. Ilyenkor kijátszhatjuk a megnyitott kártyát vagy vissza is rakhatjuk a
-        kezünkbe. Egy körben több lapot is ki játszhatunk attól függően, hogy mennyi Kristályunk van mert a lapok
-        Kristályba kerülnek. A lap kijátszás ilyenkor már animációval történik meg. Ha befejezettnek ítéli a felhasználó
-        ezt a fázist akkor a képernyőn fog találni egy gombot amivel befejezheti ezt a fázist. Ha megnyomta ezt gombot
-        akkor a program a 3. Játék Fázisra lép át egy kisebb átvezető animációval, a Földi Egységünk véletlenszerűen
-        megtámadja az ellenfél földi egységeit amit most már animációval is láthatunk. A Földi Egységünknek a támadó
-        pontja levonódik az ellenfél Földi Egységének élet erejéből, de ez fordítva is igaz, azaz az ellenfél egységének
-        a támadó pontja is levonódik a mi egységünk élet erejéből. Ha a valamelyik Földi Egység életereje nullára
-        csökken az a egység eltűnik a mezőről amit most már egy eltűnő animációval is jeleznénk. Ezután ha mindkét
-        oldalon maradt Földi Egység akkor a játék tovább folytatódik a 4. Játék Fázissal ha valamelyik oldalon nem
-        maradt több Földi Egység akkor a 5. Játék Fázis következik. A 4. Játék Fázis értelmében a program 2. Játék
-        Fázistól folytatódik az ellenfél szemszögéből. Ebben az állapotban az ellenfél gépi ellenfél lesz és az ellenfél
-        a kártyát úgy játssza ki, hogy az összes felhasználható Kristály mennyiségből, kiszámolja hogy tudja a lapokat
-        úgy kijátszani, hogy a földi egység támadó pontja a legmagasabb legyen és azokat a lapokat fogja kiválasztani és
-        lerakni a mezőre, ezután ha befejezte a lap lerakást automatikusan átlép a 3.Játék Fázisra és onnan a 4. Játék
-        Fázisra és ha maradt mindkét oldalon Földi Egység akkor mi kezdjük el a 2. Játék Fázisunkat.
-
-        Ha az egyik oldalon nem maradt több Földi Egység akkor a játék átlép az 5. Játék Fázisra. Az győz akinek maradt
-        Földi Egysége, vagy ha megismétlődik a 4. Játék Fázis 15-ször akkor és nem születik abszolút győztes akkor az
-        győz akinek a támadó pontja több a jelenlegi mezőn. Ha olyan helyzet alakulna ki, hogy 15 kör alatt nincs
-        abszolút győztes és a támadáspont is megegyezne akkor az győz aki a játék egésze alatt a legtöbb támadás pontott
-        kiosztotta.
-
-        Animációval íratjuk ki a győztes fél nevét és ha az egér bal gombjával nyomunk egyet a képernyőre automatikusan
-        visszadob a játék menü képernyőjére.
-
-    </p>
-
-    <h2><a name="614"></a>6.1.4 Megjelenési Állapot/ Végtermék</h2>
+    <h2><a name="61"></a>6.1. Megjelenési Állapot/ Végtermék</h2>
     <p class="h1">
         A felhasználó be tud jelentkezni a játékba és saját profilt tud létrehozni ahol tapasztalati pontot kap a
         lejátszott mérkőzésekért ezenkívül érvényesülne a szezon rendszer és lehet már paklikat is vásárolni.
@@ -505,6 +372,24 @@
 
         Animációval íratjuk ki a győztes fél nevét és ha az egér bal gombjával nyomunk egyet a képernyőre automatikusan
         visszadob a játék főmenü képernyőjére.
+
+        <br><br>
+
+        <strong>Gazdasági Megoldások:</strong>
+        <br><br>
+        A játék gazdasági modelljét 2 tudjuk választani a felhasználók igényeihez igazítva.
+        <br><br>
+        <strong>1, Pakli Vásárlás</strong>
+        <br><br>
+        Ha egy játékos egyszerűen csak bővíteni szeretné a kártya gyűjteményét az megteheti pakli vásárlással, egy pakli
+        5 véletlenszerű lapot fog tartalmazni.
+        <br><br>
+        <strong>2, Szezon Bérlet</strong><br><br>
+        Azok a játékosok akik jobban elkötelezettek azoknak lehetőség van a játékbeli szezononként előfizetést
+        vásárolni, ilyenkor exkluzív ajándékokat kaphatnak a játékkal töltött idő függvényében. Ezt úgy oldanánk meg,
+        hogy szintenként nyílna meg számukra egy jutalom egészen a 100. szintig.
+        <br><br>
+
 
     </p>
 
