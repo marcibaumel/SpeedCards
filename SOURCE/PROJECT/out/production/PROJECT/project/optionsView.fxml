@@ -22,6 +22,11 @@
                         <Font size="26.0" />
                     </font>
                 </Label>
+            <ChoiceBox id="cbResolution" fx:id="cbResolution" layoutX="171.0" layoutY="128.0" prefHeight="31.0" prefWidth="244.0" />
+            <Label layoutX="34.0" layoutY="114.0" prefHeight="60.0" prefWidth="118.0" text="Resolution">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
             </children>
         </Pane>
     </children>

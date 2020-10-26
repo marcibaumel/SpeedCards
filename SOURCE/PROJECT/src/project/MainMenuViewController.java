@@ -35,7 +35,7 @@ public class MainMenuViewController implements Initializable {
     @FXML
     private void testButton(ActionEvent event){
         System.out.println("logButton");
-        //mediaPlayer.play();
+        //MediaPlayer.play();
 
     }
 
