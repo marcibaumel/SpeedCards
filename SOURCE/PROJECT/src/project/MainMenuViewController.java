@@ -1,4 +1,5 @@
 package project;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,10 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,6 +23,8 @@ public class MainMenuViewController implements Initializable {
     */
 
 
+    @FXML
+    private Button exitButton;
 
     @FXML
     private Button playButton;
@@ -36,19 +36,29 @@ public class MainMenuViewController implements Initializable {
     private void testButton(ActionEvent event){
         System.out.println("logButton");
         //MediaPlayer.play();
+    }
 
+
+    /*
+    *Ha a felhasználó rányom a exitButton-ra bezárodik a program
+    *
+    */
+
+    @FXML
+    private void exitButtonEvent(ActionEvent event){
+        ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
     }
 
     @FXML
     public void optionsButton(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("optionsView.fxml"));
+            
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Views/optionsView.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
 
-            //main.stg.close();
         } catch(Exception e) {
             e.printStackTrace();
         }

@@ -10,13 +10,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("mainMenuView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Views/mainMenuView.fxml"));
         primaryStage.setTitle("SpeedCards");
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root, 720, 480));
         primaryStage.show();
 
     }
+
 
 
     public static void main(String[] args) {

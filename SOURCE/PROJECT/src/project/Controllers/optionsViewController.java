@@ -1,4 +1,4 @@
-package project;
+package project.Controllers;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
@@ -25,13 +25,23 @@ public class optionsViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        cbResolution.setValue("1280x720");
         cbResolution.setItems(FXCollections.observableArrayList(
                 "1280x720", "1920x1080 ")
         );
+        //cbResolution.setValue("1280x720");
+        cbResolution.setValue(resolutionSetting(cbResolution));
 
+    }
 
+    public Object resolutionSetting(ChoiceBox cb){
+
+        Object to= cb.getSelectionModel().getSelectedItem();
+
+        String value = (String) cb.getValue();
+        System.out.println(value);
+
+        System.out.println(to);
+        return to;
 
     }
 }
