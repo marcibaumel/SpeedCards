@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.MainMenuViewController">
+<AnchorPane id="mainMenuAnchor" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.MainMenuViewController">
    <children>
       <Pane id="menuPane" fx:id="menuPane" prefHeight="480.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,7 +21,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button id="playButton" fx:id="playButton" mnemonicParsing="false" onAction="#testButton" prefHeight="112.0" prefWidth="272.0" text="Play">
+                  <Button id="playButton" fx:id="playButton" mnemonicParsing="false" onAction="#playButton" prefHeight="112.0" prefWidth="272.0" text="Play">
                      <font>
                         <Font size="39.0" />
                      </font>
@@ -31,7 +31,7 @@
                         <Font size="39.0" />
                      </font>
                   </Button>
-                  <Button id="exitButton" mnemonicParsing="false" onAction="#exitButtonEvent" cancelButton="true" prefHeight="112.0" prefWidth="272.0" text="Exit" GridPane.rowIndex="2">
+                  <Button id="exitButton" cancelButton="true" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="112.0" prefWidth="272.0" text="Exit" GridPane.rowIndex="2">
                      <font>
                         <Font size="39.0" />
                      </font>

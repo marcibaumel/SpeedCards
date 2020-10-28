@@ -1,5 +1,6 @@
 package project;
 
+import com.sun.media.jfxmediaimpl.platform.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +24,8 @@ public class MainMenuViewController implements Initializable {
     MediaPlayer mediaPlayer=new MediaPlayer(me);
     */
 
+    @FXML
+    private AnchorPane mainMenuAnchor;
 
     @FXML
     private Button exitButton;
@@ -39,6 +43,7 @@ public class MainMenuViewController implements Initializable {
     }
 
 
+
     /*
     *Ha a felhasználó rányom a exitButton-ra bezárodik a program
     *
@@ -52,12 +57,31 @@ public class MainMenuViewController implements Initializable {
     @FXML
     public void optionsButton(ActionEvent event) {
         try {
-            
+            //Stage stage = javafx.stage.Window.getWindows();
+
+            //stage.close();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Views/optionsView.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
+
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void playButton(ActionEvent event) {
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Views/playGroundView.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+
 
         } catch(Exception e) {
             e.printStackTrace();

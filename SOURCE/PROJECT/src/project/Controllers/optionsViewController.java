@@ -20,16 +20,24 @@ import java.util.ResourceBundle;
 
 public class optionsViewController implements Initializable {
 
+    String test;
     @FXML
     private ChoiceBox cbResolution;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
         cbResolution.setItems(FXCollections.observableArrayList(
-                "1280x720", "1920x1080 ")
+                "1280x720", new Separator(), "1920x1080 ")
         );
         //cbResolution.setValue("1280x720");
-        cbResolution.setValue(resolutionSetting(cbResolution));
+        //cbResolution.setValue(resolutionSetting(cbResolution));
+        test = (String) cbResolution.getSelectionModel().getSelectedItem();
+        if(test==null) {
+            cbResolution.setValue("1280x720");
+            System.out.println(test);
+        }
 
     }
 
