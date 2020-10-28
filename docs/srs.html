@@ -195,7 +195,95 @@
 
     <h1><a name="2"></a>2. Áttekintés</h1>
     <p class="h1">
-
+        <strong>A termék környezete és elhelyezkedése</strong>
+        <br><br>
+        A termék alapötlete egy játék, ezért a már kész szoftvert a játékiparban tervezzük elhelyezni. Itt több
+        játékplatfom is létezik ahol össze vannak gyűjtve minden kategóriából a játékok, ezek közül mi elsősorban a
+        jelenleg leghíresebb platformot válaszottuk a Steamet, de a jövőben, ha a termék terjeszkedni fog más eszközökre
+        is akkor telefonon a Play Strora-ban és az Apple Store-ban is meg lehet lesz találni.
+        <br><br>
+        <strong> Legfontosabb funkciók:</strong>
+        <br><br>
+        Az alkalmazás megnyitásakor rögtön találkozunk két fontos funkcióval, a Regisztrációs és a Bejelentkezési
+        menüvel, ahol a felhasználó tud regisztrálni egy új fiókot, vagy már belépni egy meglévő fiókkal.
+        Regisztrációkor be kell írnia a kért adatokat, és el kell fogadnia a felhasználói feltételeket, amint ezeket
+        megtette és rákattintott a regisztráció gombra a rendszer elküldi az adatokat az adatbázisnak ami ellenőrzi,
+        azoknak a helyességét és azt, hogy nem-e szerepel már egy felhasználó ilyen adatokkal az adatbázisban. Helyes
+        adatok megadásakor továbbengedi a menübe, viszont ha valamilyen adatot helytelenül adott meg vagy már szerepel
+        ilyen akkor visszadobja egy a regisztrációs ablakhoz a felhasználót.
+        <br>
+        Bejelentkezésnél is hasonló a helyzet, a felhasználónak meg kell adnia a nevet és a jelszót amivel beregisztrált
+        a rendszerbe, az adatbázis itt is ellenőrzi az adatok helyességét és azt, hogy szerepel-e ilyen név ilyen
+        jelszóval társítva az adatbázisban. Sikeres bejelentkezésnél a képernyőn megjelenik egy üzenet, "Sikeres
+        bejelentkezés", sikertelen bejelentkezésnél pedig "Sikertelen bejelentkezés helytelen felhasználónév vagy
+        jelszó".
+        Egy szintén hasznos funkció a bejelentkezésnél ,hogy ha egyszerre annyi felhasználó jelentkezik be, amennyit az
+        adatbázis nem bír kis idő alatt leellenőrizni akkor egy, úgymond bejelentkezési sor jön létre, ahol a már
+        bejelentkezett viszont még nem ellenőrzött felhasználók várakoznak az ellenőrzésre.
+        <br>
+        A felhasználónak bejelentkezéskor lehetősége van új jelszót kérni, hogyha véletlenül elfelejtette volna, A
+        "Jelszó emlékeztető" gombbal, itt a felhasználónévhez megadott e-mail címre fog érkezni egy link amin keresztül
+        lehetősége lesz megváltoztatni a jelszavát.
+        <br>
+        Regisztráció és bejelentkezés után a játékosok teljes hozzáférést kapnak az alkalmazás nyújtotta
+        szolgáltatásokhoz. Ilyen például a játék egy szintén nagyon fontos funkciója, maga a játszás, ahol a felhasználó
+        kiválaszthatja, hogy milyen játékmódot szeretne játszani. A Játék elején csak Single Player játékmód lesz
+        elérhető, ahol egy gép ellen tudunk majd játszani, viszont későbbi frissítések során elérhető lesz majd a Multi
+        Player játékmód is, ahol meccskeresés által meg tudunk mérkőzni majd más játékosokkal.
+        <br>
+        Egy főbb funkció még a játékban a Bolt, ahol a játékosoknak lehetőségük lesz rendes pénzért vásárolni a
+        játékban. A Boltban megtalálhatóak lesznek a Kártyahátlapok és a Kártyapaklik, amik 5 db véletlenszerű kártyák
+        fognak tartalmazni, viszont ezek nem lesznek olyanok amiket amúgy a játékban nem lehetne megszerezni idővel.
+        Létezni fog a szezon rendszer is ahol majd küldetéseket teljesítve különféle jutalmakhoz juthatnak hozzá a
+        játékosok, ebből lesz egy ingyenes és egy prémium verzió is. Az ingyenes verzió alapból elérhető minden
+        felhasználónak, viszont a prémium verzióhoz a belépőt majd a boltban lehet lesz majd megvásárolni.
+        <br><br>
+        <strong> Főbb funkciók még:</strong>
+        <br><br>
+        Profil / Profilkép személyre szabhatósága
+        <br>
+        Jelszó / játékbeli név megváltoztatása
+        <br>
+        Egyéni kártyapaklik összeállítása a már megszerzett kártyákból / kártyahátlap kinézetek kiválasztása.
+        <br>
+        Audio, Display és Grafika beállítások
+        <br>
+        Feliratkozás e-mail értesítőkre a játékban történő frissítésekkel és Eventekkel kapcsolatban.
+        <br><br>
+        <strong>Felhasználók:</strong>
+        <br><br>
+        A felhasználókat két csoportra osztatjuk, a már regisztrált felhasználók és a még nem regisztrált felhasználók.
+        <br>
+        A már regisztrált felhasználó teljes jogú hozzáférést kap az alkalmazás által nyújtott összes funkcióhoz és
+        szolgáltatáshoz. A még nem regisztrált felhasználók nem férnek hozzá a játék által nyújtott szolgáltatásokhoz,
+        viszont a játék megnyitásakor lehetőségük van egy rövid sablon próbameccset játszani.
+        <br>
+        Feltételezések, függőségek és korlátozások:
+        <br><br>
+        Mivel az alkalmazás elsősorban a Steam játékplatformon lesz elérhető, így szükség van egy aktív Steam fiókra,
+        viszont a játéknak egy saját bejelentkezési felülete is lesz szóval egy SpeedCars-os fiókra is szükség lesz.
+        <br>
+        Az alkalmazás Java nyelven íródik ezért szükség lesz egy futtató környezetre, ilyen például a Java JRE vagy Java
+        JDK, enélkül a játék nem fog futni. Letöltésnél a telepítő figyelmezteti a felhasználót, ha nincs Java az
+        eszközön és felajánlja a letöltését a Java hivatalos oldaláról.
+        <br>
+        Szükséges a stabil internetkapcsolat, közepes sávszélességgel, a regisztrációhoz és a bejelentkezéshez, később
+        pedig a Multi Player játékmódhoz is.
+        <br>
+        Egy eszköz is szükséges lesz a játékhoz, elsősorban számítógépre fog kerülni az alkalmazás majd később telefonon
+        is elérhető lesz. A játéknak nem lesz nagy a hardverigénye, mivel nem kell nagyobb modelleket és objektumokat
+        betöltenie, viszont ez az igény a későbbi frissítések során valamennyire növekedhet, a frissítés tartalmától
+        függően.
+        <br>
+        <strong>Minimális rendszerkövetelmény:</strong>
+    <ul>
+        <li> CPU: AMD FX-6300 Hexa-core 3.5GHz.</li>
+        <li>Memória: 1 GB 1333MHz Ram.</li>
+        <li> Videókártya: Integrated: Intel HD Graphics 4000 (Ivy Bridge) vagy AMD Radeon R5 széria (Kaveri line) OpenGL
+            4.41-vel</li>
+        <li> Merevlemez: Legalább 4 GB szabad hellyel rendelkező.</li>
+        <li> Operációs rendszer: Windows 7 vagy újabb, később linux.</li>
+    </ul>
     </p>
     <p><br></p>
 
@@ -876,19 +964,85 @@
 
     <h1><a name="8"></a>8. Tervezési Korlátozások</h1>
     <p class="h1">
-
+        <strong>8. Tervezési korlátozások</strong>
+        <br><br>
+        Programozási nyelvek és fejlesztőeszközök:
+        <br><br>
+        Az alkalmazást elsősorban Java nyelven fejlesztjük, ennek megírásához az Eclipse IDE fejlesztői környezetet
+        fogjuk használni. A Sorftware-ben használt animációk és grafikus elemek megjelenítéséért a Java nyelv egyik
+        könyvtára a JavaFX könyvtár fog felelni.
+        <br>
+        Az alkalmazás kódjára Objektum Oriántált Programozást(OOP) fogunk használni, erre több indokból is szükségünk
+        van. Elsősorban azért fogunk OOP-t használni, mivel a program több funkciót fog ellátni és átláthatatlanná válna
+        a kódunk, ha megpróbálnánk egy fájlba megírni az egészet, így az OOP-vel több osztályra, azaz több fájlra
+        bontjuk a kódot, ami a későbbi fejlesztések során elősegíti az átláthatóságot.
+        <br>
+        A szoftverhez használt adatbázist rendszert a MySQL rendszerben fogjuk kivitelezni, ennek eléréséhez pedig a PHP
+        MyAdmin felületet fogjuk használni, ezt azért választottuk mivel többfelhasználós és több-szálon futó adatbázis
+        kezelő rendszer és legfőképpen platformfüggetlen, így minden platformon el tudja majd érni az alkalmazás az
+        adatokat.
+        Java nyelvből kezelhető a JDBC (Java DataBase COnnectivity) segítségével, ez egy API amely definiálja az
+        adatbázisok lekérdezéséhez és módosításához szükséges osztályokat és metódusokat.
+        <br>
+        A csapatmunka,párhuzamosítás és kódhozzáférés elősegítése érdekében a GitHub használata mellett döntöttünk, mert
+        egyszerű és átlátható a használata.
+        <br><br>
+        Újrafelhasználható elemek az alkalmazásban:
+        <br><br>
+        Ahogy a fent is leírtakban már szerepel az animációkért és a grafikus elemek megjelenítéséért a JavaFX
+        könyvtárat használjuk, ami a Java-nak már egy létező könyvtára, ami az interneten bárki számára elérhető és
+        letölthető a hivatalos OpenJFx oldalon. A JavaFX szabad felhasználású, így ennek alapjára dolgozunk.
+        <br>
+        Több már más játékokban is ismert szabad felhasználású funkciókat is beleépítünk a játékba, ilyen például a
+        Tutorial funkció, amely szinte minden játékban alap funkcióként megtalálható, hogy segítse a felhasználókat
+        alapszinten megérteni a játékot.
+        <br><br>
+        Fejlesztési módszertan:
+        <br><br>
+        Az alkalmazás fejlesztése során igyekszünk az ismertebb modellek segítségével dolgozni. Tehát fejlesztési
+        módszertanként Scrum módszertant tervezzük használni, ez egy agilis szoftverfejlesztési módszertan, amely a
+        csoporton belüli összetartásra összpontosít. Mivel a scrum a folyamatos szóbeli kommunikációk szervezésénél
+        hatékony módszert alkot a fejlesztési területen, így ezt mi teljesen ki tudjuk használni a beszervezett
+        meetingek által. A módszertan meghatározott szerepeket és tevékenységeket állít fel, amellyel le lehet fedni az
+        összes munkafolyamatot, mi ezt is tudtuk integrálni a fejlesztésben, mivel a csapatban minden szerep ki van
+        osztva, és mindenki a saját feladatán dolgozik.
+        <br><br>
     </p>
     <p><br></p>
 
     <h1><a name="9"></a>9. On-line dokumentáció és Help rendszer</h1>
     <p class="h1">
 
+
     </p>
     <p><br></p>
 
     <h1><a name="10"></a>10. Felhasznált kész komponensek</h1>
     <p class="h1">
-
+        <strong>10.1 Tutorial funkció</strong>
+        <br><br>
+        Ezt a funkciót, a más játékokban is gyakran használt megoldást mi is beleépítjük a játékunkba. Ez egy szabad
+        felhasználású elem, aminek megvalósítási sorrendjei és megadott algoritmusai találhatók meg az interneten,
+        programozó tudástár weblapokon (pl.: StackOverFlow, GitHub). Ennek felhasználásának nincs semmilyen
+        követelménye, kötelezettség, szabadon átírható az alapja.
+        <br><br>
+        <strong>10.2 Grafika</strong>
+        <br><br>
+        A játék grafikus megvalósításához egy már létező, erre kialakított programnyelvet használunk, a Java FX-et. Ez
+        az internetet bárki számára elérhető és letölthető a hivatalos OpenJFx oldalon, tehát ez a nyelvi, mint
+        komponens is szabad felhasználású, lehet ennek az alapjára bármilyen programot írni, viszont az alapját átírni
+        továbbra is TILOS.
+        <br><br>
+        <strong>10.3 Dizájn</strong>
+        <br><br>
+        Mivel lesz egy fő stílusirány, ezért ahhoz az irányhoz kötődő dizájn elemeket akarunk a játékhoz hozzárendelni.
+        Meglehet, hogy betudunk néhány elemet szerezni az internetről, mint szabad felhasználású elem, viszont nagy
+        részét nekünk kell elkészíteni, elkészíttetni, ezek vásárolt elemek, amiknek az ára a grafikussal való
+        megegyezés alapján lesz megadva.
+        <br><br>
+        A software megvalósításához igyekszünk minél több komponenst/elemet mi megcsinálni, így a fent említetteken
+        kívül nem szeretnénk továbbit más forrásból beszerezni. Viszont a sikeres fejlesztés miatt a lista bővítésének
+        lehetőségét nem zárjuk ki.
     </p>
     <p><br></p>
 
