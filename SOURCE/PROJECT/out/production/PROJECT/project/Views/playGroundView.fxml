@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controllers.playGroundViewController">
@@ -15,6 +17,13 @@
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="104.0" prefWidth="161.0" text="Button" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="109.0" prefWidth="181.0" text="Button" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" prefHeight="118.0" prefWidth="207.0" text="Button" GridPane.columnIndex="3" />
+            <Button mnemonicParsing="false" prefHeight="148.0" prefWidth="196.0" text="Button" GridPane.columnIndex="4" />
+            <Button id="card1_1Button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#testButton" prefHeight="89.0" prefWidth="166.0" text="Button" textAlignment="CENTER" />
+         </children>
       </GridPane>
        <GridPane gridLinesVisible="true" layoutX="179.0" layoutY="14.0" prefHeight="76.0" prefWidth="707.0">
            <columnConstraints>
@@ -27,6 +36,16 @@
            <rowConstraints>
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
            </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="151.0" prefWidth="265.0" text="Button" />
+            <Button mnemonicParsing="false" prefHeight="128.0" prefWidth="211.0" text="Button" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="131.0" prefWidth="190.0" text="Button" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" prefHeight="117.0" prefWidth="215.0" text="Button" GridPane.columnIndex="3" />
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="225.0" text="Button" GridPane.columnIndex="4" />
+         </children>
        </GridPane>
    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
 </AnchorPane>
