@@ -1,5 +1,6 @@
 package project.Controllers;
 
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +17,6 @@ import javafx.scene.control.Separator;
 import javafx.scene.control.Slider;
 
 import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,19 +27,33 @@ public class optionsViewController implements Initializable {
 
     String test;
 
+
     @FXML
     private ChoiceBox cbResolution;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
-        String resolution[] = { "1280x720","1920x1080" };
-
-        ChoiceBox cbResolution (FXCollections.observableArrayList(resolution));
+        //String resolution[] = { "1280x720","1920x1080" };
 
 
+        cbResolution.setItems(FXCollections.observableArrayList(
+                "1280x720","1920x1080"
+                ));
 
+        System.out.println(cbResolution.getItems());
+
+        cbResolution.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+
+            @Override
+
+            public void changed(ObservableValue ov, Number value, Number new_value) {
+                cbResolution.setValue(new_value);
+                System.out.println(new_value);
+            }
+        });
 
 
 
@@ -61,7 +75,7 @@ public class optionsViewController implements Initializable {
         }
         System.out.println(value);
         cb.setValue(value);
-      
+
     }
 
  */
