@@ -15,6 +15,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -32,25 +33,38 @@ public class playGroundViewController extends Application implements Initializab
     }
 
     @FXML
-    private void imgLoad(){
-        String path="Views/testpic.jpg";
-        Image img = new Image(path);
+    private void imgLoad(Button button){
+        //String path="/Views/testpic.jpg";
+        /*
+        Image img = new Image("Views/testpic.jpg");
         ImageView view = new ImageView(img);
-        card1_1Button.setGraphic(view);
+        view.setFitHeight(5);
+        view.setPreserveRatio(true);
+        */
+
+        button.setTranslateX(200);
+        button.setTranslateY(25);
+        //Setting the size of the button
+        button.setPrefSize(80, 80);
+        //Setting a graphic to the button
+        //button.setGraphic(view);
     }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-    //imgLoad();
+     //imgLoad(card1_1Button);
 
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        String path="Views/testpic.jpg";
+        /*
+        String path="/Views/testpic.jpg";
         Image img = new Image(path);
         ImageView view = new ImageView(img);
         card1_1Button.setGraphic(view);
+    */
     }
+
 }

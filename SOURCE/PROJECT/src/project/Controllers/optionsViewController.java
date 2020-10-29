@@ -1,5 +1,6 @@
 package project.Controllers;
 
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,6 +14,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Separator;
 import javafx.scene.control.Slider;
+
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.net.URL;
@@ -21,6 +26,7 @@ import java.util.ResourceBundle;
 public class optionsViewController implements Initializable {
 
     String test;
+
     @FXML
     private ChoiceBox cbResolution;
 
@@ -28,28 +34,35 @@ public class optionsViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
-        cbResolution.setItems(FXCollections.observableArrayList(
-                "1280x720", new Separator(), "1920x1080 ")
-        );
-        //cbResolution.setValue("1280x720");
-        //cbResolution.setValue(resolutionSetting(cbResolution));
-        test = (String) cbResolution.getSelectionModel().getSelectedItem();
-        if(test==null) {
-            cbResolution.setValue("1280x720");
-            System.out.println(test);
+        String resolution[] = { "1280x720","1920x1080" };
+
+        ChoiceBox cbResolution (FXCollections.observableArrayList(resolution));
+
+
+
+
+
+
+    }
+
+
+/*
+    public void setElem(ChoiceBox cb)
+    {
+        String value;
+        //System.out.println(cb.getItems());
+
+        if(cb.getValue()!="1280x720"){
+            value = (String) cb.getValue();
         }
-
-    }
-
-    public Object resolutionSetting(ChoiceBox cb){
-
-        Object to= cb.getSelectionModel().getSelectedItem();
-
-        String value = (String) cb.getValue();
+        else
+        {
+            value= "1280x720";
+        }
         System.out.println(value);
-
-        System.out.println(to);
-        return to;
-
+        cb.setValue(value);
+      
     }
+
+ */
 }
