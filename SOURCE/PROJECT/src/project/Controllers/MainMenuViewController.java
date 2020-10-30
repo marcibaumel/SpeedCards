@@ -1,4 +1,4 @@
-package project;
+package project.Controllers;
 
 import com.sun.media.jfxmediaimpl.platform.Platform;
 import javafx.event.ActionEvent;
@@ -60,7 +60,7 @@ public class MainMenuViewController implements Initializable {
             //Stage stage = javafx.stage.Window.getWindows();
 
             //stage.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Views/optionsView.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/optionsView.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
@@ -76,7 +76,7 @@ public class MainMenuViewController implements Initializable {
     public void playButton(ActionEvent event) {
         try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Views/playGroundView.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/playGroundView.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

@@ -35,36 +35,35 @@ public class playGroundViewController extends Application implements Initializab
     @FXML
     private void imgLoad(Button button){
         //String path="/Views/testpic.jpg";
-        /*
-        Image img = new Image("Views/testpic.jpg");
+
+        Image img = new Image("/Views/testpic.jpg");
         ImageView view = new ImageView(img);
         view.setFitHeight(5);
         view.setPreserveRatio(true);
-        */
-
+        //Teszt Miatt
         button.setTranslateX(200);
         button.setTranslateY(25);
         //Setting the size of the button
         button.setPrefSize(80, 80);
         //Setting a graphic to the button
-        //button.setGraphic(view);
+        button.setGraphic(view);
     }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-     //imgLoad(card1_1Button);
+        imgLoad(card1_1Button);
 
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        /*
-        String path="/Views/testpic.jpg";
+/*
+        String path="testpic.jpg";
         Image img = new Image(path);
         ImageView view = new ImageView(img);
         card1_1Button.setGraphic(view);
-    */
+*/
     }
 
 }
