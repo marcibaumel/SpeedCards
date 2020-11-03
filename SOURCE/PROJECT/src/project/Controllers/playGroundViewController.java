@@ -52,7 +52,7 @@ public class playGroundViewController extends Application implements Initializab
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        imgLoad(card1_1Button);
+        //imgLoad(card1_1Button);
 
     }
 
