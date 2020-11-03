@@ -45,6 +45,9 @@
         .h5 {
             margin-left: 3cm;
         }
+		.h6 {
+            margin-left: 3.5cm;
+        }
     </style>
 </head>
 
@@ -101,11 +104,7 @@
         </tbody>
     </table>
     <p><br></p>
-    <!--
-    <p align="right">
-		<font size="4">2020.10.05</font>
-    </p>
-    -->
+
     <p><br></p>
     <p> <br></p>
     <p align="center"><b>Történet</b></p>
@@ -133,45 +132,48 @@
                 <td width="160">Baumel Márton</td>
             </tr>
             <tr valign="top">
-                <td width="90">&nbsp;</td>
-                <td width="60">&nbsp;</td>
-                <td width="300">&nbsp;</td>
-                <td width="160">&nbsp;</td>
+                <td width="90">2020.11.03</td>
+                <td width="60">1.2</td>
+                <td width="300">Javítások, formázás</td>
+                <td width="160">Korita Zsófia</td>
             </tr>
         </tbody>
     </table>
 
     <p><br></p>
-    <p><br></p>
+	<p><b><h1>Tartalomjegyzék</h1></b></p>
     <div id="Tartalomjegyzek" dir="ltr">
 
         <p class="h1"><a href="#1">1. Bevezetés</a></p>
-
         <p class="h1"><a href="#2">2. Áttekintés</a></p>
-
+			<p class="h2"><a href="#2.1">2.1 A termék környezete és elhelyezkedése</a></p>
+			<p class="h2"><a href="#2.2">2.2 Legfontosabb funkciók</a></p>
+			<p class="h2"><a href="#2.3">2.3 Felhasználók</a></p>
+			<p class="h2"><a href="#2.4">2.4 Feltételezések, függőségek és korlátozások</a></p>
         <p class="h1"><a href="#3">3. Rendszer funkciói</a></p>
-
+			<p class="h2"><a href="#3.1">3.1 Nem regisztrált felhasználók</a></p>
+			<p class="h2"><a href="#3.2">3.2 Regisztrált felhasználók</a></p>
+				<p class="h4"><a href="#3.2.1">3.2.1 Kiskorú felhasználó</a></p>
+				<p class="h4"><a href="#3.2.2">3.2.2 Nagykorú felhasználó</a></p>
+				<p class="h4"><a href="#3.2.3">3.2.3 Admin</a></p>
         <p class="h1"><a href="#4">4. Használhatóság</a></p>
-
+			<p class="h2"><a href="#4.1">4.1. Betanulási idő különböző tapasztaltságú felhasználóknak</a></p>
+				<p class="h4"><a href="#4.1.1">4.1.1. Kezdő felhasználó</a></p>
+				<p class="h4"><a href="#4.1.2">4.1.2. Tapasztalt felhasználó
+			<p class="h2"><a href="#4.2">4.2 Tevékenység végrehajtás</a></p>
+			<p class="h2"><a href="#4.3">4.3. Kezdő felhasználó betanulása</a></p>
+			<p class="h2"><a href="#4.4">4.4. Egyéb betanulási lehetőségek</a></p>
+			<p class="h2"><a href="#4.5">4.5 Felhasználói felület</a></p>
+			<p class="h2"><a href="#4.6">4.6 Párhuzamos alkalmazás használat</a></p>
         <p class="h1"><a href="#5">5. Megbízhatóság</a></p>
-
         <p class="h1"><a href="#6">6. Teljesítmény </a></p>
-
-
         <p class="h1"><a href="#7">7. Támogatottság</a></p>
-
         <p class="h1"><a href="#8">8. Tervezési Korlátozások</a></p>
-
         <p class="h1"><a href="#9">9. On-line dokumentáció és Help rendszer</a></p>
-
         <p class="h1"><a href="#10">10. Felhasznált kész komponensek </a></p>
-
         <p class="h1"><a href="#11">11. Interfészek</a></p>
-
         <p class="h1"><a href="#12">12. Alkalmazott szabványok</a></p>
-
         <p class="h1"><a href="#13">13. Mellékletek</a></p>
-
     </div>
     <p><br></p>
     <p><br></p>
@@ -179,706 +181,594 @@
 
     <h1><a name="1"></a>1. Bevezetés</h1>
     <p class="h1">
-        <br><br>
-        A mi szoftverünk egy kártyajáték amely a Hearthstone, Yu-Gi-Oh! és a Gwent című játékok játékmechanikáit az RTS
-        alapjaira helyezve teremt egy új játékot. Ez a játék témáját tekintve SCI-FI témájú játék sok érdekes pályával,
-        ami eleinte az űrben fog játszódni, de a további kiegészítőkben újabb pályákkal, témákkal és korokkal
-        ismerkedhet meg a játékos.
-        <br><br>
+        A mi szoftverünk egy kártyajáték amely a Hearthstone, Yu-Gi-Oh! és a Gwent című játékok játékmechanikáit az RTS alapjaira helyezve teremt egy új játékot. Ez a játék témáját tekintve SCI-FI témájú játék sok érdekes pályával, ami eleinte az űrben fog játszódni, de a további kiegészítőkben újabb pályákkal, témákkal és korokkal ismerkedhet meg a játékos.<br><br>
         Ezeket a pályákat színesítik tovább a változatos játékmechanikák.
-        A játék elsajátításához a játékosnak játék közben stratégikusan kell gondolkodnia hogyha megszeretné nyerni a
-        mérkőzést, mivel a játékban sok lap és változatos képességek is jelen vannak. A játékmenet közbeni
-        döntéssorozattal pedig a játékosok döntéshozatali és stratégiai képességét tennénk próbára.
+        A játék elsajátításához a játékosnak játék közben stratégikusan kell gondolkodnia hogyha megszeretné nyerni a mérkőzést, mivel a játékban sok lap és változatos képességek is jelen vannak. A játékmenet közbeni döntéssorozattal pedig a játékosok döntéshozatali és stratégiai képességét tennénk próbára.
         <br><br>
     </p>
     <p><br></p>
 
     <h1><a name="2"></a>2. Áttekintés</h1>
-    <p class="h1">
-        <strong>A termék környezete és elhelyezkedése</strong>
-        <br><br>
-        A termék alapötlete egy játék, ezért a már kész szoftvert a játékiparban tervezzük elhelyezni. Itt több
-        játékplatfom is létezik ahol össze vannak gyűjtve minden kategóriából a játékok, ezek közül mi elsősorban a
-        jelenleg leghíresebb platformot válaszottuk a Steamet, de a jövőben, ha a termék terjeszkedni fog más eszközökre
-        is akkor telefonon a Play Strora-ban és az Apple Store-ban is meg lehet lesz találni.
-        <br><br>
-        <strong> Legfontosabb funkciók:</strong>
-        <br><br>
-        Az alkalmazás megnyitásakor rögtön találkozunk két fontos funkcióval, a Regisztrációs és a Bejelentkezési
-        menüvel, ahol a felhasználó tud regisztrálni egy új fiókot, vagy már belépni egy meglévő fiókkal.
-        Regisztrációkor be kell írnia a kért adatokat, és el kell fogadnia a felhasználói feltételeket, amint ezeket
-        megtette és rákattintott a regisztráció gombra a rendszer elküldi az adatokat az adatbázisnak ami ellenőrzi,
-        azoknak a helyességét és azt, hogy nem-e szerepel már egy felhasználó ilyen adatokkal az adatbázisban. Helyes
-        adatok megadásakor továbbengedi a menübe, viszont ha valamilyen adatot helytelenül adott meg vagy már szerepel
-        ilyen akkor visszadobja egy a regisztrációs ablakhoz a felhasználót.
-        <br>
-        Bejelentkezésnél is hasonló a helyzet, a felhasználónak meg kell adnia a nevet és a jelszót amivel beregisztrált
-        a rendszerbe, az adatbázis itt is ellenőrzi az adatok helyességét és azt, hogy szerepel-e ilyen név ilyen
-        jelszóval társítva az adatbázisban. Sikeres bejelentkezésnél a képernyőn megjelenik egy üzenet, "Sikeres
-        bejelentkezés", sikertelen bejelentkezésnél pedig "Sikertelen bejelentkezés helytelen felhasználónév vagy
-        jelszó".
-        Egy szintén hasznos funkció a bejelentkezésnél ,hogy ha egyszerre annyi felhasználó jelentkezik be, amennyit az
-        adatbázis nem bír kis idő alatt leellenőrizni akkor egy, úgymond bejelentkezési sor jön létre, ahol a már
-        bejelentkezett viszont még nem ellenőrzött felhasználók várakoznak az ellenőrzésre.
-        <br>
-        A felhasználónak bejelentkezéskor lehetősége van új jelszót kérni, hogyha véletlenül elfelejtette volna, A
-        "Jelszó emlékeztető" gombbal, itt a felhasználónévhez megadott e-mail címre fog érkezni egy link amin keresztül
-        lehetősége lesz megváltoztatni a jelszavát.
-        <br>
-        Regisztráció és bejelentkezés után a játékosok teljes hozzáférést kapnak az alkalmazás nyújtotta
-        szolgáltatásokhoz. Ilyen például a játék egy szintén nagyon fontos funkciója, maga a játszás, ahol a felhasználó
-        kiválaszthatja, hogy milyen játékmódot szeretne játszani. A Játék elején csak Single Player játékmód lesz
-        elérhető, ahol egy gép ellen tudunk majd játszani, viszont későbbi frissítések során elérhető lesz majd a Multi
-        Player játékmód is, ahol meccskeresés által meg tudunk mérkőzni majd más játékosokkal.
-        <br>
-        Egy főbb funkció még a játékban a Bolt, ahol a játékosoknak lehetőségük lesz rendes pénzért vásárolni a
-        játékban. A Boltban megtalálhatóak lesznek a Kártyahátlapok és a Kártyapaklik, amik 5 db véletlenszerű kártyák
-        fognak tartalmazni, viszont ezek nem lesznek olyanok amiket amúgy a játékban nem lehetne megszerezni idővel.
-        Létezni fog a szezon rendszer is ahol majd küldetéseket teljesítve különféle jutalmakhoz juthatnak hozzá a
-        játékosok, ebből lesz egy ingyenes és egy prémium verzió is. Az ingyenes verzió alapból elérhető minden
-        felhasználónak, viszont a prémium verzióhoz a belépőt majd a boltban lehet lesz majd megvásárolni.
-        <br><br>
-        <strong> Főbb funkciók még:</strong>
-        <br><br>
-        Profil / Profilkép személyre szabhatósága
-        <br>
-        Jelszó / játékbeli név megváltoztatása
-        <br>
-        Egyéni kártyapaklik összeállítása a már megszerzett kártyákból / kártyahátlap kinézetek kiválasztása.
-        <br>
-        Audio, Display és Grafika beállítások
-        <br>
-        Feliratkozás e-mail értesítőkre a játékban történő frissítésekkel és Eventekkel kapcsolatban.
-        <br><br>
-        <strong>Felhasználók:</strong>
-        <br><br>
-        A felhasználókat két csoportra osztatjuk, a már regisztrált felhasználók és a még nem regisztrált felhasználók.
-        <br>
-        A már regisztrált felhasználó teljes jogú hozzáférést kap az alkalmazás által nyújtott összes funkcióhoz és
-        szolgáltatáshoz. A még nem regisztrált felhasználók nem férnek hozzá a játék által nyújtott szolgáltatásokhoz,
-        viszont a játék megnyitásakor lehetőségük van egy rövid sablon próbameccset játszani.
-        <br>
-        Feltételezések, függőségek és korlátozások:
-        <br><br>
-        Mivel az alkalmazás elsősorban a Steam játékplatformon lesz elérhető, így szükség van egy aktív Steam fiókra,
-        viszont a játéknak egy saját bejelentkezési felülete is lesz szóval egy SpeedCars-os fiókra is szükség lesz.
-        <br>
-        Az alkalmazás Java nyelven íródik ezért szükség lesz egy futtató környezetre, ilyen például a Java JRE vagy Java
-        JDK, enélkül a játék nem fog futni. Letöltésnél a telepítő figyelmezteti a felhasználót, ha nincs Java az
-        eszközön és felajánlja a letöltését a Java hivatalos oldaláról.
-        <br>
-        Szükséges a stabil internetkapcsolat, közepes sávszélességgel, a regisztrációhoz és a bejelentkezéshez, később
-        pedig a Multi Player játékmódhoz is.
-        <br>
-        Egy eszköz is szükséges lesz a játékhoz, elsősorban számítógépre fog kerülni az alkalmazás majd később telefonon
-        is elérhető lesz. A játéknak nem lesz nagy a hardverigénye, mivel nem kell nagyobb modelleket és objektumokat
-        betöltenie, viszont ez az igény a későbbi frissítések során valamennyire növekedhet, a frissítés tartalmától
-        függően.
-        <br><br>
-        <strong>Minimális rendszerkövetelmény:</strong>
-    <ul>
-        <li> CPU: AMD FX-6300 Hexa-core 3.5GHz.</li>
-        <li>Memória: 1 GB 1333MHz Ram.</li>
-        <li> Videókártya: Integrated: Intel HD Graphics 4000 (Ivy Bridge) vagy AMD Radeon R5 széria (Kaveri line) OpenGL
-            4.41-vel</li>
-        <li> Merevlemez: Legalább 4 GB szabad hellyel rendelkező.</li>
-        <li> Operációs rendszer: Windows 7 vagy újabb, később linux.</li>
-    </ul>
-    </p>
+
+	<h2><a name="2.1"></a>2.1 A termék környezete és elhelyezkedése</h2>
+        <p class ="h2">
+			 A termék alapötlete egy játék, ezért a már kész szoftvert a játékiparban tervezzük elhelyezni. Itt több játékplatfom is létezik ahol össze vannak gyűjtve minden kategóriából a játékok, ezek közül mi elsősorban a jelenleg leghíresebb platformot válaszottuk a Steamet, de a jövőben, ha a termék terjeszkedni fog más eszközökre is akkor telefonon a Play Strora-ban és az Apple Store-ban is meg lehet lesz találni.
+		</p>
+	<h2><a name="2.1"></a> 2.2 Legfontosabb funkciók:</h2>
+        <p class ="h2">
+			Az alkalmazás megnyitásakor rögtön találkozunk két fontos funkcióval, a Regisztrációs és a Bejelentkezési menüvel, ahol a felhasználó tud regisztrálni egy új fiókot, vagy már belépni egy meglévő fiókkal.<br><br>
+			Regisztrációkor be kell írnia a kért adatokat, és el kell fogadnia a felhasználói feltételeket, amint ezeket megtette és rákattintott a regisztráció gombra a rendszer elküldi az adatokat az adatbázisnak ami ellenőrzi, azoknak a helyességét és azt, hogy nem-e szerepel már egy felhasználó ilyen adatokkal az adatbázisban. Helyes adatok megadásakor továbbengedi a menübe, viszont ha valamilyen adatot helytelenül adott meg vagy már szerepel ilyen akkor visszadobja egy a regisztrációs ablakhoz a felhasználót.	<br><br>
+			Bejelentkezésnél is hasonló a helyzet, a felhasználónak meg kell adnia a nevet és a jelszót amivel beregisztrált a rendszerbe, az adatbázis itt is ellenőrzi az adatok helyességét és azt, hogy szerepel-e ilyen név ilyen jelszóval társítva az adatbázisban. Sikeres bejelentkezésnél a képernyőn megjelenik egy üzenet, "Sikeres bejelentkezés", sikertelen bejelentkezésnél pedig "Sikertelen bejelentkezés helytelen felhasználónév vagy jelszó".<br><br>
+			Egy szintén hasznos funkció a bejelentkezésnél ,hogy ha egyszerre annyi felhasználó jelentkezik be, amennyit az	adatbázis nem bír kis idő alatt leellenőrizni akkor egy, úgymond bejelentkezési sor jön létre, ahol a már bejelentkezett viszont még nem ellenőrzött felhasználók várakoznak az ellenőrzésre.<br><br>
+			A felhasználónak bejelentkezéskor lehetősége van új jelszót kérni, hogyha véletlenül elfelejtette volna, A "Jelszó emlékeztető" gombbal, itt a felhasználónévhez megadott e-mail címre fog érkezni egy link amin keresztül lehetősége lesz megváltoztatni a jelszavát.<br><br>
+			Regisztráció és bejelentkezés után a játékosok teljes hozzáférést kapnak az alkalmazás nyújtotta
+			szolgáltatásokhoz. Ilyen például a játék egy szintén nagyon fontos funkciója, maga a játszás, ahol a felhasználó kiválaszthatja, hogy milyen játékmódot szeretne játszani. A Játék elején csak Single Player játékmód lesz elérhető, ahol egy gép ellen tudunk majd játszani, viszont későbbi frissítések során elérhető lesz majd a Multi Player játékmód is, ahol meccskeresés által meg tudunk mérkőzni majd más játékosokkal.<br><br>
+			Egy főbb funkció még a játékban a Bolt, ahol a játékosoknak lehetőségük lesz rendes pénzért vásárolni a	játékban. A Boltban megtalálhatóak lesznek a Kártyahátlapok és a Kártyapaklik, amik 5 db véletlenszerű kártyák fognak tartalmazni, viszont ezek nem lesznek olyanok amiket amúgy a játékban nem lehetne megszerezni idővel.<br><br>
+			Létezni fog a szezon rendszer is ahol majd küldetéseket teljesítve különféle jutalmakhoz juthatnak hozzá a játékosok, ebből lesz egy ingyenes és egy prémium verzió is. Az ingyenes verzió alapból elérhető minden felhasználónak, viszont a prémium verzióhoz a belépőt majd a boltban lehet lesz majd megvásárolni.
+		</p>
+        <h3>Főbb funkciók még:</h3>
+			<ul class="h3">
+				<li>Profil / Profilkép személyre szabhatósága</li>
+				<li>Jelszó / játékbeli név megváltoztatása</li>
+				<li>Egyéni kártyapaklik összeállítása a már megszerzett kártyákból / kártyahátlap kinézetek kiválasztása.</li>
+				<li>Audio, Display és Grafika beállítások</li>
+				<li>Feliratkozás e-mail értesítőkre a játékban történő frissítésekkel és Eventekkel kapcsolatban.</li>
+			</ul>
+	<h2><a name="2.3"></a>2.3 Felhasználók:</h2>
+        	<p class ="h2">
+				A felhasználókat két csoportra osztatjuk, a már regisztrált felhasználók és a még nem regisztrált felhasználók.
+				<br>
+				A már regisztrált felhasználó teljes jogú hozzáférést kap az alkalmazás által nyújtott összes funkcióhoz és
+				szolgáltatáshoz. A még nem regisztrált felhasználók nem férnek hozzá a játék által nyújtott szolgáltatásokhoz,
+				viszont a játék megnyitásakor lehetőségük van egy rövid sablon próbameccset játszani.
+			</p>
+	<h2><a name="2.4"></a> 2.4 Feltételezések, függőségek és korlátozások:</h2>
+        <p class ="h2">
+			Mivel az alkalmazás elsősorban a Steam játékplatformon lesz elérhető, így szükség van egy aktív Steam fiókra,
+			viszont a játéknak egy saját bejelentkezési felülete is lesz szóval egy SpeedCars-os fiókra is szükség lesz.
+			<br>
+			Az alkalmazás Java nyelven íródik ezért szükség lesz egy futtató környezetre, ilyen például a Java JRE vagy Java
+			JDK, enélkül a játék nem fog futni. Letöltésnél a telepítő figyelmezteti a felhasználót, ha nincs Java az
+			eszközön és felajánlja a letöltését a Java hivatalos oldaláról.
+			<br>
+			Szükséges a stabil internetkapcsolat, közepes sávszélességgel, a regisztrációhoz és a bejelentkezéshez, később
+			pedig a Multi Player játékmódhoz is.
+			<br>
+			Egy eszköz is szükséges lesz a játékhoz, elsősorban számítógépre fog kerülni az alkalmazás majd később telefonon
+			is elérhető lesz. A játéknak nem lesz nagy a hardverigénye, mivel nem kell nagyobb modelleket és objektumokat
+			betöltenie, viszont ez az igény a későbbi frissítések során valamennyire növekedhet, a frissítés tartalmától
+			függően.
+		</p>
+        <h3>Minimális rendszerkövetelmény:</h3>
+			<ul class="h3">
+				<li> CPU: AMD FX-6300 Hexa-core 3.5GHz.</li>
+				<li>Memória: 1 GB 1333MHz Ram.</li>
+				<li> Videókártya: Integrated: Intel HD Graphics 4000 (Ivy Bridge) vagy AMD Radeon R5 széria (Kaveri line) OpenGL
+					4.41-vel</li>
+				<li> Merevlemez: Legalább 4 GB szabad hellyel rendelkező.</li>
+				<li> Operációs rendszer: Windows 7 vagy újabb, később linux.</li>
+			</ul>
     <p><br></p>
 
     <h1><a name="3"></a>3. Rendszer funkciói</h1>
     <p class="h1">
-
-        <br><br>
         A rendszernek felhasználói oldalról és admin oldalról is több funkciója van, valamint van egy weboldali és egy
         alkalmazás oldala is.
         Kezdjük a felhasználói oldallal.
         <br><br>
         Három fajta felhasználót különböztetünk meg. Van a nagykorú, a kiskorú és a nem regisztrált felhasználó
-        <br><br>
-        Nem regisztrált felhasználó:
-        <br><br>
-        Weboldali funkciók:
-        <br><br>
-        <img src="rf1.PNG" alt="rf1" class="center" style="width:1000px;height:600px;">
-        <br><br>
-        Regisztráció:
-        <br><br>
-        Itt lehet létrehozni a felhasználói profilt.
-        <br><br>
-        Főoldal:
-        <br><br>
-        Ez jelenik meg a weboldal megnyitásakor. Itt megtekinthető néhány videó, hogyan is zajlik a játékmenet. Valamint
-        tartalmaz egy rövid leírást, hogy milyen típusú a játék.
-        Felső blokk:
-        <br><br>
-        A felső része a weboldalnak, egy menürendszer. Több különböző funkció elérhető innen.
-        Galéria blokk:
-        <br><br>
-        A játékmenet közben készült képeket lehet megnézni innen. Több mappa is található benne, amelyek különböző
-        eventek vagy versenyek alatt készültek, esetlegesen egy-egy DLC-be is betekintést is nyerhetünk vele
-        Játék története blokk
-        <br><br>
-        DLC-k bemutatása:
-        <br><br>
-        Bemutatja az egyes kiegészítőknél milyen típusú történetekben vehetünk részt. Milyen típusú kártyákkal
-        játszhatunk és mi az alaptörténetet az adott kiegészítőben
-        Játékmenet leírása:
-        <br><br>
-        Összefoglalja, hogyan is működik maga a játék. Melyik kártyalapnak mi a szerepe és tippeket ad, hogyan is
-        lehetünk minél hatékonyabbak a játékban
-        <br><br>
-        Fórum blokk:
-        <br><br>
-        Itt léphetünk be a fórumba. A játékosok itt tudják elérni egymást, illetve különböző kérdéseket tudnak feltenni
-        egymásnak.
-        <br><br>
-        A nem regisztrált felhasználó csak olvasni tudja a topicokat, hozzászólást nem tud írni.
-        Többféleképpen lehet rendezni az egyes témákat, A-Z vagy Z-A de a bejegyzés módosítása szerint is lehet.
-        Valamint keresni is lehet a témák között, így egyszerűbben meg lehet találni ha egy konkrét témáról szeretnénk
-        olvasni.
-        <br><br>
-        Alkalmazás oldali:
+	</p>
+	<h2><a name="3.1"></a> 3.1 Nem regisztrált felhasználó:</h2>
+        
+        <h3>Weboldali funkciók:</h3>
+        	<br>
+        	<img src="rf1.PNG" alt="rf1" class="center" style="width:1000px;height:600px;">
+        	<br><br>
+        	<h4>Regisztráció:</h4>
+        		<p class="h4">
+        			Itt lehet létrehozni a felhasználói profilt.
+				</p>
+			<h4>Főoldal:</h4>
+        		<p class="h4">
+					Ez jelenik meg a weboldal megnyitásakor. Itt megtekinthető néhány videó, hogyan is zajlik a játékmenet. Valamint tartalmaz egy rövid leírást, hogy milyen típusú a játék.
+				</p>
+			<h4>Felső blokk:</h4>
+        		<p class="h4">
+        			A felső része a weboldalnak, egy menürendszer. Több különböző funkció elérhető innen.
+				</p>
+			<h4>Galéria blokk:</h4>
+				<p class="h4">
+					A játékmenet közben készült képeket lehet megnézni innen. Több mappa is található benne, amelyek különböző eventek vagy versenyek alatt készültek, esetlegesen egy-egy DLC-be is betekintést is nyerhetünk vele
+				</p>
+			<h4>Játék története blokk</h4>
+        		<h5>DLC-k bemutatása:</h5>
+        			<p class="h5">
+        				Bemutatja az egyes kiegészítőknél milyen típusú történetekben vehetünk részt. Milyen típusú kártyákkal játszhatunk és mi az alaptörténetet az adott kiegészítőben
+					</p>
+				<h5>Játékmenet leírása:</h5>
+        			<p class="h5">
+						Összefoglalja, hogyan is működik maga a játék. Melyik kártyalapnak mi a szerepe és tippeket ad, hogyan is lehetünk minél hatékonyabbak a játékban
+					</p>
+			<h4>Fórum blokk:</h4>
+        		<p class="h5">
+					Itt léphetünk be a fórumba. A játékosok itt tudják elérni egymást, illetve különböző kérdéseket tudnak feltenni
+					egymásnak.
+					<br>
+					A nem regisztrált felhasználó csak olvasni tudja a topicokat, hozzászólást nem tud írni.
+					Többféleképpen lehet rendezni az egyes témákat, A-Z vagy Z-A de a bejegyzés módosítása szerint is lehet.
+					Valamint keresni is lehet a témák között, így egyszerűbben meg lehet találni ha egy konkrét témáról szeretnénk
+					olvasni.
+				</p>
+	<h3>Alkalmazás oldali funkciók:</h3>
         <br><br>
         <img src="rf2.PNG" alt="rf2" class="center" style="width:1000px;height:600px;">
-        <br><br>
-        A játék kliensnél ember ellen csak bejelentkezett felhasználó tud menni. De biztosít egy próba játékot, hogy
-        megnézze a játékos, milyen is a játékmenet.
-        <br><br>
-        Bejelentkezés:
-        <br><br>
-        Itt tud bejelentkezni, ha sikeresen belépett akkor már más hatáskörei vannak.
-        <br><br>
-        Aktuális hírek:
-        <br><br>
-        Ez az ablak ugrik fel az indításnál. Itt tudunk tájékozódni, milyen újítások találhatók a játékban, mi az
-        aktuális event vagy mikor várható a legközelebbi verseny, esetleg ki nyerte az előzőt.
-        <br><br>
-        Regisztrált felhasználók:
-        <br><br>
-        Kiskorú:
-        <br><br>
-        Weboldali:
-        <br><br>
+        <p class="h3">
+			A játék kliensnél ember ellen csak bejelentkezett felhasználó tud menni. De biztosít egy próba játékot, hogy
+			megnézze a játékos, milyen is a játékmenet.
+		</p>
+        <h4>Bejelentkezés:</h4>
+			<p class="h4">
+				Itt tud bejelentkezni, ha sikeresen belépett akkor már más hatáskörei vannak.
+			</p>
+		<h4>Aktuális hírek:</h4>
+			<p class="h4">
+				Ez az ablak ugrik fel az indításnál. Itt tudunk tájékozódni, milyen újítások találhatók a játékban, mi az
+				aktuális event vagy mikor várható a legközelebbi verseny, esetleg ki nyerte az előzőt.
+			</p>
+	<h2><a name="3.2"></a> 3.2 Regisztrált felhasználók:</h2>
+	<h2><a name="3.2.1"></a> 3.2.1 Kiskorú felhasználó:</h2>
+		<h3 class="h2"> Weboldali funkciók:</h3>
+        <br>
         <img src="rf3.PNG" alt="rf3" class="center" style="width:1000px;height:600px;">
-        <br><br>
-        Bejelentkezés:
-        <br><br>
-        A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen
-        akkor újra próbálkozhatunk.
-        <br><br>
-        Jelszó emlékeztető:
-        <br><br>
-        Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg
-        tudjuk változtatni.
-        <br><br>
-        Profil:
-        <br><br>
-        A profilban megtekinthetjük az adatainkat, illetve a jelenlegi szintünket.
-        Többféle módosítást is el tudunk végezni innen:
-        Bemutatkozás:
-        <br><br>
-        Itt lehet egy rövid ismertetőt leírni, amit a többi játékos is el tud olvasni
-        Profilkép módosítás:
-        <br><br>
-        Előre feltöltött listából lehet kiválasztani, milyen típusú legyen az avatar, vagy saját képet is fel lehet
-        tölteni.
-        <br><br>
-        Jelszó módosítás:
-        <br><br>
-        A jelenlegi jelszó megadása után lehet új jelszót beállítani. Legalább 1 kisbetűt, 1 nagybetűt, 1 számot kell
-        tartalmaznia.
-        <br><br>
-        Név módosítás:
-        <br><br>
-        A játékban lévő neved megváltoztatása. Ez egy egyedi név, ez alapján lehet majd megtalálni más játékosokat.
-        <br><br>
-        Főoldal:
-        <br><br>
-        Ez jelenik meg a weboldal megnyitásakor. Itt megtekinthető néhány videó, hogyan is zajlik a játékmenet. Valamint
-        tartalmaz egy rövid leírást, hogy milyen típusú a játék.
-        <br><br>
-        Felső blokk:
-        <br><br>
-        A felső része a weboldalnak, egy menürendszer. Több különböző funkció elérhető innen.
-        <br><br>
-        Galéria blokk:
-        <br><br>
-        A játékmenet közben készült képeket lehet megnézni innen. Több mappa is található benne, amelyek különböző
-        eventek vagy versenyek alatt készültek, esetlegesen egy-egy DLC-be is betekintést is nyerhetünk vele
-        <br><br>
-        Játék története blokk
-        <br><br>
-        DLC-k bemutatása:
-        <br><br>
-        Bemutatja az egyes kiegészítőknél milyen típusú történetekben vehetünk részt. Milyen típusú kártyákkal
-        játszhatunk és mi az alaptörténetet az adott kiegészítőben
-        <br><br>
-        Játékmenet leírása:
-        <br><br>
-        Összefoglalja, hogyan is működik maga a játék. Melyik kártyalapnak mi a szerepe és tippeket ad, hogyan is
-        lehetünk minél hatékonyabbak a játékban
-        <br><br>
-        Fórum blokk:
-        <br><br>
-        Itt léphetünk be a fórumba. A játékosok itt tudják elérni egymást, illetve különböző kérdéseket tudnak feltenni
-        egymásnak.
-        <br><br>
-        A regisztrált felhasználó olvasni tudja a topicokat valamint hozzászólást is tud írni vagy új témakört is létre
-        tud hozni.
-        <br><br>
-        Többféleképpen lehet rendezni az egyes témákat, A-Z vagy Z-A de a bejegyzés módosítása szerint is lehet.
-        Valamint keresni is lehet a témák között, így egyszerűbben meg lehet találni ha egy konkrét témáról szeretnénk
-        olvasni.
-        <br><br>
-        Alkalmazás oldali:
+        <br>
+		<h4>Bejelentkezés:</h4>
+			<p class="h4">
+				 A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen akkor újra próbálkozhatunk.
+			</p>
+		<h4> Jelszó emlékeztető: </h4>
+			<p class="h4">
+				Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg tudjuk változtatni.
+			</p>
+		<h4>Profil:</h4>
+        	<p class="h4">
+				A profilban megtekinthetjük az adatainkat, illetve a jelenlegi szintünket.
+				Többféle módosítást is el tudunk végezni innen:
+			</p>
+			<ul class="h5">
+				<li>
+					Bemutatkozás:<br>
+					Itt lehet egy rövid ismertetőt leírni, amit a többi játékos is el tud olvasni<br><br>
+				</li>
+				<li>
+					Profilkép módosítás:<br>
+					Előre feltöltött listából lehet kiválasztani, milyen típusú legyen az avatar, vagy saját képet is fel lehet tölteni.<br><br>
+				</li>
+				<li>
+					Jelszó módosítás:<br>
+					A jelenlegi jelszó megadása után lehet új jelszót beállítani. Legalább 1 kisbetűt, 1 nagybetűt, 1 számot kell tartalmaznia.<br><br>
+				</li>
+				<li>
+					Név módosítás:<br>
+					A játékban lévő neved megváltoztatása. Ez egy egyedi név, ez alapján lehet majd megtalálni más játékosokat.
+				</li>
+			</ul>
+        	<h4>Főoldal:</h4>
+        		<p class="h4">
+					Ez jelenik meg a weboldal megnyitásakor. Itt megtekinthető néhány videó, hogyan is zajlik a játékmenet. Valamint tartalmaz egy rövid leírást, hogy milyen típusú a játék.
+				</p>
+			<h4>Felső blokk:</h4>
+        		<p class="h4">
+        			A felső része a weboldalnak, egy menürendszer. Több különböző funkció elérhető innen.
+				</p>
+			<h4>Galéria blokk:</h4>
+				<p class="h4">
+					A játékmenet közben készült képeket lehet megnézni innen. Több mappa is található benne, amelyek különböző eventek vagy versenyek alatt készültek, esetlegesen egy-egy DLC-be is betekintést is nyerhetünk vele
+				</p>
+			<h4>Játék története blokk</h4>
+        		<h5>DLC-k bemutatása:</h5>
+        			<p class="h5">
+        				Bemutatja az egyes kiegészítőknél milyen típusú történetekben vehetünk részt. Milyen típusú kártyákkal játszhatunk és mi az alaptörténetet az adott kiegészítőben
+					</p>
+				<h5>Játékmenet leírása:</h5>
+        			<p class="h5">
+						Összefoglalja, hogyan is működik maga a játék. Melyik kártyalapnak mi a szerepe és tippeket ad, hogyan is lehetünk minél hatékonyabbak a játékban
+					</p>
+			<h4>Fórum blokk:</h4>
+        		<p class="h5">
+					Itt léphetünk be a fórumba. A játékosok itt tudják elérni egymást, illetve különböző kérdéseket tudnak feltenni egymásnak.
+					<br>
+					A regisztrált felhasználó olvasni tudja a topicokat valamint hozzászólást is tud írni vagy új témakört is létre	tud hozni.
+					<br>
+					Többféleképpen lehet rendezni az egyes témákat, A-Z vagy Z-A de a bejegyzés módosítása szerint is lehet.Valamint keresni is lehet a témák között, így egyszerűbben meg lehet találni ha egy konkrét témáról szeretnénk olvasni.
+				</p>
+        <h3>Alkalmazás oldali funkciók:
         <br><br>
         <img src="rf4.PNG" alt="rf4" class="center" style="width:1000px;height:600px;">
         <br><br>
-        Bejelentkezés:
-        <br><br>
-        A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen
-        akkor újra próbálkozhatunk.
-        <br><br>
-        Jelszó emlékeztető:
-        <br><br>
-        Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg
-        tudjuk változtatni.
-        <br><br>
-        Beállítások:
-        <br><br>
-        Rendszerbeállításokat itt lehet megadni.
-        <br><br>
-        Hangerő beállítás:
-        <br><br>
-        A zene és a hangeffektusok hangerejének beállítása lehetséges itt.
-        <br><br>
-        Grafikai beállítás:
-        <br><br>
-        Élesség, TTA és felbontás beállítása
-        <br><br>
-        Profil beállítás:
-        <br><br>
-        Profilkép illetve a név módosítása
-        <br><br>
-        Aktuális hírek:
-        <br><br>
-        Ez az ablak ugrik fel az indításnál. Itt tudunk tájékozódni, milyen újítások találhatók a játékban, mi az
-        aktuális event vagy mikor várható a legközelebbi verseny, esetleg ki nyerte az előzőt.
-        <br><br>
-        Játék:
-        <br><br>
-        Ezen a menüponton belül lehet a játékot elindítani, illetve a vele kapcsolatos módosításokat elvégezni.
-        Játék indítása:
-        <br><br>
-        A játék elindítása előtt 2 fajta játékmódot tudunk választani.
-        <br><br>
-        Multiplayer:
-        <br><br>
-        Véletlenszerűen kiválasztott player ellen tudunk játszani,
-        <br><br>
-        Gép ellen:
-        <br><br>
-        Ez egy gyakorló mód. Számítógép ellen lehet játszani, ahol különféle stratégiákat tudunk kidolgozni.
-        Pakli elkészítése:
-        <br><br>
-        Mivel a szintfejlődések után kapunk új lapokat, így több lapunk lesz, mint ami a pakliban elfér. Ebben a
-        menüpontban ki tudjuk választani, hogy milyen kártyalapokat tudunk vinni a következő küzdelemre.
-        Kártya hátlap módosítása:
-        <br><br>
-        A játékosnak itt van lehetősége kiválasztani a megszerzett hátlapok közül melyik legyen a használatban lévő.
-        <br><br>
-        Nagykorú:
-        <br><br>
-        Weboldali:
+			<h4>Bejelentkezés:</h4>
+        		<p class="h4">
+					A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen akkor újra próbálkozhatunk.
+				</p>
+			<h4>Jelszó emlékeztető:</h4>
+        		<p class="h4">
+					Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg tudjuk változtatni.
+				</p>
+			<h4>Beállítások:</h4>
+        		<p class="h4">
+					Rendszerbeállításokat itt lehet megadni.
+				</p>
+				<ul class="h5">
+					<li>
+						Hangerő beállítás:<br>
+        				A zene és a hangeffektusok hangerejének beállítása lehetséges itt.<br><br>
+					</li>
+					<li>
+						Grafikai beállítás:<br>
+						Élesség, TTA és felbontás beállítása<br><br>
+					</li>
+					<li>
+						Profil beállítás:<br>
+						Profilkép illetve a név módosítása<br><br>
+					</li>
+				</ul>
+        
+			<h4>Aktuális hírek:</h4>
+        		<p class="h4">
+					Ez az ablak ugrik fel az indításnál. Itt tudunk tájékozódni, milyen újítások találhatók a játékban, mi az	aktuális event vagy mikor várható a legközelebbi verseny, esetleg ki nyerte az előzőt.
+				</p>
+			<h4>Játék:</h4>
+        		<p class="h4">
+        			Ezen a menüponton belül lehet a játékot elindítani, illetve a vele kapcsolatos módosításokat elvégezni.
+				</p>
+			<h4 class="h4">Játék indítása:</h4>
+					<p class="h5">
+						A játék elindítása előtt 2 fajta játékmódot tudunk választani.
+					</p>
+					<ul class="h6">
+						<li>
+							Multiplayer:<br>
+							Véletlenszerűen kiválasztott player ellen tudunk játszani<br><br>
+						</li>
+						<li>
+							Gép ellen:<br>
+        					Ez egy gyakorló mód. Számítógép ellen lehet játszani, ahol különféle stratégiákat tudunk kidolgozni.<br><br>
+						</li>
+					</ul>
+					<h4 class="h4">Pakli elkészítése:</h4>
+						<p class="h5">
+							Mivel a szintfejlődések után kapunk új lapokat, így több lapunk lesz, mint ami a pakliban elfér. Ebben a menüpontban ki tudjuk választani, hogy milyen kártyalapokat tudunk vinni a következő küzdelemre.
+						</p>
+					<h4 class="h4">Kártya hátlap módosítása:</h4>
+						<p class="h5">
+							A játékosnak itt van lehetősége kiválasztani a megszerzett hátlapok közül melyik legyen a használatban lévő.
+						</p>
+        <h2><a name="3.2.2"></a> 3.2.2 Nagykorű felhasználó:</h2>
+        <br>
+        <h3> Weboldali funkciók:</h3>
         <br><br>
         <img src="rf5.PNG" alt="rf5" class="center" style="width:1000px;height:600px;">
-        Bejelentkezés:
-        <br><br>
-        A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen
-        akkor újra próbálkozhatunk.
-        <br><br>
-        Jelszó emlékeztető:
-        <br><br>
-        Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg
-        tudjuk változtatni.
-        <br><br>
-        Profil:
-        <br><br>
-        A profilban megtekinthetjük az adatainkat, illetve a jelenlegi szintünket.
-        Itt látható a boltban lévő utolsó 5 tranzakció adatai is.
-        <br><br>
-        Többféle módosítást is el tudunk végezni innen:
-        <br><br>
-        Bemutatkozás:
-        <br><br>
-        Itt lehet egy rövid ismertetőt leírni, amit a többi játékos is el tud olvasni
-        Profilkép módosítás:
-        <br><br>
-        Előre feltöltött listából lehet kiválasztani, milyen típusú legyen az avatar, vagy saját képet is fel lehet
-        tölteni.
-        <br><br>
-        Jelszó módosítás:
-        <br><br>
-        A jelenlegi jelszó megadása után lehet új jelszót beállítani. Legalább 1 kisbetűt, 1 nagybetűt, 1 számot kell
-        tartalmaznia.
-        <br><br>
-        Név módosítás:
-        <br><br>
-        A játékban lévő neved megváltoztatása. Ez egy egyedi név, ez alapján lehet majd megtalálni más játékosokat.
-        <br><br>
-        Főoldal:
-        <br><br>
-        Ez jelenik meg a weboldal megnyitásakor. Itt megtekinthető néhány videó, hogyan is zajlik a játékmenet. Valamint
-        tartalmaz egy rövid leírást, hogy milyen típusú a játék.
-        <br><br>
-        Felső blokk:
-        <br><br>
-        A felső része a weboldalnak, egy menürendszer. Több különböző funkció elérhető innen.
-        <br><br>
-        Galéria blokk:
-        <br><br>
-        A játékmenet közben készült képeket lehet megnézni innen. Több mappa is található benne, amelyek különböző
-        eventek vagy versenyek alatt készültek, esetlegesen egy-egy DLC-be is betekintést is nyerhetünk vele
-        <br><br>
-        Játék története blokk
-        <br><br>
-        DLC-k bemutatása:
-        <br><br>
-        Bemutatja az egyes kiegészítőknél milyen típusú történetekben vehetünk részt. Milyen típusú kártyákkal
-        játszhatunk és mi az alaptörténetet az adott kiegészítőben
-        <br><br>
-        Játékmenet leírása:
-        <br><br>
-        Összefoglalja, hogyan is működik maga a játék. Melyik kártyalapnak mi a szerepe és tippeket ad, hogyan is
-        lehetünk minél hatékonyabbak a játékban
-        <br><br>
-        Fórum blokk:
-        <br><br>
-        Itt léphetünk be a fórumba. A játékosok itt tudják elérni egymást, illetve különböző kérdéseket tudnak feltenni
-        egymásnak.
-        <br><br>
-        A regisztrált felhasználó olvasni tudja a topicokat valamint hozzászólást is tud írni vagy új témakört is létre
-        tud hozni.
-        <br><br>
-        Többféleképpen lehet rendezni az egyes témákat, A-Z vagy Z-A de a bejegyzés módosítása szerint is lehet.
-        Valamint keresni is lehet a témák között, így egyszerűbben meg lehet találni ha egy konkrét témáról szeretnénk
-        olvasni.
-        <br><br>
-        Bolt:
-        <br><br>
-        A boltban valódi pénzért tudunk játék beli fizetőeszközt venni. Ezeket különféle gyorsítókra vagy kártyákra
-        tudjuk beváltani.
-        <br><br>
-        Nyersanyag fejlesztések:
-        <br><br>
-        A játékban a nyersanyagokért tudunk lapokat kitenni a pályákra. A boltban kapható fejlesztések révén egy körben
-        több nyersanyagot kapunk mint az alap, így magasabb értékű kártyákat is ki tudunk helyezni a pályára.
-        <br><br>
-        Kártyák vásárlása:
-        <br><br>
-        A játékban megszerezhető kártyák mellett itt is tudunk venni. Egy pakli 5 véletlenszerű lapot tartalmaz.
-        <br><br>
-        Hátlapok:
-        <br><br>
-        Különböző mintájú hátlapok elérhetőek, így sokkal egyedibb lehet a pakli.
-        <br><br>
-        Alkalmazási:
-        <br><br>
+        		<h4>Bejelentkezés:</h4>
+			<p class="h4">
+				 A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen akkor újra próbálkozhatunk.
+			</p>
+		<h4> Jelszó emlékeztető: </h4>
+			<p class="h4">
+				Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg tudjuk változtatni.
+			</p>
+		<h4>Profil:</h4>
+        	<p class="h4">
+				A profilban megtekinthetjük az adatainkat, illetve a jelenlegi szintünket.
+				Többféle módosítást is el tudunk végezni innen:
+			</p>
+			<ul class="h5">
+				<li>
+					Bemutatkozás:<br>
+					Itt lehet egy rövid ismertetőt leírni, amit a többi játékos is el tud olvasni<br><br>
+				</li>
+				<li>
+					Profilkép módosítás:<br>
+					Előre feltöltött listából lehet kiválasztani, milyen típusú legyen az avatar, vagy saját képet is fel lehet tölteni.<br><br>
+				</li>
+				<li>
+					Jelszó módosítás:<br>
+					A jelenlegi jelszó megadása után lehet új jelszót beállítani. Legalább 1 kisbetűt, 1 nagybetűt, 1 számot kell tartalmaznia.<br><br>
+				</li>
+				<li>
+					Név módosítás:<br>
+					A játékban lévő neved megváltoztatása. Ez egy egyedi név, ez alapján lehet majd megtalálni más játékosokat.
+				</li>
+			</ul>
+        	<h4>Főoldal:</h4>
+        		<p class="h4">
+					Ez jelenik meg a weboldal megnyitásakor. Itt megtekinthető néhány videó, hogyan is zajlik a játékmenet. Valamint tartalmaz egy rövid leírást, hogy milyen típusú a játék.
+				</p>
+			<h4>Felső blokk:</h4>
+        		<p class="h4">
+        			A felső része a weboldalnak, egy menürendszer. Több különböző funkció elérhető innen.
+				</p>
+			<h4>Galéria blokk:</h4>
+				<p class="h4">
+					A játékmenet közben készült képeket lehet megnézni innen. Több mappa is található benne, amelyek különböző eventek vagy versenyek alatt készültek, esetlegesen egy-egy DLC-be is betekintést is nyerhetünk vele
+				</p>
+			<h4>Játék története blokk</h4>
+        		<h5>DLC-k bemutatása:</h5>
+        			<p class="h5">
+        				Bemutatja az egyes kiegészítőknél milyen típusú történetekben vehetünk részt. Milyen típusú kártyákkal játszhatunk és mi az alaptörténetet az adott kiegészítőben
+					</p>
+				<h5>Játékmenet leírása:</h5>
+        			<p class="h5">
+						Összefoglalja, hogyan is működik maga a játék. Melyik kártyalapnak mi a szerepe és tippeket ad, hogyan is lehetünk minél hatékonyabbak a játékban
+					</p>
+			<h4>Fórum blokk:</h4>
+        		<p class="h5">
+					Itt léphetünk be a fórumba. A játékosok itt tudják elérni egymást, illetve különböző kérdéseket tudnak feltenni egymásnak.
+					<br>
+					A regisztrált felhasználó olvasni tudja a topicokat valamint hozzászólást is tud írni vagy új témakört is létre	tud hozni.
+					<br>
+					Többféleképpen lehet rendezni az egyes témákat, A-Z vagy Z-A de a bejegyzés módosítása szerint is lehet.Valamint keresni is lehet a témák között, így egyszerűbben meg lehet találni ha egy konkrét témáról szeretnénk olvasni.
+				</p>
+        	<h4>Bolt:</h4>
+				<p class="h4">
+					A boltban valódi pénzért tudunk játék beli fizetőeszközt venni. Ezeket különféle gyorsítókra vagy kártyákra tudjuk beváltani.
+				</p>
+        		<ul class="h5">
+					<li>
+						Nyersanyag fejlesztések:<br>
+						A játékban a nyersanyagokért tudunk lapokat kitenni a pályákra. A boltban kapható fejlesztések révén egy körben	több nyersanyagot kapunk mint az alap, így magasabb értékű kártyákat is ki tudunk helyezni a pályára.<br><br>
+					</li>
+					<li>
+						Kártyák vásárlása:<br>
+						A játékban megszerezhető kártyák mellett itt is tudunk venni. Egy pakli 5 véletlenszerű lapot tartalmaz.<br><br>
+					</li>
+					<li>
+						Hátlapok:<br>
+						Különböző mintájú hátlapok elérhetőek, így sokkal egyedibb lehet a pakli.<br><br>
+					</li>
+				</ul>
+        
+        
+        <h3>Alkalmazás oldali funkciók:</h3>
+        <br>
         <img src="rf6.PNG" alt="rf6" class="center" style="width:1000px;height:600px;">
-        <br><br>
-        Bejelentkezés:
-        <br><br>
-        A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen
-        akkor újra próbálkozhatunk.
-        <br><br>
-        Jelszó emlékeztető:
-        <br><br>
-        Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg
-        tudjuk változtatni.
-        <br><br>
-        Beállítások:
-        <br><br>
-        Rendszerbeállításokat itt lehet megadni.
-        <br><br>
-        Hangerő beállítás:
-        <br><br>
-        A zene és a hangeffektusok hangerejének beállítása lehetséges itt.
-        <br><br>
-        Grafikai beállítás:
-        <br><br>
-        Élesség, TTA és felbontás beállítása
-        <br><br>
-        Profil beállítás:
-        <br><br>
-        Profilkép illetve a név módosítása
-        <br><br>
-        Aktuális hírek:
-        <br><br>
-        Ez az ablak ugrik fel az indításnál. Itt tudunk tájékozódni, milyen újítások találhatók a játékban, mi az
-        aktuális event vagy mikor várható a legközelebbi verseny, esetleg ki nyerte az előzőt.
-        <br><br>
-        Játék:
-        <br><br>
-        Ezen a menüponton belül lehet a játékot elindítani, illetve a vele kapcsolatos módosításokat elvégezni.
-        <br><br>
-        Játék indítása:
-        <br><br>
-        A játék elindítása előtt 2 fajta játékmódot tudunk választani.
-        <br><br>
-        Multiplayer:
-        <br><br>
-        Véletlenszerűen kiválasztott player ellen tudunk játszani,
-        <br><br>
-        Gép ellen:
-        <br><br>
-        Ez egy gyakorló mód. Számítógép ellen lehet játszani, ahol különféle stratégiákat tudunk kidolgozni.
-        <br><br>
-        Pakli elkészítése:
-        <br><br>
-        Mivel a szintfejlődések után kapunk új lapokat, így több lapunk lesz, mint ami a pakliban elfér. Ebben a
-        menüpontban ki tudjuk választani, hogy milyen kártyalapokat tudunk vinni a következő küzdelemre.
-        <br><br>
-        Kártya hátlap módosítása:
-        <br><br>
-        A játékosnak itt van lehetősége kiválasztani a megszerzett hátlapok közül melyik legyen a használatban lévő.
-        <br><br>
-        Bolt:
-        <br><br>
-        A boltban valódi pénzért tudunk játék beli fizetőeszközt venni. Ezeket különféle gyorsítókra vagy kártyákra
-        tudjuk beváltani.
-        <br><br>
-        Nyersanyag fejlesztések:
-        <br><br>
-        A játékban a nyersanyagokért tudunk lapokat kitenni a pályákra. A boltban kapható fejlesztések révén egy körben
-        több nyersanyagot kapunk mint az alap, így magasabb értékű kártyákat is ki tudunk helyezni a pályára.
-        <br><br>
-        Kártyák vásárlása:
-        <br><br>
-        A játékban megszerezhető kártyák mellett itt is tudunk venni. Egy pakli 5 véletlenszerű lapot tartalmaz.
-        <br><br>
-        Hátlapok:
-        <br><br>
-        Különböző mintájú hátlapok elérhetőek, így sokkal egyedibb lehet a pakli.
-        <br><br>
-        Admin:
-        <br><br>
-        Weboldali:
-        <br><br>
+        <br>
+        	<h4>Bejelentkezés:</h4>
+        		<p class="h4">
+					A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen akkor újra próbálkozhatunk.
+				</p>
+			<h4>Jelszó emlékeztető:</h4>
+        		<p class="h4">
+					Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg tudjuk változtatni.
+				</p>
+			<h4>Beállítások:</h4>
+        		<p class="h4">
+					Rendszerbeállításokat itt lehet megadni.
+				</p>
+				<ul class="h5">
+					<li>
+						Hangerő beállítás:<br>
+        				A zene és a hangeffektusok hangerejének beállítása lehetséges itt.<br><br>
+					</li>
+					<li>
+						Grafikai beállítás:<br>
+						Élesség, TTA és felbontás beállítása<br><br>
+					</li>
+					<li>
+						Profil beállítás:<br>
+						Profilkép illetve a név módosítása<br><br>
+					</li>
+				</ul>
+        
+			<h4>Aktuális hírek:</h4>
+        		<p class="h4">
+					Ez az ablak ugrik fel az indításnál. Itt tudunk tájékozódni, milyen újítások találhatók a játékban, mi az	aktuális event vagy mikor várható a legközelebbi verseny, esetleg ki nyerte az előzőt.
+				</p>
+			<h4>Játék:</h4>
+        		<p class="h4">
+        			Ezen a menüponton belül lehet a játékot elindítani, illetve a vele kapcsolatos módosításokat elvégezni.
+				</p>
+			<h4 class="h4">Játék indítása:</h4>
+					<p class="h5">
+						A játék elindítása előtt 2 fajta játékmódot tudunk választani.
+					</p>
+					<ul class="h6">
+						<li>
+							Multiplayer:<br>
+							Véletlenszerűen kiválasztott player ellen tudunk játszani<br><br>
+						</li>
+						<li>
+							Gép ellen:<br>
+        					Ez egy gyakorló mód. Számítógép ellen lehet játszani, ahol különféle stratégiákat tudunk kidolgozni.<br><br>
+						</li>
+					</ul>
+					<h4 class="h4">Pakli elkészítése:</h4>
+						<p class="h5">
+							Mivel a szintfejlődések után kapunk új lapokat, így több lapunk lesz, mint ami a pakliban elfér. Ebben a menüpontban ki tudjuk választani, hogy milyen kártyalapokat tudunk vinni a következő küzdelemre.
+						</p>
+					<h4 class="h4">Kártya hátlap módosítása:</h4>
+						<p class="h5">
+							A játékosnak itt van lehetősége kiválasztani a megszerzett hátlapok közül melyik legyen a használatban lévő.
+						</p>
+        <h4>Bolt:</h4>
+				<p class="h4">
+					A boltban valódi pénzért tudunk játék beli fizetőeszközt venni. Ezeket különféle gyorsítókra vagy kártyákra tudjuk beváltani.
+				</p>
+        		<ul class="h5">
+					<li>
+						Nyersanyag fejlesztések:<br>
+						A játékban a nyersanyagokért tudunk lapokat kitenni a pályákra. A boltban kapható fejlesztések révén egy körben	több nyersanyagot kapunk mint az alap, így magasabb értékű kártyákat is ki tudunk helyezni a pályára.<br><br>
+					</li>
+					<li>
+						Kártyák vásárlása:<br>
+						A játékban megszerezhető kártyák mellett itt is tudunk venni. Egy pakli 5 véletlenszerű lapot tartalmaz.<br><br>
+					</li>
+					<li>
+						Hátlapok:<br>
+						Különböző mintájú hátlapok elérhetőek, így sokkal egyedibb lehet a pakli.<br><br>
+					</li>
+				</ul>
+		<h2><a name="3.2.3"></a>3.2.3 Admin felhasználó:</h2>
+        <br>
+        <h3> Weboldali funkciók:</h3>
+        <br>
         <img src="rf7.PNG" alt="rf7" class="center" style="width:1000px;height:600px;">
         <br><br>
-        Bejelentkezés:
-        <br><br>
-        A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen
-        akkor újra próbálkozhatunk.
-        <br><br>
-        Jelszó emlékeztető:
-        <br><br>
-        Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg
-        tudjuk változtatni.
-        <br><br>
-        Profil:
-        <br><br>
-        A profilban megtekinthetjük az adatainkat, illetve a jelenlegi szintünket.
-        Többféle módosítást is el tudunk végezni innen:
-        <br><br>
-        Bemutatkozás:
-        <br><br>
-        Itt lehet egy rövid ismertetőt leírni, amit a többi játékos is el tud olvasni
-        Profilkép módosítás:
-        <br><br>
-        Előre feltöltött listából lehet kiválasztani, milyen típusú legyen az avatar, vagy saját képet is fel lehet
-        tölteni.
-        <br><br>
-        Jelszó módosítás:
-        <br><br>
-        A jelenlegi jelszó megadása után lehet új jelszót beállítani. Legalább 1 kisbetűt, 1 nagybetűt, 1 számot kell
-        tartalmaznia.
-        <br><br>
-        Név módosítás:
-        <br><br>
-        A játékban lévő neved megváltoztatása. Ez egy egyedi név, ez alapján lehet majd megtalálni más játékosokat.
-        <br><br>
-        Főoldal:
-        <br><br>
-        Ez jelenik meg a weboldal megnyitásakor. Itt megtekinthető néhány videó, hogyan is zajlik a játékmenet. Valamint
-        tartalmaz egy rövid leírást, hogy milyen típusú a játék.
-        <br><br>
-        Felső blokk:
-        <br><br>
-        A felső része a weboldalnak, egy menürendszer. Több különböző funkció elérhető innen.
-        <br><br>
-        Galéria blokk:
-        <br><br>
-        A játékmenet közben készült képeket lehet megnézni innen. Több mappa is található benne, amelyek különböző
-        eventek vagy versenyek alatt készültek, esetlegesen egy-egy DLC-be is betekintést is nyerhetünk vele
-        Játék története blokk
-        <br><br>
-        DLC-k bemutatása:
-        <br><br>
-        Bemutatja az egyes kiegészítőknél milyen típusú történetekben vehetünk részt. Milyen típusú kártyákkal
-        játszhatunk és mi az alaptörténetet az adott kiegészítőben. Az admin tudja módosítani a leírásokat, illetve
-        újakat is tud hozzáadni.
-        <br><br>
-        Játékmenet leírása:
-        <br><br>
-        Összefoglalja, hogyan is működik maga a játék. Melyik kártyalapnak mi a szerepe és tippeket ad, hogyan is
-        lehetünk minél hatékonyabbak a játékban. Az admin folyamatosan bővíti a szükséges információkkal
-        <br><br>
-        Fórum blokk:
-        <br><br>
-        Itt léphetünk be a fórumba. A játékosok itt tudják elérni egymást, illetve különböző kérdéseket tudnak feltenni
-        egymásnak.
-        <br><br>
-        Az admin felügyeli a topicokat, illetve moderálja őket. szükség esetén ki is tudja tiltani a felhasználókat,
-        illetve törölni tudja a bejegyzéseket.
-        <br><br>
-        Többféleképpen lehet rendezni az egyes témákat, A-Z vagy Z-A de a bejegyzés módosítása szerint is lehet.
-        Valamint keresni is lehet a témák között, így egyszerűbben meg lehet találni ha egy konkrét témáról szeretnénk
-        olvasni.
-        <br><br>
-        Admin:
-        <br><br>
-        Ezen a fülön belül tudja az admin a játékosokkal és a szerverrel kapcsolatos teendőket megejteni.
-        Szerver moderáció:
-        <br><br>
-        Logok kezelése, szoftver frissítése, adatbázis szinkronizálás, karbantartás, hibák javítása, weboldal
-        frissítése, szerver elérés kezelése
-        <br><br>
-        Bannolás:
-        <br><br>
-        TO:
-        <br><br>
-        Csak gép ellen tud játszani a player, mert nem megfelelően viselkedett multiplayer környezetben.
-        <br><br>
-        ChatBann:
-        <br><br>
-        Egy bizonyos ideig nem tudja használni a játékban használt csevegő részt, nem megfelelő viselkedés miatt.
-        Eventek hirdetése:
-        <br><br>
-        Itt tudja beállítani az admin, hogy milyen event legyen aktív a játékban, illetve az új eventeket itt adja hozzá
-        a játékhoz.
-        <br><br>
-        Üzenetek moderálása:
-        <br><br>
-        Meg tudja tekinteni a felhasználók által küldött üzeneteket és ez alapján is kitilthatja a játékból a playert.
-        <br><br>
-    </p>
+        	<h4>Bejelentkezés:</h4>
+				<p class="h4">
+					A regisztráció után megadott adatokkal tudunk belépni. Ha sikeres, akkor megnyílik a profil oldal, ha sikertelen akkor újra próbálkozhatunk.
+				</p>
+        	<h4>Jelszó emlékeztető:</h4>
+			   <p class="h4">
+					Ha elfelejtettük a jelszót, itt az email címre amit megadott a regisztráció során elküld egy linket ahol meg tudjuk változtatni.
+				</p>
+        		<h4>Profil:</h4>
+        	<p class="h4">
+				A profilban megtekinthetjük az adatainkat, illetve a jelenlegi szintünket.
+				Többféle módosítást is el tudunk végezni innen:
+			</p>
+			<ul class="h5">
+				<li>
+					Bemutatkozás:<br>
+					Itt lehet egy rövid ismertetőt leírni, amit a többi játékos is el tud olvasni<br><br>
+				</li>
+				<li>
+					Profilkép módosítás:<br>
+					Előre feltöltött listából lehet kiválasztani, milyen típusú legyen az avatar, vagy saját képet is fel lehet tölteni.<br><br>
+				</li>
+				<li>
+					Jelszó módosítás:<br>
+					A jelenlegi jelszó megadása után lehet új jelszót beállítani. Legalább 1 kisbetűt, 1 nagybetűt, 1 számot kell tartalmaznia.<br><br>
+				</li>
+				<li>
+					Név módosítás:<br>
+					A játékban lévő neved megváltoztatása. Ez egy egyedi név, ez alapján lehet majd megtalálni más játékosokat.
+				</li>
+			</ul>
+        	<h4>Főoldal:</h4>
+        		<p class="h4">
+					Ez jelenik meg a weboldal megnyitásakor. Itt megtekinthető néhány videó, hogyan is zajlik a játékmenet. Valamint tartalmaz egy rövid leírást, hogy milyen típusú a játék.
+				</p>
+       		<h4>Felső blokk:</h4>
+        		<p class="h4">
+        			A felső része a weboldalnak, egy menürendszer. Több különböző funkció elérhető innen.
+				</p>
+			<h4>Galéria blokk:</h4>
+				<p class="h4">
+        			A játékmenet közben készült képeket lehet megnézni innen. Több mappa is található benne, amelyek különböző eventek vagy versenyek alatt készültek, esetlegesen egy-egy DLC-be is betekintést is nyerhetünk vele
+				</p>
+        <h4>Játék története blokk</h4>
+        		<h5>DLC-k bemutatása:</h5>
+        			<p class="h5">
+						Bemutatja az egyes kiegészítőknél milyen típusú történetekben vehetünk részt. Milyen típusú kártyákkal játszhatunk és mi az alaptörténetet az adott kiegészítőben. Az admin tudja módosítani a leírásokat, illetve újakat is tud hozzáadni.
+					</p>
+        		<h5>Játékmenet leírása:</h5>
+        			<p class="h5">
+        				Összefoglalja, hogyan is működik maga a játék. Melyik kártyalapnak mi a szerepe és tippeket ad, hogyan is lehetünk minél hatékonyabbak a játékban. Az admin folyamatosan bővíti a szükséges információkkal
+					</p>
+        <h4>Fórum blokk:</h4>
+        	<p class="h4">
+				Itt léphetünk be a fórumba. A játékosok itt tudják elérni egymást, illetve különböző kérdéseket tudnak feltenni egymásnak.<br>
+				Az admin felügyeli a topicokat, illetve moderálja őket. szükség esetén ki is tudja tiltani a felhasználókat, illetve törölni tudja a bejegyzéseket.<br>
+				Többféleképpen lehet rendezni az egyes témákat, A-Z vagy Z-A de a bejegyzés módosítása szerint is lehet. Valamint keresni is lehet a témák között, így egyszerűbben meg lehet találni ha egy konkrét témáról szeretnénk olvasni.
+			</p>
+        <h4>Admin:</h4>
+        	<p class="h4">
+        		Ezen a fülön belül tudja az admin a játékosokkal és a szerverrel kapcsolatos teendőket megejteni.
+			<ul class="h5">
+				<li>
+					Szerver moderáció:<br>
+					Logok kezelése, szoftver frissítése, adatbázis szinkronizálás, karbantartás, hibák javítása, weboldal frissítése, szerver elérés kezelése<br><br>
+				</li>
+				<li>
+					Bannolás:<br>
+					Itt tud a játékosoknak különböző tiltásokat kiosztani az admin.<br><br>
+				</li>
+				<ul>
+					<li>
+						TO:<br>
+						Csak gép ellen tud játszani a player, mert nem megfelelően viselkedett multiplayer környezetben.<br><br>
+					</li>
+					<li>
+					    ChatBann:<br>
+        				Egy bizonyos ideig nem tudja használni a játékban használt csevegő részt, nem megfelelő viselkedés miatt.<br><br>
+					</li>
+				</ul>
+				<li>
+					Eventek hirdetése:<br>
+       				 Itt tudja beállítani az admin, hogy milyen event legyen aktív a játékban, illetve az új eventeket itt adja hozzá a játékhoz.<br><br>
+				</li>
+				<li>
+				    Üzenetek moderálása:<br>
+					Meg tudja tekinteni a felhasználók által küldött üzeneteket és ez alapján is kitilthatja a játékból a playert.<br><br>
+				</li>
+			</ul>	
     <p><br></p>
-
     <h1><a name="4"></a>4. Használhatóság</h1>
-    <p class="h1">
-        <br><br>
-        Az alábbi pontban tárgyalva lesz a felhasználók rendszerhez való hozzászokásának idejéről és módjairól, valamint
-        más már általuk használt sofwarek a mi software-ünkhöz viszonyított hasonlóságáról.
-        <br><br>
-        <strong>4.1. Betanulási idő különböző tapasztaltságú felhasználóknak</strong>
-        <br><br>
-        <strong>4.1.1. Kezdő felhasználó</strong>
-        <br><br>
-        Mivel a kezelőfelületet igen egyszerű (tehát könnyen átlátható), de hatékonyra tervezzük, így legyen az olyan
-        ember, aki először ül számítógép közelébe, olyan is képes lesz legfeljebb fél órán belül beletanulni és
-        hozzászokni a grafikus felülethez.
-        <br><br>
-        <strong>4.1.2. Tapasztalt felhasználó</strong>
-        <br><br>
-        Egy gyakorlottabb felhasználónak már ismerős lesz a játék kezelőfelületének a szerkezete, ezért igen hamar,
-        körülbelül 2-5 percen belül hozzá tud úgy szokni, hogy azt hatékonyan tudja használni.
-        <br><br>
-        <strong>4.2 Tevékenység végrehajtás</strong>
-        <br><br>
-        Egy átlagos felhasználó, akinek van minimális tapasztalata a játékokban (ez legyen független a játék típusától),
-        lesz fogalma arról, ha valamit végre szeretne hajtani, akkor azt a funkciót, ami az adott feladatot végzi merre
-        kell keresni, így pár kattintással sikerül is neki megcsinálni (időben mérve pár másodperc). Amennyiben a
-        kezelőfelületen a gombokon a szöveget nem olvassa el, vagy nem tudja (mert tegyük fel a felhasználó által nem
-        ismert nyelven van írva), akkor véletlenszerű gombnyomogatással is 1-2 percen belül sikerülhet az adott funkció
-        megtalálása.
-        <br><br>
-        <strong>4.3. Kezdő felhasználó betanulása</strong>
-        <br><br>
-        Lesz egy Tutorial rendszer funkció, ami a játék elindítása során megmutatja, hogy melyik gomb mit csinál, ezzel
-        bemutatva felhasználónak a a játék alapvető, gyakran használt részeit. Ez természetesen kikapcsolódik magától az
-        első alkalommal amint végzett a feladatával és bekapcsolni nem lehet (első indítás során fut csak le).
-        <br><br>
-        <strong> 4.4. Egyéb betanulási lehetőségek</strong>
-        <br><br>
-        Amennyiben a Tutorial funkció nem lenne elég, vagy megfelelő, akkor vagy általunk vagy mások által feltöltött
-        videókból ahol a játékmenetet lehet nézni jól meg lehet tanulni, hogy hogyan kell használni a softwaret.
-        <br><br>
-        <strong>4.5 Felhasználói felület</strong>
-        <br><br>
-        Ez majdhogynem teljesen úgy fog kinézni, mint amilyen felhasználói felületet már megszokhattunk más játékokból,
-        hisz a főmenüben lesz a "Play" gomb, beállítás, kilépés, profilkép és In-game vásárlás gomb.
-        <br><br>
-        <strong>4.6 Párhuzamos alkalmazás használat</strong>
-        <br><br>
-        Ahogy azt a korábbi pontokban is írtam, a felület hasonló lesz mint más alkalmazásoké, hisz azt szeretnénk, hogy
-        mindenki számára ismerős és könnyű legyen a kezelés. Tehát ha más játékokkal is játszik a felhasználó, akkor a
-        kezelőfelületet más alkalmazás használata után könnyen, gondolkodás nélkül is használni tudja.
-
-    </p>
+    	<p class="h1">
+        	Az alábbi pontban tárgyalva lesz a felhasználók rendszerhez való hozzászokásának idejéről és módjairól, valamint más már általuk használt sofwarek a mi software-ünkhöz viszonyított hasonlóságáról.
+		</p>
+        <h2><a name="4.1"></a>4.1. Betanulási idő különböző tapasztaltságú felhasználóknak</h2>
+        <h2><a name="4.1.1"></a>4.1.1. Kezdő felhasználó</h2>
+        	<p class="h2">
+        		Mivel a kezelőfelületet igen egyszerű (tehát könnyen átlátható), de hatékonyra tervezzük, így legyen az olyan  ember, aki először ül számítógép közelébe, olyan is képes lesz legfeljebb fél órán belül beletanulni és hozzászokni a grafikus felülethez.
+			</p>
+        <h2><a name="4.1.2"></a>4.1.2. Tapasztalt felhasználó</h2>
+        	<p class="h2">
+        		Egy gyakorlottabb felhasználónak már ismerős lesz a játék kezelőfelületének a szerkezete, ezért igen hamar, körülbelül 2-5 percen belül hozzá tud úgy szokni, hogy azt hatékonyan tudja használni.
+			</p>
+        <h2><a name="4.2"></a>4.2 Tevékenység végrehajtás</h2>
+        	<p class="h2">
+        		Egy átlagos felhasználó, akinek van minimális tapasztalata a játékokban (ez legyen független a játék típusától), lesz fogalma arról, ha valamit végre szeretne hajtani, akkor azt a funkciót, ami az adott feladatot végzi merre kell keresni, így pár kattintással sikerül is neki megcsinálni (időben mérve pár másodperc). Amennyiben a kezelőfelületen a gombokon a szöveget nem olvassa el, vagy nem tudja (mert tegyük fel a felhasználó által nem ismert nyelven van írva), akkor véletlenszerű gombnyomogatással is 1-2 percen belül sikerülhet az adott funkció megtalálása.
+			</p>
+        <h2><a name="4.3"></a>4.3. Kezdő felhasználó betanulása</h2>
+        	<p class="h2">
+        		Lesz egy Tutorial rendszer funkció, ami a játék elindítása során megmutatja, hogy melyik gomb mit csinál, ezzel bemutatva felhasználónak a a játék alapvető, gyakran használt részeit. Ez természetesen kikapcsolódik magától az első alkalommal amint végzett a feladatával és bekapcsolni nem lehet (első indítás során fut csak le).
+			</p>
+        <h2><a name="4.4"></a> 4.4. Egyéb betanulási lehetőségek</h2>
+        	<p class="h2">
+        		Amennyiben a Tutorial funkció nem lenne elég, vagy megfelelő, akkor vagy általunk vagy mások által feltöltött videókból ahol a játékmenetet lehet nézni jól meg lehet tanulni, hogy hogyan kell használni a softwaret.
+			</p>
+        <h2><a name="4.5"></a>4.5 Felhasználói felület</h2>
+        	<p class="h2">
+				Ez majdhogynem teljesen úgy fog kinézni, mint amilyen felhasználói felületet már megszokhattunk más játékokból,	hisz a főmenüben lesz a "Play" gomb, beállítás, kilépés, profilkép és In-game vásárlás gomb.
+			</p>
+        <h2><a name="4.6"></a>4.6 Párhuzamos alkalmazás használat</h2>
+        	<p class="h2">
+        		Ahogy azt a korábbi pontokban is írtam, a felület hasonló lesz mint más alkalmazásoké, hisz azt szeretnénk, hogy mindenki számára ismerős és könnyű legyen a kezelés. Tehát ha más játékokkal is játszik a felhasználó, akkor a kezelőfelületet más alkalmazás használata után könnyen, gondolkodás nélkül is használni tudja.
+    		</p>
     <p><br></p>
 
     <h1><a name="5"></a>5. Megbízhatóság</h1>
     <p class="h1">
-        <br><br>
-        Teljes használhatóságról akkor beszélünk a szoftverünk esetében mikor a játékosos a nem vár 2 meccs között csak
-        annyit amennyi a betöltési idő és nem kell másra pl: szerver szinkronizációra várni. Ez az általános
-        rendelkezésre állást is jelenti. Lesznek azonban olyan időszakok amikor karbantartási időről kell beszélnünk
-        mivel előfordulhatnak betöltési és generálási hibák ,vagy esetleg a felhasználóktól kapunk hiba bejelentéseket.
-        Ilyenkor előre szólunk a játékosoknak hogy egy adott időintervallumban a játék nem lesz elérhető karbantartás
-        miatt.
-        <br><br>
+        Teljes használhatóságról akkor beszélünk a szoftverünk esetében mikor a játékosos a nem vár 2 meccs között csak annyit amennyi a betöltési idő és nem kell másra pl: szerver szinkronizációra várni. Ez az általános rendelkezésre állást is jelenti. Lesznek azonban olyan időszakok amikor karbantartási időről kell beszélnünk mivel előfordulhatnak betöltési és generálási hibák ,vagy esetleg a felhasználóktól kapunk hiba bejelentéseket. Ilyenkor előre szólunk a játékosoknak hogy egy adott időintervallumban a játék nem lesz elérhető karbantartás miatt.<br><br>
         Korlátozott használhatóság a felhasználók szemszögéből fent áll mivel a felhasználóknak 2 csoportja van:
-        <br><br>
-        <strong>Regisztrált Felhasználók:</strong>
-        Itt a felhasználó teljeskörű hozzáférést kap a játékban található funkciókoz és szolgáltatásokhoz
-        <br><br>
-        <strong>Nem regisztrált Felhasználó:</strong>
-        Itt a felhasználó csak egy sablon próba meccset tud játszni,és amint a meccsnek vége rögtön egy regisztrációs
-        panel ugrik fel és a felhasználó tud regisztrálni addig nem is engedi tovább a rendszer. Esetleg ha újra tölti
-        az oldalt akkor sem fog mással játszani ugyan azt a meccset fogja újrajátszani mivel csak 1 sablon meccs lenne
-        ami megmutatja milyen is a játék. Regisztráció után pedig ott lenne egy turtoial rész ahol a felhasználó
-        részletesebben megismeri a játékot.
-
-        <br><br>
-        A szoftverünk esetében mivel a gépigény alacsony szinte minden mai számítógépen el kell futnia, ezért az átlagos
-        idő ami eltelik 2 hiba között az nagy, vagy ha mégis több hiba jelentkezik egy felhasználónál akkor a
-        felhasználónak lehetősége van hibabejelentés küldeni amit megpróbálunk minél előbb javítani, bár ez a hiba
-        komolyságától is fog függeni. A szoftver lefagyni vagy bugolni esetleg akkor tud ha nincs meg a megfelelő
-        mennyiségű memória vagy processor, vagy nincs meg a stabil internet kapcsolat.
-    </p>
+        <ul class="h2">
+			<li>
+				Regisztrált Felhasználók:<br>
+        		Itt a felhasználó teljeskörű hozzáférést kap a játékban található funkciókoz és szolgáltatásokhoz<br><br>
+			</li>
+			<li>
+				Nem regisztrált Felhasználó:<br>
+        		Itt a felhasználó csak egy sablon próba meccset tud játszni,és amint a meccsnek vége rögtön egy regisztrációs panel ugrik fel és a felhasználó tud regisztrálni addig nem is engedi tovább a rendszer. Esetleg ha újra tölti az oldalt akkor sem fog mással játszani ugyan azt a meccset fogja újrajátszani mivel csak 1 sablon meccs lenne ami megmutatja milyen is a játék. Regisztráció után pedig ott lenne egy turtoial rész ahol a felhasználó részletesebben megismeri a játékot.<br><br>
+			</li>
+		</ul>
+		<p class="h1">
+       		 A szoftverünk esetében mivel a gépigény alacsony szinte minden mai számítógépen el kell futnia, ezért az átlagos idő ami eltelik 2 hiba között az nagy, vagy ha mégis több hiba jelentkezik egy felhasználónál akkor a  felhasználónak lehetősége van hibabejelentés küldeni amit megpróbálunk minél előbb javítani, bár ez a hiba komolyságától is fog függeni. A szoftver lefagyni vagy bugolni esetleg akkor tud ha nincs meg a megfelelő mennyiségű memória vagy processor, vagy nincs meg a stabil internet kapcsolat.
+    	</p>
+	</p>
     <p><br></p>
 
     <h1><a name="6"></a>6. Teljesítmény</h1>
-    <p class="h1">
-        <br><br>
-        Elvárások az alkalmazással kapcsolatban, válaszidő:
-        A szoftver fejlesztése közben legfőképpen arra hajtunk, hogy a szoftver a lehető leggyorsabb legyen. Ez alatt
-        azt értjük, hogy az alkalmazás ne legyen leterhelve a nagy játékosszám és a sok kommunikáció ellenére sem, így a
-        lehető legtöbb felhasználó tudja egy időben zökkenőmentesen használni. Ennek az egyik követelménye a jól megírt
-        programkód, a másik pedig a nagy teljesítményű szerver, amely kezeli az adatbázisokat, a webszervert és az
-        E-mail szervert.
-        <br><br>
-        A szerver erőforrásai előre meghatározottak viszont ezek , a játékosszámmal arányosan növekednek, az általános
-        túlterhelések és lefagyások elkerülése végett. A szerver saját szerver lesz, viszont szerverparkban lesz
-        elhelyezve az optimális működés, a nagy sávszélesség és a nagy sebességű stabil internetkapcsolat miatt.
-        <br><br>
-        Kapacitás szempontjából, a tervezett szerver, amit szeretnénk összeállítani körülbelül 12500 aktív felhasználót
-        képes egyszerre kezelni úgy, hogy ez a teljesítményt és a válaszidőt ne befolyásolja és ne okozzon hibát az
-        alkalmazásban. Ez a szám teljes mértékben fennáll a változásra, mivel sok mindentől függ, főleg a jövőben
-        bekerülő új funkcióktól, és az alkalmazás optimalizálásától.
-        <br><br>
-        A webszerveren a játék saját weblapja fog futni, ennek a terhelhetősége viszonylag nagy, mivel nem sok funkció
-        fog rajta futni, lehetőség van weboldalon regisztrálni és bejelentkezni. Legfőbb célja a játékkal való
-        információk megosztása a játékosokkal.
-        <br><br>
-        Az alkalmazáson belüli funkciók válaszideje viszonylag alacsony, az optimálisan megírt programnak és az erős.
-        nagy sávszélességgel rendelkező szervernek köszönhetően.
-        <br><br>
-        Adatbázisok kapacitása,terhelhetősége:
-        <br><br>
+
+		<h2><a name="6.1"></a>6.1 Elvárások az alkalmazással kapcsolatban, válaszidő:</h2>
+			<p class="h2">
+				A szoftver fejlesztése közben legfőképpen arra hajtunk, hogy a szoftver a lehető leggyorsabb legyen. Ez alatt azt értjük, hogy az alkalmazás ne legyen leterhelve a nagy játékosszám és a sok kommunikáció ellenére sem, így a lehető legtöbb felhasználó tudja egy időben zökkenőmentesen használni. Ennek az egyik követelménye a jól megírt  programkód, a másik pedig a nagy teljesítményű szerver, amely kezeli az adatbázisokat, a webszervert és az E-mail szervert. <br><br>
+				A szerver erőforrásai előre meghatározottak viszont ezek , a játékosszámmal arányosan növekednek, az általános túlterhelések és lefagyások elkerülése végett. A szerver saját szerver lesz, viszont szerverparkban lesz elhelyezve az optimális működés, a nagy sávszélesség és a nagy sebességű stabil internetkapcsolat miatt. <br><br>
+				Kapacitás szempontjából, a tervezett szerver, amit szeretnénk összeállítani körülbelül 12500 aktív felhasználót képes egyszerre kezelni úgy, hogy ez a teljesítményt és a válaszidőt ne befolyásolja és ne okozzon hibát az alkalmazásban. Ez a szám teljes mértékben fennáll a változásra, mivel sok mindentől függ, főleg a jövőben bekerülő új funkcióktól, és az alkalmazás optimalizálásától.<br><br>
+				A webszerveren a játék saját weblapja fog futni, ennek a terhelhetősége viszonylag nagy, mivel nem sok funkció fog rajta futni, lehetőség van weboldalon regisztrálni és bejelentkezni. Legfőbb célja a játékkal való információk megosztása a játékosokkal. <br><br>
+				Az alkalmazáson belüli funkciók válaszideje viszonylag alacsony, az optimálisan megírt programnak és az erős.Nagy sávszélességgel rendelkező szervernek köszönhetően.
+			</p>
+        <h2><a name="6.2"></a>6.2 Adatbázisok kapacitása,terhelhetősége:</h2>
+        	<p class="h2">
         Az alkalmazás két adatbázist használ, egyik amelyik a felhasználókat és adataikat tárolja, a másik pedig ami a
         játékhoz tartozó elemeknek, azaz a kártyáknak, az adatait és tulajdonságait tárolja. Egyik adatbázis sem fix
         méretű.
@@ -1214,6 +1104,32 @@
 
     <h1><a name="13"></a>13. Mellékletek</h1>
     <p class="h1">
+		Felhasználói dokumentáció:<br>
+		<a href="https://marcibaumel.github.io/SpeedCards/UserDoc.html?">
+			https://marcibaumel.github.io/SpeedCards/UserDoc.html?
+		</a><br><br>
+		A projekt weboldala:<br>
+		<a href="https://marcibaumel.github.io/SpeedCards/">
+			https://marcibaumel.github.io/SpeedCards/
+		</a><br><br>
+		Alap ötleteket adó játékok:
+		<ul class="h2">
+			<li>
+				<a href="https://playhearthstone.com/en-us/enhttps://playhearthstone.com/en--us/us/">
+					Hearthstone
+				</a>
+			</li>
+			<li>
+				<a href="https://store.steampowered.com/app/601510/YuGiOh_Duel_Links/?l=hungarian">
+					Yu-Gi-Oh! Duel Links
+				</a>
+			</li>
+			<li>
+				<a href="https://www.playgwent.com/en/enhttps:/www.playgwent.com/en">
+					GWENT
+				</a>
+			</li>
+		</ul>
 
     </p>
     <p><br></p>
