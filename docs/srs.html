@@ -767,53 +767,36 @@
 				A webszerveren a játék saját weblapja fog futni, ennek a terhelhetősége viszonylag nagy, mivel nem sok funkció fog rajta futni, lehetőség van weboldalon regisztrálni és bejelentkezni. Legfőbb célja a játékkal való információk megosztása a játékosokkal. <br><br>
 				Az alkalmazáson belüli funkciók válaszideje viszonylag alacsony, az optimálisan megírt programnak és az erős.Nagy sávszélességgel rendelkező szervernek köszönhetően.
 			</p>
-        <h2><a name="6.2"></a>6.2 Adatbázisok kapacitása,terhelhetősége:</h2>
+                <h2><a name="6.2"></a>6.2 Adatbázisok kapacitása,terhelhetősége:</h2>
         	<p class="h2">
-        Az alkalmazás két adatbázist használ, egyik amelyik a felhasználókat és adataikat tárolja, a másik pedig ami a
-        játékhoz tartozó elemeknek, azaz a kártyáknak, az adatait és tulajdonságait tárolja. Egyik adatbázis sem fix
-        méretű.
-        <br><br>
-        Ha egy felhasználó regisztrál és elkezd játszani a játékkal, akkor az adatai bekerülnek a felhasználó
-        adatbázisba, így az növekszik. A játékosbázis növekedésével a felhasználó adatbázis is folyamatosan növekszik. A
-        frissítésekkel a játékba bekerülő teljesen új lapok által pedig a játékhoz tartozó adatbázis nő.
-        Mivel a felhasználók egyszerre többen játszanak a játékkal, így több felhasználót kell majd egyszerre
-        kiszolgálnia az adatbázisnak. Az adatbázis méretének növekedésével romlik a lekérdezések gyorsasága, ezeket
-        igyekszünk különböző adatbázis-kezelési módszerekkel kiküszöbölni.
-        <br><br>
-        Erőforrás igények:
-        <br><br>
-        Az általunk fejlesztett alkalmazásban nincsenek nagyobb modellek amiket be kellene töltenie a rendszernek, így a
-        rendszerkövetelmény is viszonylag kicsi. Az előre összeállított minimális hardverigény a mai modern világban
-        minden felhasználó számára könnyen teljesíthető, azonban ezek a követelmények a játék fejlesztése során
-        növekedhetnek a frissítések tartalma által. A támogatott operációs rendszerek Windows 7 és újabb verziók, ez a
-        későbbiekben bővülhet egyéb rendszerekre (pl. Android, Linux).
-        <br><br>
-        Minimális rendszerkövetelmény:
-        <br><br>
-    <ul>
-        <li>CPU: AMD FX-6300 Hexa-core 3.5GHz.</li>
-        <li> Memória: 1 GB 1333MHz Ram.</li>
-        <li>Videókártya: Integrated: Intel HD Graphics 4000 (Ivy Bridge) vagy AMD Radeon R5 széria (Kaveri line) OpenGL
-        <li>4.41-vel</li>
-        <li>Merevlemez: Legalább 4 GB szabad hellyel rendelkező (ez nőhet a frissítések során).</li>
-        <li>Operációs rendszer: Windows 7 vagy újabb.</li>
-        <li>Internetelérés: közepes sávszélesség a későbbi PvP játékmód miatt</li>
-    </ul>
-    <br><br>
-    A szerver lehetséges konfigurációja a következő lehet:
-    <br><br>
-    <ul>
-        <li>Processzor: 2x Intel® Xeon® Processor E5-2620 v4</li>
-        <li>Alaplap: ASUS WS C621E SAGE</li>
-        <li>Memória: 64GB DDR4 3000Mhz CL15-16 (bővíthető)</li>
-        <li> Merevlemez: 12TB, raid technológiával, hozzá raid vezérlő (bővíthető)</li>
-        <li>Hálózati kártya: Dual GigaBit Ethernet (1000Mbps)</li>
-        <li>Tápegység: 1200W (bővíthető)</li>
-        <li>Sávszélesség : BIX hálózatra kötve 1Gbit/1Gbit</li>
-    </ul>
-    </p>
+				Az alkalmazás két adatbázist használ, egyik amelyik a felhasználókat és adataikat tárolja, a másik pedig ami a játékhoz tartozó elemeknek, azaz a kártyáknak, az adatait és tulajdonságait tárolja. Egyik adatbázis sem fix méretű.<br><br>
+				Ha egy felhasználó regisztrál és elkezd játszani a játékkal, akkor az adatai bekerülnek a felhasználó adatbázisba, így az növekszik. A játékosbázis növekedésével a felhasználó adatbázis is folyamatosan növekszik. A frissítésekkel a játékba bekerülő teljesen új lapok által pedig a játékhoz tartozó adatbázis nő. Mivel a felhasználók egyszerre többen játszanak a játékkal, így több felhasználót kell majd egyszerre
+				kiszolgálnia az adatbázisnak. Az adatbázis méretének növekedésével romlik a lekérdezések gyorsasága, ezeket igyekszünk különböző adatbázis-kezelési módszerekkel kiküszöbölni.
+			</p>
+		<h2><a name="6.3"></a>6.3 Erőforrás igények:</h2>
+			<p class="h2">
+        		Az általunk fejlesztett alkalmazásban nincsenek nagyobb modellek amiket be kellene töltenie a rendszernek, így a rendszerkövetelmény is viszonylag kicsi. Az előre összeállított minimális hardverigény a mai modern világban minden felhasználó számára könnyen teljesíthető, azonban ezek a követelmények a játék fejlesztése során növekedhetnek a frissítések tartalma által. A támogatott operációs rendszerek Windows 7 és újabb verziók, ez a későbbiekben bővülhet egyéb rendszerekre (pl. Android, Linux).
+			</p>
+        <h3>Minimális rendszerkövetelmény:</h3>
+			<ul class="h3">
+				<li>CPU: AMD FX-6300 Hexa-core 3.5GHz.</li>
+				<li> Memória: 1 GB 1333MHz Ram.</li>
+				<li>Videókártya: Integrated: Intel HD Graphics 4000 (Ivy Bridge) vagy AMD Radeon R5 széria (Kaveri line) OpenGL 4.41-vel</li>
+				<li>Merevlemez: Legalább 4 GB szabad hellyel rendelkező (ez nőhet a frissítések során).</li>
+				<li>Operációs rendszer: Windows 7 vagy újabb.</li>
+				<li>Internetelérés: közepes sávszélesség a későbbi PvP játékmód miatt</li>
+			</ul>
+    	<h3>A szerver lehetséges konfigurációja a következő lehet:</h3>
+			<ul class="h3">
+				<li>Processzor: 2x Intel® Xeon® Processor E5-2620 v4</li>
+				<li>Alaplap: ASUS WS C621E SAGE</li>
+				<li>Memória: 64GB DDR4 3000Mhz CL15-16 (bővíthető)</li>
+				<li> Merevlemez: 12TB, raid technológiával, hozzá raid vezérlő (bővíthető)</li>
+				<li>Hálózati kártya: Dual GigaBit Ethernet (1000Mbps)</li>
+				<li>Tápegység: 1200W (bővíthető)</li>
+				<li>Sávszélesség : BIX hálózatra kötve 1Gbit/1Gbit</li>
+			</ul>
     <p><br></p>
-
     <h1><a name="7"></a>7. Támogatottság</h1>
     <p class="h1">
         <br><br>
