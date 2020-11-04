@@ -381,7 +381,7 @@
 					<br>
 					Többféleképpen lehet rendezni az egyes témákat, A-Z vagy Z-A de a bejegyzés módosítása szerint is lehet.Valamint keresni is lehet a témák között, így egyszerűbben meg lehet találni ha egy konkrét témáról szeretnénk olvasni.
 				</p>
-        <h3>Alkalmazás oldali funkciók:
+		<h3>Alkalmazás oldali funkciók:</h3>
         <br><br>
         <img src="rf4.PNG" alt="rf4" class="center" style="width:1000px;height:600px;">
         <br><br>
@@ -673,6 +673,7 @@
         <h4>Admin:</h4>
         	<p class="h4">
         		Ezen a fülön belül tudja az admin a játékosokkal és a szerverrel kapcsolatos teendőket megejteni.
+			</p>
 			<ul class="h5">
 				<li>
 					Szerver moderáció:<br>
@@ -767,7 +768,7 @@
 				A webszerveren a játék saját weblapja fog futni, ennek a terhelhetősége viszonylag nagy, mivel nem sok funkció fog rajta futni, lehetőség van weboldalon regisztrálni és bejelentkezni. Legfőbb célja a játékkal való információk megosztása a játékosokkal. <br><br>
 				Az alkalmazáson belüli funkciók válaszideje viszonylag alacsony, az optimálisan megírt programnak és az erős.Nagy sávszélességgel rendelkező szervernek köszönhetően.
 			</p>
-                <h2><a name="6.2"></a>6.2 Adatbázisok kapacitása,terhelhetősége:</h2>
+        <h2><a name="6.2"></a>6.2 Adatbázisok kapacitása,terhelhetősége:</h2>
         	<p class="h2">
 				Az alkalmazás két adatbázist használ, egyik amelyik a felhasználókat és adataikat tárolja, a másik pedig ami a játékhoz tartozó elemeknek, azaz a kártyáknak, az adatait és tulajdonságait tárolja. Egyik adatbázis sem fix méretű.<br><br>
 				Ha egy felhasználó regisztrál és elkezd játszani a játékkal, akkor az adatai bekerülnek a felhasználó adatbázisba, így az növekszik. A játékosbázis növekedésével a felhasználó adatbázis is folyamatosan növekszik. A frissítésekkel a játékba bekerülő teljesen új lapok által pedig a játékhoz tartozó adatbázis nő. Mivel a felhasználók egyszerre többen játszanak a játékkal, így több felhasználót kell majd egyszerre
@@ -797,292 +798,235 @@
 				<li>Sávszélesség : BIX hálózatra kötve 1Gbit/1Gbit</li>
 			</ul>
     <p><br></p>
+
     <h1><a name="7"></a>7. Támogatottság</h1>
-    <p class="h1">
-        <br><br>
-        A szoftverünket úgy készítjük el hogy a későbbi karbantartás és hibaelhárítás gyorsan és könnyen kezelhető
-        legyen. A karbantartást és hibakezelést az adatbázis átláthatósága is megkönnyíti , valamint a szoftverhez
-        tartozó weboldalt is karban kell tartani.
-        <br><br>
-        Támogatottsági szempontok:
-    <ul class=h1>
-        <li>A szoftver kódjának átláthatóságát az Eclipse fejlesztő környezet segíti</li>
-        <br><br>
-        <li>A kód complexitását és stabilitását is ellenőrizni tudjuk a CodeAnalysis segítségével.</li>
-        <br><br>
-        <li>A karbantartók számára a hibakeresést és ellenőrzést egy útmutató plugint csinálunk.</li>
-        <br><br>
-        <li>A szoftver elindítása után különböző fileokat hoz létre. Első sorban a szoftver indításánál
-            legenerálódik
-            SySLog.txt file amiben a rendszer futási teljesítménye és a hardverhasználat fog naplózódni. A meccs
-            keresés
-            és indításkor létrejön egy GameAdminLog.txt nevű file amiben a játékosok lapjai és lerakási sorrendjük
-            és
-            maga a játék menet fog naplózódni, ezen kívül ebben a fileban az is lenaplózódik ha valaki vagy valakik
-            csalnak egy-egy meccs során. Generálódik egy GameUserLog.txt ennek a tartalma ugyan az mint a
-            GameAdminLog.txt-nek annyi különbséggel hogy nem annyira részletes és ebben nincsenek benne a csalások.
-            Ezt
-            a filet tudják visszanézni a játékosok egy egy meccs menetét. Valamint ha játék közben valami hiba lép
-            fel
-            akkor a szoftver generál egy ErrorLog.txt-t amiben hibakódok vannak ami alapján meg lehet határozni a
-            hiba
-            okát és a hiba kiváltó okát is. Valamint ha a játék kifagy vagy ki crach-el akkor létrejön a
-            CrashLog.txt
-            amiben a crash leírása található, ezt a filet a játékos is meg tudja nézni mivel lehet hogy nem a
-            szerverrel
-            van hiba csak esetleg túltöltődött a memória.</li>
-    </ul>
+		<p class="h1">
+			A szoftverünket úgy készítjük el hogy a későbbi karbantartás és hibaelhárítás gyorsan és könnyen kezelhető
+			legyen. A karbantartást és hibakezelést az adatbázis átláthatósága is megkönnyíti , valamint a szoftverhez
+			tartozó weboldalt is karban kell tartani.
+		<h3>Támogatottsági szempontok:</h3>
+		<ul class="h2">
+			<li>A szoftver kódjának átláthatóságát az Eclipse fejlesztő környezet segíti</li>
+			<li>A kód complexitását és stabilitását is ellenőrizni tudjuk a CodeAnalysis segítségével.</li>
+			<li>A karbantartók számára a hibakeresést és ellenőrzést egy útmutató plugint csinálunk.</li>
+			<li>A szoftver elindítása után különböző fileokat hoz létre. </li>
+			<ul>
+				<li>A szoftver indításánál legenerálódik SySLog.txt file amiben a rendszer futási teljesítménye és a hardverhasználat fog naplózódni.</li> 
+				<li>A meccs keresés és indításkor létrejön egy GameAdminLog.txt nevű file amiben a játékosok lapjai és lerakási sorrendjük és maga a játék menet fog naplózódni, ezen kívül ebben a fileban az is lenaplózódik ha valaki vagy valakik csalnak egy-egy meccs során. </li>
+				<li>Generálódik egy GameUserLog.txt ennek a tartalma ugyan az mint a GameAdminLog.txt-nek annyi különbséggel hogy nem annyira részletes és ebben nincsenek benne a csalások. Ezt a filet tudják visszanézni a játékosok egy egy meccs menetét. </li>
+				<li>Ha játék közben valami hiba lép fel akkor a szoftver generál egy ErrorLog.txt-t amiben hibakódok vannak ami alapján meg lehet határozni a hiba okát és a hiba kiváltó okát is. </li>
+				<li>Ha a játék kifagy vagy ki crach-el akkor létrejön a CrashLog.txt amiben a crash leírása található, ezt a filet a játékos is meg tudja nézni mivel lehet hogy nem a szerverrel van hiba csak esetleg túltöltődött a memória.</li>
+			</ul>
+		</ul>
     </p>
     <p><br></p>
 
     <h1><a name="8"></a>8. Tervezési Korlátozások</h1>
-    <p class="h1">
-        <strong>8. Tervezési korlátozások</strong>
-        <br><br>
-        Programozási nyelvek és fejlesztőeszközök:
-        <br><br>
-        Az alkalmazást elsősorban Java nyelven fejlesztjük, ennek megírásához az Eclipse IDE fejlesztői környezetet
-        fogjuk használni. A Sorftware-ben használt animációk és grafikus elemek megjelenítéséért a Java nyelv egyik
-        könyvtára a JavaFX könyvtár fog felelni.
-        <br>
-        Az alkalmazás kódjára Objektum Oriántált Programozást(OOP) fogunk használni, erre több indokból is szükségünk
-        van. Elsősorban azért fogunk OOP-t használni, mivel a program több funkciót fog ellátni és átláthatatlanná válna
-        a kódunk, ha megpróbálnánk egy fájlba megírni az egészet, így az OOP-vel több osztályra, azaz több fájlra
-        bontjuk a kódot, ami a későbbi fejlesztések során elősegíti az átláthatóságot.
-        <br>
-        A szoftverhez használt adatbázist rendszert a MySQL rendszerben fogjuk kivitelezni, ennek eléréséhez pedig a PHP
-        MyAdmin felületet fogjuk használni, ezt azért választottuk mivel többfelhasználós és több-szálon futó adatbázis
-        kezelő rendszer és legfőképpen platformfüggetlen, így minden platformon el tudja majd érni az alkalmazás az
-        adatokat.
-        Java nyelvből kezelhető a JDBC (Java DataBase COnnectivity) segítségével, ez egy API amely definiálja az
-        adatbázisok lekérdezéséhez és módosításához szükséges osztályokat és metódusokat.
-        <br>
-        A csapatmunka,párhuzamosítás és kódhozzáférés elősegítése érdekében a GitHub használata mellett döntöttünk, mert
-        egyszerű és átlátható a használata.
-        <br><br>
-        Újrafelhasználható elemek az alkalmazásban:
-        <br><br>
-        Ahogy a fent is leírtakban már szerepel az animációkért és a grafikus elemek megjelenítéséért a JavaFX
-        könyvtárat használjuk, ami a Java-nak már egy létező könyvtára, ami az interneten bárki számára elérhető és
-        letölthető a hivatalos OpenJFx oldalon. A JavaFX szabad felhasználású, így ennek alapjára dolgozunk.
-        <br>
-        Több már más játékokban is ismert szabad felhasználású funkciókat is beleépítünk a játékba, ilyen például a
-        Tutorial funkció, amely szinte minden játékban alap funkcióként megtalálható, hogy segítse a felhasználókat
-        alapszinten megérteni a játékot.
-        <br><br>
-        Fejlesztési módszertan:
-        <br><br>
-        Az alkalmazás fejlesztése során igyekszünk az ismertebb modellek segítségével dolgozni. Tehát fejlesztési
-        módszertanként Scrum módszertant tervezzük használni, ez egy agilis szoftverfejlesztési módszertan, amely a
-        csoporton belüli összetartásra összpontosít. Mivel a scrum a folyamatos szóbeli kommunikációk szervezésénél
-        hatékony módszert alkot a fejlesztési területen, így ezt mi teljesen ki tudjuk használni a beszervezett
-        meetingek által. A módszertan meghatározott szerepeket és tevékenységeket állít fel, amellyel le lehet fedni az
-        összes munkafolyamatot, mi ezt is tudtuk integrálni a fejlesztésben, mivel a csapatban minden szerep ki van
-        osztva, és mindenki a saját feladatán dolgozik.
-        <br><br>
-    </p>
+	<h2><a name="8.1"></a>8.1 Programozási nyelvek és fejlesztőeszközök</h2>
+       <p class="h2">
+			Az alkalmazást elsősorban Java nyelven fejlesztjük, ennek megírásához az Eclipse IDE fejlesztői környezetet
+			fogjuk használni. A Sorftware-ben használt animációk és grafikus elemek megjelenítéséért a Java nyelv egyik
+			könyvtára a JavaFX könyvtár fog felelni.
+			<br>
+			Az alkalmazás kódjára Objektum Oriántált Programozást(OOP) fogunk használni, erre több indokból is szükségünk
+			van. Elsősorban azért fogunk OOP-t használni, mivel a program több funkciót fog ellátni és átláthatatlanná válna
+			a kódunk, ha megpróbálnánk egy fájlba megírni az egészet, így az OOP-vel több osztályra, azaz több fájlra
+			bontjuk a kódot, ami a későbbi fejlesztések során elősegíti az átláthatóságot.
+			<br>
+			A szoftverhez használt adatbázist rendszert a MySQL rendszerben fogjuk kivitelezni, ennek eléréséhez pedig a PHP
+			MyAdmin felületet fogjuk használni, ezt azért választottuk mivel többfelhasználós és több-szálon futó adatbázis
+			kezelő rendszer és legfőképpen platformfüggetlen, így minden platformon el tudja majd érni az alkalmazás az
+			adatokat.
+			Java nyelvből kezelhető a JDBC (Java DataBase COnnectivity) segítségével, ez egy API amely definiálja az
+			adatbázisok lekérdezéséhez és módosításához szükséges osztályokat és metódusokat.
+			<br>
+			A csapatmunka,párhuzamosítás és kódhozzáférés elősegítése érdekében a GitHub használata mellett döntöttünk, mert
+			egyszerű és átlátható a használata.
+		</p>
+	<h2><a name="8.2"></a>8.2 Újrafelhasználható elemek az alkalmazásban:</h2>
+        <p class="h2">
+			Ahogy a fent is leírtakban már szerepel az animációkért és a grafikus elemek megjelenítéséért a JavaFX
+			könyvtárat használjuk, ami a Java-nak már egy létező könyvtára, ami az interneten bárki számára elérhető és
+			letölthető a hivatalos OpenJFx oldalon. A JavaFX szabad felhasználású, így ennek alapjára dolgozunk.
+			<br>
+			Több már más játékokban is ismert szabad felhasználású funkciókat is beleépítünk a játékba, ilyen például a
+			Tutorial funkció, amely szinte minden játékban alap funkcióként megtalálható, hogy segítse a felhasználókat
+			alapszinten megérteni a játékot.
+		</p>
+	<h2><a name="8.3"></a>8.3 Fejlesztési módszertan: </h2>
+        <p class="h2">
+			Az alkalmazás fejlesztése során igyekszünk az ismertebb modellek segítségével dolgozni. Tehát fejlesztési
+			módszertanként Scrum módszertant tervezzük használni, ez egy agilis szoftverfejlesztési módszertan, amely a
+			csoporton belüli összetartásra összpontosít. Mivel a scrum a folyamatos szóbeli kommunikációk szervezésénél
+			hatékony módszert alkot a fejlesztési területen, így ezt mi teljesen ki tudjuk használni a beszervezett
+			meetingek által. A módszertan meghatározott szerepeket és tevékenységeket állít fel, amellyel le lehet fedni az
+			összes munkafolyamatot, mi ezt is tudtuk integrálni a fejlesztésben, mivel a csapatban minden szerep ki van
+			osztva, és mindenki a saját feladatán dolgozik.
+    	</p>
     <p><br></p>
 
     <h1><a name="9"></a>9. On-line dokumentáció és Help rendszer</h1>
     <p class="h1">
-        <br><br>
         A felhasználói dokumentáció ebben az SRS dokumentumban található meg, hanem egy különálló dokumentumban, amit
         akár itt is el lehet érni.
-        <br><br>
+        <br>
         A help rendszer amit mi megvalósítunk az a weblapról lesz elérhető, a fórumon. A fórumon 3 fő téma/fül lesz
         elérhető:
-        <br><br>
-    <ul>
-        <li>Általános csevegés: Itt a felhasználók tudnak egymással beszélgetni, ismerkedni és adott témákban kifejteni
-            a
-            gondolataikat, mivel lehetne a játékot előrébb vinni a véleményeik szerint, mi tetszik nekik az adott
-            állapotban
-            és mi nem.</li>
-        <br><br>
-        <li> Gyakori kérdések: Itt a felhasználókban gyakran felmerülő kérdések lesznek megválaszolva(pl. a játék
-            működésével
-            kapcsolatban). A regisztrált felhasználók tudnak új témát hozzáfűzni, tudnak hozzá kommentet írni és ezeket
-            olvasni, míg a nem regisztrált felhasználók csak olvasni tudják ezeket.
-            Problémák: Bármilyen technikai probléma merül fel egy felhasználónak, vagy bug lép fel, akkor arra fel tudja
-            hívni a fejlesztők figyelmét és vagy kijavítják, vagy leírják hogy kell azt megoldani. Mint ahogy GYIK-nél
-            is, a
-            regisztrált felhasználók tudnak új témát hozzáadni, ahhoz kommentelni és azokat olvasni, míg a nem
-            regisztráltak
-            csak olvasni tudják ezeket.</li>
-        <br><br>
-        <li>Ez a fórum megoldás abból a szempontból a legjobb, hogy ha valakinek bármilyen problémája, gondolata
-            felmerült
-            és azt itt megosztja, akkor az visszamenőleg látható marad és így ha másnak is lesz/van ilyen problémája,
-            akkor
-            elég ha elolvassa a már megválaszolt témát, vagy ha van egy hasonló gondolata, ami ki lett fejtve egy
-            témában,</li>
-        akkor azt a gondolat fonalat más felhasználókkal tovább lehet tárgyalni.
-    </ul>
-    <br><br>
-    </p>
+	</p>
+		<ul class="h2">
+			<li>
+				Általános csevegés: <br>
+				Itt a felhasználók tudnak egymással beszélgetni, ismerkedni és adott témákban kifejteni a gondolataikat, mivel lehetne a játékot előrébb vinni a véleményeik szerint, mi tetszik nekik az adott állapotban és mi nem.
+			</li>
+			<li> 
+				Gyakori kérdések: <br>
+				Itt a felhasználókban gyakran felmerülő kérdések lesznek megválaszolva(pl. a játék működésével kapcsolatban). A regisztrált felhasználók tudnak új témát hozzáfűzni, tudnak hozzá kommentet írni és ezeket olvasni, míg a nem regisztrált felhasználók csak olvasni tudják ezeket.
+			</li>
+			<li>
+				Problémák: <br>
+				Bármilyen technikai probléma merül fel egy felhasználónak, vagy bug lép fel, akkor arra fel tudja  hívni a fejlesztők figyelmét és vagy kijavítják, vagy leírják hogy kell azt megoldani. Mint ahogy GYIK-nél is, a regisztrált felhasználók tudnak új témát hozzáadni, ahhoz kommentelni és azokat olvasni, míg a nem regisztráltak csak olvasni tudják ezeket.
+			</li>
+		</ul>
+		<p class="h1">
+			Ez a fórum megoldás abból a szempontból a legjobb, hogy ha valakinek bármilyen problémája, gondolata felmerült és azt itt megosztja, akkor az visszamenőleg látható marad és így ha másnak is lesz/van ilyen problémája, akkor elég ha elolvassa a már megválaszolt témát, vagy ha van egy hasonló gondolata, ami ki lett fejtve egy témában akkor azt a gondolat fonalat más felhasználókkal tovább lehet tárgyalni.
+		</p>
     <p><br></p>
 
     <h1><a name="10"></a>10. Felhasznált kész komponensek</h1>
-    <p class="h1">
-        <strong>10.1 Tutorial funkció</strong>
-        <br><br>
-        Ezt a funkciót, a más játékokban is gyakran használt megoldást mi is beleépítjük a játékunkba. Ez egy szabad
-        felhasználású elem, aminek megvalósítási sorrendjei és megadott algoritmusai találhatók meg az interneten,
-        programozó tudástár weblapokon (pl.: StackOverFlow, GitHub). Ennek felhasználásának nincs semmilyen
-        követelménye, kötelezettség, szabadon átírható az alapja.
-        <br><br>
-        <strong>10.2 Grafika</strong>
-        <br><br>
-        A játék grafikus megvalósításához egy már létező, erre kialakított programnyelvet használunk, a Java FX-et. Ez
-        az internetet bárki számára elérhető és letölthető a hivatalos OpenJFx oldalon, tehát ez a nyelvi, mint
-        komponens is szabad felhasználású, lehet ennek az alapjára bármilyen programot írni, viszont az alapját átírni
-        továbbra is TILOS.
-        <br><br>
-        <strong>10.3 Dizájn</strong>
-        <br><br>
-        Mivel lesz egy fő stílusirány, ezért ahhoz az irányhoz kötődő dizájn elemeket akarunk a játékhoz hozzárendelni.
-        Meglehet, hogy betudunk néhány elemet szerezni az internetről, mint szabad felhasználású elem, viszont nagy
-        részét nekünk kell elkészíteni, elkészíttetni, ezek vásárolt elemek, amiknek az ára a grafikussal való
-        megegyezés alapján lesz megadva.
-        <br><br>
-        A software megvalósításához igyekszünk minél több komponenst/elemet mi megcsinálni, így a fent említetteken
-        kívül nem szeretnénk továbbit más forrásból beszerezni. Viszont a sikeres fejlesztés miatt a lista bővítésének
-        lehetőségét nem zárjuk ki.
-    </p>
+        <h2><a name="10.1"></a>10.1 Tutorial funkció</h2>
+			<p class="h2">
+				Ezt a funkciót, a más játékokban is gyakran használt megoldást mi is beleépítjük a játékunkba. Ez egy szabad
+				felhasználású elem, aminek megvalósítási sorrendjei és megadott algoritmusai találhatók meg az interneten,
+				programozó tudástár weblapokon (pl.: StackOverFlow, GitHub). Ennek felhasználásának nincs semmilyen
+				követelménye, kötelezettség, szabadon átírható az alapja.
+			</p>
+		<h2><a name="10.2"></a>10.2 Grafika</h2>
+			<p class="h2">
+				A játék grafikus megvalósításához egy már létező, erre kialakított programnyelvet használunk, a Java FX-et. Ez
+				az internetet bárki számára elérhető és letölthető a hivatalos OpenJFx oldalon, tehát ez a nyelvi, mint
+				komponens is szabad felhasználású, lehet ennek az alapjára bármilyen programot írni, viszont az alapját átírni
+				továbbra is TILOS.
+			</p>
+        <h2><a name="10.3"></a>10.3 Dizájn</h2>
+			<p class="h2">
+				Mivel lesz egy fő stílusirány, ezért ahhoz az irányhoz kötődő dizájn elemeket akarunk a játékhoz hozzárendelni.
+				Meglehet, hogy betudunk néhány elemet szerezni az internetről, mint szabad felhasználású elem, viszont nagy
+				részét nekünk kell elkészíteni, elkészíttetni, ezek vásárolt elemek, amiknek az ára a grafikussal való
+				megegyezés alapján lesz megadva.
+				<br>
+				A software megvalósításához igyekszünk minél több komponenst/elemet mi megcsinálni, így a fent említetteken
+				kívül nem szeretnénk továbbit más forrásból beszerezni. Viszont a sikeres fejlesztés miatt a lista bővítésének
+				lehetőségét nem zárjuk ki.
+			</p>
     <p><br></p>
 
     <h1><a name="11"></a>11. Interfészek</h1>
     <p class="h1">
-
         A szoftverünk nem definiál külön felületeket más alkalmazásoknak, csak a szoftverhez szükséges interfacek vannak
         definiálva.
-        <br><br>
-        <strong>Felhasználói Interface:</strong>
-        <br><br>
-        A felhasználói interface az az interface amin keresztül a játékos kommunikál a szoftverrel, és kezeli azt.
-        <br><br>
-        <strong>Felhasználói interface jellemzői:</strong>
-
-    <ul class=h1>
-        <li>Könnyen kezelhető és átlátható felület</li>
-        <li>Egységes téma és stílusok megjelenítés</li>
-        <li>Gyorsan tanulható és kezelhető</li>
-    </ul>
-    <br><br>
-    A felhasználók szempontjából előnyös a könnyű kezelhetőség, gyorsan elsajátítható funkciók összessége, valamint
-    tudják igény szerint szerkeszteni amit látnak (témák, kártya hátlapok cseréje, menüelrendezés cseréje, gyors
-    gombok bindelése).
-    <br><br>
-    <strong>Admin Interface:</strong>
-    <br><br>
-    Az Admin Interface az az interface amin keresztül az adminok tudnak parancsokat küldeni a szerver felé és a
-    jogokat valamint büntetéseket, jutalmakat kiosztani /kisorsolni.
-    <br><br>
-    <strong>Admin Interface Jellemzői:</strong>
-    <br><br>
-    <ul class=h1>
-        <li>Könnyen kezelhető és átlátható</li>
-        <li> Könynen kezelhető viszont complexebb a felhasználóitól mivel itt megjelenik a játékosok listáján kívül a
-            modder
-            panel is.</li>
-        <li>Letisztult és lényeg kiemelő.</li>
-    </ul>
-    <br><br>
-    <strong>Szoftver Interface:</strong>
-    <br><br>
-    Ez az az interface ami ahoz szükséges hogy a szoftver más szoftverekkel együtt tudjon működni.
-    <br><br>
-    <strong>Szoftver Interface Feladata:</strong>
-    <br><br>
-    Jelen esetünkben ez az interface azért lényeges mivel a mi szoftverünknek kell a JVM ahhoz hogy el tudjon
-    indulni és futni. Tehát ennek az interfacenak az a feladata hogy összeköttetést létsítsen a szoftverünk és a
-    java JVM componense között, és ezt a kapcsolatot az előtt létre kell hozni mielőtt a szoftverünk elindul mivel a
-    működéséhez elengedhetetlen.
-    <br><br>
-    <strong>Kommunikációs Interface:</strong>
-    <br><br>
-    A kommunikációs interface nevéből adódóan a komponensek közötti kommunikációért felel. A szoftverünk esetében ez
-    az interface 3 al interfacera bontható
-    <br><br>
-    <strong>3 al-interface:</strong>
-    <ul>
-        <br><br>
-        <li><strong>Cliens-Szerver:</strong></li>
-        Ebben a kommunikációban a Felhasználói cliens és a játékot futtató szerver vesz részt. Itt történik az a
-        kommunikáció mikor a játékos elindít egy meccs keresést és játszik.
-        <br><br>
-        <li><strong>Szerever-Adatbázis:</strong></li>
-        Ebben a kommunikációban a játékot futtató szerver és az adatokat tároló adatbázis vesz rész. Itt történik a
-        kommunikációnak az a része mikor a játékos kijátszik valamilyen lapot amit a szerver feldolgozáskor lekér az
-        adatbázis azon részéből amiben a játékhoz tartozó lapok és adataik szerepelnek. Majd mikor ez megtörténik akkor
-        az adatokat megkapva a szerver betölti a pályára az adott lapot és érvényesíti azt.
-        <br><br>
-        <li><strong>Cliens-Adatbázis:</strong></li>
-        Ebben a kommunikációban a cliens és az adatokat tároló adatbázis vesz részt. Itt történik a kommunikáció azon
-        része amikor egy regisztrált felhasználó a cliensbe belépve az adatokat elküldi az adatbázis szervernek azon
-        részére ahol a felhasználók és azok adatai vannak nyilvántartva és ha szerepel a nyilvántartásban akkor a
-        szerver visszaválaszol és belépteti az adott clienst, amennyiben nincs benne az nyilvántartásban akkor egy error
-        üzenttel tér vissza a cliensnek mivel az a felhasználó nincs regisztrálva.
-    </ul>
-    <br><br>
-
-    </p>
+	</p>
+		<h2><a name="11.1"></a>11.1 Felhasználói Interface:</h2>
+			<p class="h2">
+				A felhasználói interface az az interface amin keresztül a játékos kommunikál a szoftverrel, és kezeli azt.<br>
+				<strong>Jellemzői:</strong>
+			</p>
+			<ul class="h3">
+				<li>Könnyen kezelhető és átlátható felület</li>
+				<li>Egységes téma és stílusok megjelenítés</li>
+				<li>Gyorsan tanulható és kezelhető</li>
+			</ul>
+			<p class="h2">
+				A felhasználók szempontjából előnyös a könnyű kezelhetőség, gyorsan elsajátítható funkciók összessége, valamint
+				tudják igény szerint szerkeszteni amit látnak (témák, kártya hátlapok cseréje, menüelrendezés cseréje, gyors
+				gombok bindelése).
+			</p>
+    	<h2><a name="11.2"></a>11.2 Admin Interface:</h2>
+			<p class="h2">
+				Az Admin Interface az az interface amin keresztül az adminok tudnak parancsokat küldeni a szerver felé és a
+				jogokat valamint büntetéseket, jutalmakat kiosztani /kisorsolni.<br>
+				<strong>Jellemzői:</strong>
+			</p>
+			<ul class="h3">
+				<li>Könnyen kezelhető és átlátható</li>
+				<li> Könynen kezelhető viszont complexebb a felhasználóitól mivel itt megjelenik a játékosok listáján kívül a modder panel is.</li>
+				<li>Letisztult és lényeg kiemelő.</li>
+			</ul>
+    	<h2><a name="11.3"></a>11.3 Szoftver Interface:</h2>
+    		<p class="h2">
+    			Ez az az interface ami ahoz szükséges hogy a szoftver más szoftverekkel együtt tudjon működni.<br>
+    			<strong>Feladata:</strong>
+    		</p>
+			<p class="h3">
+				Jelen esetünkben ez az interface azért lényeges mivel a mi szoftverünknek kell a JVM ahhoz hogy el tudjon
+				indulni és futni. Tehát ennek az interfacenak az a feladata hogy összeköttetést létsítsen a szoftverünk és a
+				java JVM componense között, és ezt a kapcsolatot az előtt létre kell hozni mielőtt a szoftverünk elindul mivel a
+				működéséhez elengedhetetlen.
+    		</p>
+    	<h2><a name="11.4"></a>11.4 Kommunikációs Interface:</h2>
+    		<p class="h2">
+				A kommunikációs interface nevéből adódóan a komponensek közötti kommunikációért felel.<br>
+				A szoftverünk esetében ez az interface <strong>3 al interface</strong>ra bontható:
+			<ul class="h3">
+				<li>
+					Cliens-Szerver:<br>
+					Ebben a kommunikációban a Felhasználói cliens és a játékot futtató szerver vesz részt. Itt történik az a
+					kommunikáció mikor a játékos elindít egy meccs keresést és játszik.<br><br>
+				</li>
+				<li>
+					Szerver-Adatbázis:<br>
+					Ebben a kommunikációban a játékot futtató szerver és az adatokat tároló adatbázis vesz rész. Itt történik a
+					kommunikációnak az a része mikor a játékos kijátszik valamilyen lapot amit a szerver feldolgozáskor lekér az
+					adatbázis azon részéből amiben a játékhoz tartozó lapok és adataik szerepelnek. Majd mikor ez megtörténik akkor
+					az adatokat megkapva a szerver betölti a pályára az adott lapot és érvényesíti azt.<br><br>
+				</li>
+				<li>
+					Cliens-Adatbázis:<br>
+					Ebben a kommunikációban a cliens és az adatokat tároló adatbázis vesz részt. Itt történik a kommunikáció azon
+					része amikor egy regisztrált felhasználó a cliensbe belépve az adatokat elküldi az adatbázis szervernek azon
+					részére ahol a felhasználók és azok adatai vannak nyilvántartva és ha szerepel a nyilvántartásban akkor a
+					szerver visszaválaszol és belépteti az adott clienst, amennyiben nincs benne az nyilvántartásban akkor egy error
+					üzenttel tér vissza a cliensnek mivel az a felhasználó nincs regisztrálva.
+				</li>
+			</ul>
+    	</p>
     <p><br></p>
-
-
     <h1><a name="12"></a>12. Alkalmazott szabványok</h1>
-    <p class="h1">
-        Az alkalmazásunkat 2 betartandó szabványra bontottuk, hogy a programot hosszú távon fejleszthetővé tudjuk tenni.
-        A program Java nyelven íródik emelet pedig az adatokat egy adatbázisból nyerjük ki amit a JavaFX könyvtár
-        segítségével fogjuk megmutatni a felhasználónak és ezzel a felülettel lesz képes interaktálni. Ezeket a kulcs
-        tényeket vettük figyelembe mikor kijelöltük a betartandó szabványokat.
-        <br><br>
-        <strong>OOP</strong>:
-        <br><br>
-
-        Az Objektum-Orientált Programozásra azért van szükségünk mivel a program egyszerre több funkciót fog ellátni és
-        átláthatatlanná válna a kód bázisunk, ha megpróbálnak csak egy fájlba megírni az egészet. Másfelől a későbbi
-        fejlesztést is megnehezítené ha nem szednénk szét a kódot mert:
-        <br><br>
-
-        1, A meglévő kódunk túl nagy lenne ami kavarodást okozhatna.
-        <br><br>
-
-        2, Ha egy új fejlesztő kapcsolódik a projektbe akkor neki így átláthatóbbá tudjuk tenni és hamarabb meg tudja
-        érteni a különbőző osztályok müködésének az elvét.
-        <br><br>
-
-        3, Funkcionálisan el fogjuk tudni különíteni a program elemeit
-        <br><br>
-
-        4, Az MVC szabványt nélküle nem tudnánk alkalmazni
-        <br><br>
-        <br><br>
-
-        <strong>MVC</strong>:
-        <br><br>
-
-        A programunkat úgy szeretnénk megírni, hogy a felület amit lát a felhasználó és azt ott folyó műveletek csak
-        “részben” férjenek hozzá a felhasznált adatokhoz. Ezért fogjuk alkalmazni a Model-View-Controller
-        Szabványt/Mintát (későbbiekben csak MVC ként fogunk rá hivatkozni) mert szeretnénk biztosítani egy védelmi
-        réteget a programon belül és ezzel a szabvánnyal később egyszerűbben fogjuk tudni szerkeszteni a programunkat.
-        <br><br>
-
-        A View itt a felhasználó által látott felületett értjük, a Controller osztály a felületen végbemenő interakciót
-        hivatott lekzeleni és képes a modell osztállyal kommunikálni de elemeihez csak közvetett módon férhet hozzá. Ez
-        azért hasznos mert a ha valamilyen változás/hiba történik az adatokban azaz a model osztály részben akkor
-        egyszerűen csak a Modell osztályokon kell javítani ezzel pedig azt tudjuk biztosítani, hogy a Controller
-        osztályokban nem kell újra írni a kódot mivel nem ő érte a felelős, hogy adatot biztosítson, ő csak ezt az
-        adatot felhasználja.
-        <br><br>
-
-        Ezen kívül a programon több ember is dolgozik egyszerre és ezzel a szabvánnyal egyszerűbb elkülöníteni a
-        komponenseket, mert amíg a csapat egyik része tud zökkenőmentesen dolgozni a Grafikus felületen (Views), a
-        csapat másik fele képes dolgozni a Hátterét szolgáló kódon (Models) egyazon időben.
-        <br><br>
-        <br><br>
-
-    </p>
+		<p class="h1">
+			Az alkalmazásunkat 2 betartandó szabványra bontottuk, hogy a programot hosszú távon fejleszthetővé tudjuk tenni.
+			A program Java nyelven íródik emelet pedig az adatokat egy adatbázisból nyerjük ki amit a JavaFX könyvtár
+			segítségével fogjuk megmutatni a felhasználónak és ezzel a felülettel lesz képes interaktálni. Ezeket a kulcs
+			tényeket vettük figyelembe mikor kijelöltük a betartandó szabványokat.
+		</p>	
+        <h2>OOP</h2>
+			<p class="h2">
+				Az Objektum-Orientált Programozásra azért van szükségünk mivel a program egyszerre több funkciót fog ellátni és
+				átláthatatlanná válna a kód bázisunk, ha megpróbálnak csak egy fájlba megírni az egészet. Másfelől a későbbi
+				fejlesztést is megnehezítené ha nem szednénk szét a kódot mert:
+			</p>
+				<ol class="h3">
+					<li>A meglévő kódunk túl nagy lenne ami kavarodást okozhatna.</li>
+					<li>Ha egy új fejlesztő kapcsolódik a projektbe akkor neki így átláthatóbbá tudjuk tenni és hamarabb meg tudjaérteni a különbőző osztályok müködésének az elvét.</li>
+					<li>Funkcionálisan el fogjuk tudni különíteni a program elemeit</li>
+					<li>Az MVC szabványt nélküle nem tudnánk alkalmazni</li>
+				</ol>
+        <h2>MVC</h2>
+			<p class="h2">
+				A programunkat úgy szeretnénk megírni, hogy a felület amit lát a felhasználó és azt ott folyó műveletek csak
+				“részben” férjenek hozzá a felhasznált adatokhoz. Ezért fogjuk alkalmazni a Model-View-Controller
+				Szabványt/Mintát (későbbiekben csak MVC ként fogunk rá hivatkozni) mert szeretnénk biztosítani egy védelmi
+				réteget a programon belül és ezzel a szabvánnyal később egyszerűbben fogjuk tudni szerkeszteni a programunkat.
+				<br><br>
+				A View itt a felhasználó által látott felületett értjük, a Controller osztály a felületen végbemenő interakciót
+				hivatott lekzeleni és képes a modell osztállyal kommunikálni de elemeihez csak közvetett módon férhet hozzá. Ez
+				azért hasznos mert a ha valamilyen változás/hiba történik az adatokban azaz a model osztály részben akkor
+				egyszerűen csak a Modell osztályokon kell javítani ezzel pedig azt tudjuk biztosítani, hogy a Controller
+				osztályokban nem kell újra írni a kódot mivel nem ő érte a felelős, hogy adatot biztosítson, ő csak ezt az
+				adatot felhasználja.
+				<br><br>
+				Ezen kívül a programon több ember is dolgozik egyszerre és ezzel a szabvánnyal egyszerűbb elkülöníteni a
+				komponenseket, mert amíg a csapat egyik része tud zökkenőmentesen dolgozni a Grafikus felületen (Views), a
+				csapat másik fele képes dolgozni a Hátterét szolgáló kódon (Models) egyazon időben.
+			</p>
     <p><br></p>
 
     <h1><a name="13"></a>13. Mellékletek</h1>
@@ -1113,12 +1057,6 @@
 				</a>
 			</li>
 		</ul>
-
     </p>
-    <p><br></p>
-
-
-
 </body>
-
 </html>
