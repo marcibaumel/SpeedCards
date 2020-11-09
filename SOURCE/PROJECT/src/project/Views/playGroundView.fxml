@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controllers.playGroundViewController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controllers.PlayGroundViewController">
    <children>
       <GridPane gridLinesVisible="true" layoutX="6.0" layoutY="516.0" prefHeight="76.0" prefWidth="707.0">
         <columnConstraints>

@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class optionsViewController implements Initializable {
+public class OptionsViewController implements Initializable {
 
     String test;
 

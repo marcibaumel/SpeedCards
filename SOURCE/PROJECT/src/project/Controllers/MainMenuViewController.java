@@ -19,7 +19,7 @@ public class MainMenuViewController implements Initializable {
     //private Media me;
 
     /*
-    String path=new File("src/media/test.mp3").getAbsolutePath();
+    String path=new File("src/project.media/test.mp3").getAbsolutePath();
     Media me = new Media(new File(path).toURI().toString());
     MediaPlayer mediaPlayer=new MediaPlayer(me);
     */

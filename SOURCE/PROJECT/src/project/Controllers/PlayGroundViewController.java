@@ -14,12 +14,15 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import project.Model.CardObject;
 
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class playGroundViewController extends Application implements Initializable {
+public class PlayGroundViewController extends Application implements Initializable {
+
+
 
     @FXML
     private Button card1_1Button;
