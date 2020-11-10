@@ -58,7 +58,7 @@
     </p>
     <p align="center">
       <font style="font-size: 26pt" size="6"
-        ><b>Analízis Modell DOKUMENTUM</b></font
+        ><b>Analízis Modell Dokumentum</b></font
       >
     </p>
     <p><br /><br /><br /></p>
@@ -125,6 +125,12 @@
           <td width="300">Dokumentum Létrehozása</td>
           <td width="160">Baumel Márton</td>
         </tr>
+		  <tr valign="top">
+          <td width="90">2020.11.10</td>
+          <td width="60">1.1</td>
+          <td width="300">Tartalom feltöltés</td>
+          <td width="160">Korita Zsófia</td>
+        </tr>
       </tbody>
     </table>
 
@@ -133,7 +139,107 @@
       <b><h1>Tartalomjegyzék</h1></b>
     </p>
     <div id="Tartalomjegyzek" dir="ltr">
-      <p class="h1"><a href="#1">1. Bevezetés</a></p>
+      	<p class="h1"><a href="#1">1. Bevezetés</a></p>
+		<p class="h1"><a href="#2">2. Kezdeti osztálydiagram</a></p>
+			<p class="h3"><a href="#21">2.1 Kezdeti osztálydiagram</a></p>
+			<p class="h3"><a href="#22">2.2 Osztályok felsorolása</a></p>
+			<p class="h3"><a href="#23">2.3. Alrendszerek</a></p>
+		<p class="h1"><a href="#3">3. Az első alrendszer modellje</a></p>
+			<p class="h3"><a href="#31">3.1 Statikus modell</a></p>
+				<p class="h5"><a href="#311">3.1.1 Kapcsolatok pontosítása</a></p>
+				<p class="h5"><a href="#312">3.1.2 Attribútumok azonosítása</a></p>
+				<p class="h5"><a href="#313">3.1.3 Bázisosztályok keresése</a></p>
+			<p class="h3"><a href="#32">3.2. Dinamikus modell</a></p>
+			<p class="h3"><a href="#33">3.3. Funkcionális modell</a></p>
+			<p class="h3"><a href="#34">3.4. Operációk azonosítása</a></p>
+			<p class="h3"><a href="#35">3.5 Az analízis modell osztálydiagramja</a></p>
+			<p class="h3"><a href="#36">3.6. Az analízis modell osztályainak listája</a></p>
     </div>
+	  <h1><a name="1"></a>1. Bevezetés</h1>
+	  <p><br></p>
+	  <h1><a name="2"></a>2. Kezdeti osztálydiagram</h1>
+	  <p><br></p>
+		  <h2><a name="21"></a>2.1 Kezdeti osztálydiagram</h2>
+		  <p><br></p>
+		  <h2><a name="22"></a>2.2 Osztályok felsorolása</h2>
+	  		<p class="h2">
+	  			Az osztály diagramot az MVC szerint bontottuk szét, az átláthatóság érdekében.
+	  		</p>
+	  		<h4 class="h3">Models:</h4>
+			<ul class="h4">
+	  			<li>CardObject Osztály:</li>
+				<ul>
+					<li>a pályán lévő lapok tulajdonságát tartalmazza</li>
+				</ul>
+				<li>AffectCard Osztály:</li>
+				<ul>
+					<li>módosító tényezőket tartalmaz</li>
+					<li>függvényeket tárol</li>
+				</ul>
+				<li>BufferCard Osztály:</li>
+				<ul>
+					<li>módosító tényezőket tartalmaz</li>
+					<li>CardObject értékeit módosítja</li>
+				</ul>
+				<li>GroundCardObject Osztály:</li>
+				<ul>
+					<li>CardObject leszármazottja</li>
+				</ul>
+				<li>AirCardObject Osztály:</li>
+				<ul>
+					<li>CardObject leszármazottja</li>
+				</ul>
+				<li>DbContext Osztály:</li>
+				<ul>
+					<li>Adatbázis elérése</li>
+					<li>Adatbázis elemeinek elérése</li>
+				</ul>
+	  		</ul>
+	  		<h4 class="h3">Controllers és a hozzá tartozó View felület megnevezése:</h4>
+			<ul class="h4">
+	  			<li>CardObjectController Osztály:</li>
+				<ul>
+					<li>cardObjecte.fxml sablont tölti fel</li>
+					<li>Egy cardObject-et fel tulajdonsággal amit később képesek legyünk sokszorosítani</li>
+				</ul>
+				<li>MainMenuViewController Osztály:</li>
+				<ul>
+					<li>mainMenuView.fxml interakciókat kezeli le</li>
+					<li>A belépő menü funkcióit valósítja meg</li>
+				</ul>
+				<li>OptionsViewController Osztály:</li>
+				<ul>
+					<li>optionsView.fxml interkecióit kezeli le</li>
+					<li>A beállításokat funkcióit valósítja meg</li>
+				</ul>
+				<li>PlayGroundViewController:</li>
+				<ul>
+					<li>playGroundView.fxml interakciókat kezeli</li>
+					<li>a játékmenet funkcióit valósítja meg</li>
+				</ul>
+	  		</ul>
+		  <p><br></p>
+		  <h2><a name="23"></a>2.3. Alrendszerek</h2>
+		  <p><br></p>
+	  <h1><a name="3"></a>3. Az első alrendszer modellje</h1>
+	  <p><br></p>
+		  <h2><a name="31"></a>3.1 Statikus modell</h2>
+		  <p><br></p>
+	  		  <h3><a name="311"></a>3.1.1 Kapcsolatok pontosítása</h3>
+	  		  <p><br></p>
+	  		  <h3><a name="312"></a>3.1.2 Attribútumok azonosítása</h3>
+	  		  <p><br></p>
+	  		  <h3><a name="313"></a>3.1.3 Bázisosztályok keresése</h3>
+	  		  <p><br></p>	  
+		  <h2><a name="32"></a>3.2. Dinamikus modell</h2>
+		  <p><br></p>
+		  <h2><a name="33"></a>3.3. Funkcionális modell</h2>
+		  <p><br></p>
+		  <h2><a name="34"></a>3.4. Operációk azonosítása</h2>
+		  <p><br></p>
+		  <h2><a name="35"></a>3.5 Az analízis modell osztálydiagramja</h2>
+		  <p><br></p>	
+		  <h2><a name="36"></a>3.6. Az analízis modell osztályainak listája</h2>
+		  <p><br></p>	  
   </body>
 </html>
