@@ -47,6 +47,12 @@
       .h6 {
         margin-left: 3.5cm;
       }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
     </style>
   </head>
 
@@ -125,6 +131,12 @@
           <td width="300">Dokumentum Létrehozása</td>
           <td width="160">Baumel Márton</td>
         </tr>
+		  <tr valign="top">
+          <td width="90">2020.11.10</td>
+          <td width="60">1.1</td>
+          <td width="300">Tartalom feltöltés</td>
+          <td width="160">Korita Zsófia</td>
+        </tr>
       </tbody>
     </table>
 
@@ -133,7 +145,63 @@
       <b><h1>Tartalomjegyzék</h1></b>
     </p>
     <div id="Tartalomjegyzek" dir="ltr">
-      <p class="h1"><a href="#1">1. Bevezetés</a></p>
+      	<p class="h1"><a href="#1">1. Bevezetés</a></p>
+		<p class="h1"><a href="#2">2. Felhasználói felület</a></p>
+		<p class="h1"><a href="#3">3. Adatmodellek</a></p>
+			<p class="h3"><a href="#31">3.1 Adatbázis kezelő kiválasztása</a></p>
+			<p class="h3"><a href="#32">3.2 Szemantikai adatmodell</a></p>
+			<p class="h3"><a href="#33">3.3 Relációs adatmodell</a></p>
+			<p class="h3"><a href="#34">3.4 Az adatbázis kezelővel kapcsolatot tartó osztályok</a></p>
+		<p class="h1"><a href="#4">4. A funkcionális modell kiegészítése</a></p>
     </div>
+	  <h1><a name="1"></a>1. Bevezetés</h1>
+	  <p><br></p>
+	  <h1><a name="2"></a>2. Felhasználó Felület</h1>
+    <p class="h1">
+        A játékban 3 jól elkülöníthető felület van:
+        </p>
+        <h2>1. Főmenü</h2>
+			<p class="h2">
+				Ha felhasználó elindítja a programot ez lesz az első felület amit a felhasználó látni fog. Itt 3 gomb és egy
+				profil gomb helyet foglalni. A Play gombbal tudunk belépni a játékba de előtte szükséges a belépés a profilba de
+				ezt külön jelzi is a program. Az Options gombbal tudjuk beállítani a felbontást és a hangerőt. Az Exit gombbal
+				tudunk kilépni az alkalmazásból. A Profil gomb a képernyő bal oldalán lesz elérhető, itt látható lesz, hogy
+				hanyas szintűek vagyunk de ha rányomunk bejön a Profil Management felület.
+				<br><br><br><br><br><br>
+				<img src="menu_options.gif" alt="menu-options" class="center" style="width:1000px;height:600px;">
+				<br><br><br><br><br>
+			</p>
+        <h2>2. Profil</h2>
+			<p class="h2">
+				Ha a Főmenübe rányomunk a Profil gombra bejön a Profil Management felület. Itt leszünk képesek managelni a
+				profilunkhoz kapcsolódó tevékenységeket: bejelentkezést, regisztrációt és a kijelentkezést.
+				<br><br><br><br><br><br>
+				<img src="reg_sign.png" alt="menu-options" class="center" style="width:1000px;height:600px;">
+				<br><br><br><br><br><br>
+				<img src="signIn.png" alt="menu-options" class="center" style="width:1000px;height:600px;">
+				<br><br><br><br><br><br>
+				<img src="menu_profilOptions.gif" alt="menu-profil" class="center" style="width:1000px;height:720px;">
+				<br>
+			</p>
+        <h2>3. Játék Felület</h2>
+			<p class="h2">
+				A sikerült bejelentkezni akkor leszünk képesek elindítani a Play gombbal egy játékot. Ilyenkor a egy 6 felé
+				tagolt pályát fogunk kapni, de ez szimmetrikusan megegyezik ezért csak a mi szemszögünkből lévő 3 sávot fogom
+				bemutatni. Az első sáv a kijátszható kártyákat tartalmazza, ezzel a sávval tud interakcióba kerülni a
+				felhasználó, mellette pedig megtalálható lesz a játékbeli karakterünk aktuális tulajdonsága egy négyzetben
+				alatta helyezkedik el az aktuális kör befejezésére szolgáló “End Turn” gomb. A következő sáv a légi egységek
+				vannak és a harmadik sávban helyezkednek el a földi egységek ezekben a sávokban oldalt lehetnek lapok amik
+				hatást fejthetnek ki később. Ha megnyomjuk az ESC gombot a billentyűzeten akkor egy Options ablak ugrik fel ahol
+				képesek vagyunk beállítani a játék hangját vagy kiléphetünk a játékba vissza a Főmenübe.
+				<br><br><br><br><br><br>
+				<img src="menu_play.gif" alt="menu-play" class="center" style="width:1000px;height:720px;">
+				<br><br><br><br><br>
+				<br>
+			</p>
+    <p><br></p>
+	  <h1><a name="3"></a>3. Adatmodellek</h1>
+	  <p><br></p>
+	  <h1><a name="4"></a>4. A funkcionális modell kiegészítése</h1>
   </body>
 </html>
+
