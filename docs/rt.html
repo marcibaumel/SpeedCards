@@ -222,7 +222,48 @@
 	  <h2><a name="33"></a>3.3 Relációs adatmodell</h2>
 	  	<img src="rtPictures/relacios_modell.jpg" class="center" style="width:1000px;height:600px;">
 	  <h2><a name="34"></a>3.4 Az adatbázis kezelővel kapcsolatot tartó osztályok</h1>
-	  <p><br></p>
+	  <h3>DbContext</h3>
+	  	<p>
+			Ennek az osztálynak a segítségével hozzuk létre a kapcsolatot az adatbázissal és a szoftver között.<br>
+			Három darab alosztállyal kezeljük le az egyes táblák és az osztályok közötti 
+	  	</p>
+	  	<img src="amPictures/DbContext.png">
+	  	<ul class = "h3">
+			<li>
+				<h4>CardUnitOfWork Osztály</h4>
+				A kártyákat kezelő adatbázisból vesz ki, rak be, kezeli az adatokat.
+				<ul>
+					<li>get(i_where: Object) - Lekérdezi, az adott helyen lévő adatot az adatbázisból.</li>
+					<li>post(cardUOWork: CardUOWork) - Frissíti az adott helyen lévő adatot az adatbázisban.</li>
+					<li>put(cardUOWork: CardUOWork) - Belerakja az adatbázisba az adatot a soron következő szabad helyre.</li>
+					<li>delete(i_where: Object) - Törli az adatbázisból a megadott helyen található adatot.</li>
+				</ul>
+				<img src="CUOW.png">
+			</li>	
+			<li>
+				<h4>UserUnitOfWork Osztály</h4>
+				Változtatni lehet a játékos felhasználóképét, a felhasználói nevét és a jelszavát.<br><br>
+				<ul>
+					<li>get(i_where: Object) - Lekérdezi, az adott helyen lévő adatot az adatbázisból</li>
+					<li>post(userUOWork: UserUOWork) - Frissíti az adott helyen lévő adatot az adatbázisban.</li>
+					<li>put(userUOWork: UserUOWork) - Belerakja az adatbázisba az adatot a soron következő szabad helyre.</li>
+					<li>delete(i_where: Object) - Törli az adatbázisból a megadott helyen található adatot.</li>
+				</ul>
+				<img src="UUOW.png">
+			</li>	
+			<li>
+				<h4>ShopUnitOfWork Osztály</h4>
+				A boltot kezelő adatbázisból vesz ki, rak be, kezeli az adatokat.
+				<ul>
+					<li>get(i_where: Object) - Lekérdezi, az adott helyen lévő adatot az adatbázisból</li>
+					<li>post(shopUOWork: ShopUOWork) - Frissíti az adott helyen lévő adatot az adatbázisban.</li>
+					<li>put(shopUOWork: ShopUOWork) - Belerakja az adatbázisba az adatot a soron következő szabad helyre.</li>
+					<li>delete(i_where: Object) - Törli az adatbázisból a megadott helyen található adatot.</li>
+				</ul>
+				<img src="SUOW.png">
+			</li>	
+	  	</ul>
+	  	
 	  <h1><a name="4"></a>4. A funkcionális modell kiegészítése</h2>
   </body>
 </html>
