@@ -158,7 +158,34 @@
 			<p class="h3"><a href="#33">3.3. Funkcionális modell</a></p>
 			<p class="h3"><a href="#34">3.4. Operációk azonosítása</a></p>
 			<p class="h3"><a href="#35">3.5 Az analízis modell osztálydiagramja</a></p>
-			<p class="h3"><a href="#36">3.6. Az analízis modell osztályainak listája</a></p>
+	    		<p class="h3"><a href="#36">3.6. Az analízis modell osztályainak listája</a></p>
+	    			<p class="h3"><a href="#361">3.6.1 MainMenuViewController</a></p>
+	    			<p class="h3"><a href="#362">3.6.2 User</a></p>
+	    			<p class="h3"><a href="#363">3.6.3 Level</a></p>
+	    			<p class="h3"><a href="#364">3.6.4 CardObject</a></p>
+	    			<p class="h3"><a href="#365">3.6.5 Hand</a></p>
+	    			<p class="h3"><a href="#366">3.6.6 EffectCardObject</a></p>
+	    			<p class="h3"><a href="#367">3.6.7 SoundManager</a></p>
+	    			<p class="h3"><a href="#368">3.6.8 GroundCardObject</a></p>
+	    			<p class="h3"><a href="#369">3.6.9 AirCardObject</a></p>
+	    			<p class="h3"><a href="#3610">3.6.10 Dealer</a></p>
+	    			<p class="h3"><a href="#3611">3.6.11 Deck</a></p>
+	     			<p class="h3"><a href="#3612">3.6.12 DbContext</a></p>
+	     			<p class="h3"><a href="#3613">3.6.13 CardUnitOfWork</a></p>
+	     			<p class="h3"><a href="#3614">3.6.14 UserUnitOfWork</a></p>
+	     			<p class="h3"><a href="#3615">3.6.15 ShopUnitOfWork</a></p>
+	     			<p class="h3"><a href="#3616">3.6.16 LoginController</a></p>
+	     			<p class="h3"><a href="#3617">3.6.17 RegistrationController</a></p>
+	     			<p class="h3"><a href="#3618">3.6.18 HandController</a></p>
+	     			<p class="h3"><a href="#3619">3.6.19 OptionsViewController</a></p>
+	     			<p class="h3"><a href="#3620">3.6.20 PlayGroundViewController</a></p>
+	     			<p class="h3"><a href="#3621">3.6.21 PlayController</a></p>
+	     			<p class="h3"><a href="#3622">3.6.22 CardDescriptionController</a></p>
+	     			<p class="h3"><a href="#3623">3.6.23 ShopController</a></p>
+	     			<p class="h3"><a href="#3624">3.6.24 DisplayManager</a></p>
+	     			<p class="h3"><a href="#3625">3.6.25 UserDataManager</a></p>
+	     			<p class="h3"><a href="#3626">3.6.26 OnGroundCardObject</a></p>
+	     			<p class="h3"><a href="#3627">3.6.27 DestroyedCardObject</a></p>
     </div>
 	  <h1><a name="1"></a>1. Bevezetés</h1>
 	  <p><br></p>
@@ -495,6 +522,434 @@
 	  		<img src="amPictures/Osztalydiagram.png" class="center">
 	  		</p>	
 		  <h2><a name="36"></a>3.6. Az analízis modell osztályainak listája</h2>
-		  <p><br></p>	  
+		  <h3>3.6.1 MainMenuViewController</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Lekezeli a főmenüben a az adott gombok lenyomását követő metódusokat</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>RegistrationController</li>
+        <li>LoginController</li>
+        <li>ShopController</li>
+        <li>PlayController</li>
+        <li>User</li>
+        <li>OptionsViewController</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>Login : BOOLEAN</p>
+    <u>Operációk:</u>
+    <ul>
+        <li>playButton() - A játékot elindítja</li>
+        <li>optionsButtonEvent() - Beállítások menüt nyitja meg</li>
+        <li>exitButtonEvent() - Kilép a játékból</li>
+    </ul>
+    <h3>3.6.2 User</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A felhasználó adatait kéri le, adja át más osztályoknak, amik igényt tartanak rá.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>PlayGroundViewController</li>
+        <li>Dealer</li>
+        <li>Level</li>
+        <li>MainMenuViewController</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        FID : INT<br> Name : STRING<br> Password : STRING<br> Birthday : DATE<br> Permisson : ENUM<br>
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>getName(i_where: Object) - Lekéri a felhasználó nevét, az "i_where" rámutat az adatbázisban az adott név helyére.</li>
+        <li>getLevel(i_where: Object) - Lekéri a felhasználó profiljának a szintjét, az "i_where" rámutat az adatbázisban az adott név helyére.</li>
+        <li>setXP(xp: int) - A Level osztály által kapott értékkel növeli a profil xp szintjét.</li>
+        <li>ownedCards(person: User) - A felhasználó által birtokolt kártyák vannak letárolva itt.</li>
+    </ul>
+    <h3>3.6.3 Level</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A felhasználó szintjéhez kötődik, meghatározza, hogy milyen szintbe esik hogyha egy adott mennyiségű Xp-t kap. Meccsek végén ennek az osztálynak adódik a meccsből jövő Xp.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>PlayController</li>
+        <li>User</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        WinExp : INT <br> LoseExp : INT <br> Multiplier : DOUBLE <br>
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>setLevel(i_where: Object, szint: int) - Lekéri a felhasználó által szerzett xp mennyiség helyét, az "i_where", és beállítja, hogy a felhasználó hanyas szintű lesz/marad, ha ezt megkapja.</li>
+        <li>rangeLevelByXp(xp: int) - Meghatározza, hogy mekkora xp mennyiségek milyen szintbe rakja a játékost.</li>
+        <li>matchXpCalculator(win: Boolean, hossz: int) - Kiszámolja, hogy nyert, vagy vesztett meccsért mennyi Xp jár, az érték függ a játék hosszától.</li>
+    </ul>
+    <h3>3.6.4 CardObject</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A játékban a kártya objektumok erre az osztályra épülnek, ebbe van definiálva és itt található néhány elemi metódusa.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>Hand</li>
+        <li>EffectCardObject</li>
+        <li>OnGroundCardObject</li>
+        <li>GroundCardObject</li>
+        <li>AirCardObject</li>
+        <li>DestroyedCardObject</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        DefPoint : INT <br> AtcPoint : INT <br> HealthPoint: INT<br> Destroyed : BOOLEAN<br>
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>playButton() - Kijátsza a kártyát, így vagy egy effektet rakva egy másik kártyára, vagy pedig támad.</li>
+        <li>backButton() - Visszavonja a kártya kijátszásának lehetőségét</li>
+        <li>crystalConsumption() - Azt mondja meg, hogy mennyi kristályért cserébe tudjuk kijátszani a kártyát.</li>
+    </ul>
+    <h3>3.6.5 Hand</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A játékos kezében levő kártyákat tartja számon és adja vissza.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>HandController</li>
+        <li>CardObject</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        CardDb : INT<br> Cards : INT[5] <br>
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>getHandCard() - Megadja, hogy melyik kártya/kártyák vannak a játékos kezében</li>
+    </ul>
+    <h3>3.6.6 EffectCardObject</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Ez az osztály foglalkozik az effekt kártyák példányosításáért, továbbá hogy milyen képességei, tulajdonságai vannak az adott kártyáknak.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>CardObject</li>
+        <li>CardDescriptionController</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <P>
+        ECID : INT<br> Name : STRING<br>Image : IMAGE ICON<br>Description : STRIG<br> HpEffect : INT<br> ApEffect : INT<br> OtherEffect : STRING<br><br>
+    </P>
+    <u>Operációk:</u>
+    <ul>
+        <li>getEffect() - Ez lekérdezi, hogy az adott kártya milyen effekttel lát el egy másik kártyát, esetleg sebzi-e azt.</li>
+    </ul>
+    <h3>3.6.7 SoundManager</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Kezeli a játékban történő minden hang beállítását, némítását, zene hangerő beállítását, némítását, stb.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>OptionsViewManager</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p> MusicVolume : INT<br> SoundVolume : INT<br> Mute : BOOLEAN<br></p>
+    <u>Operációk:</u>
+    <ul>
+        <li>changeVolume(vol: Sound) - Felelős a játék hangok beállításáért.</li>
+        <li>changeMusic(mus: Sound) - Felelős a játék zenéinek hangerőjének a beállításáért.</li>
+    </ul>
+    <h3>3.6.8 GroundCardObject</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Ez az osztály foglalkozik az földi kártyák példányosításáért, kezeli az életét, és hogy mekkora támadó erővel bír.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>CardObject</li>
+        <li>CardDescriptionController</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        TKID : INT<br> Name : STRING<br> Image : IMAGE ICON<br> Description : STRING<br> TypeID : INT<br> DefPoint : INT<br> AtcPoint : INT<br> HealthPoint : INT<br>
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>getAttackPower() - Lekérdezi, hogy az adott kártya mekkora támadóerővel bír.</li>
+        <li>getCardHP() - Lekérdezi, hogy az adott kártyának mekkora élete (HP-ja) van még.</li>
+    </ul>
+    <h3>3.6.9 AirCardObject</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Ez az osztály foglalkozik az légi kártyák példányosításáért, kezeli az életét, és hogy mekkora támadó erővel bír.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>CardObject</li>
+        <li>CardDescriptionController</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        TKID : INT<br> Name : STRING<br> Image : IMAGE ICON<br> Description : STRING<br> TypeID : INT<br> DefPoint : INT<br> AtcPoint : INT<br> HealthPoint : INT<br>ű
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>getAttackPower() - Lekérdezi, hogy az adott kártya mekkora támadóerővel bír.</li>
+        <li>getCardHP() - Lekérdezi, hogy az adott kártyának mekkora élete (HP-ja) van még.</li>
+    </ul>
+    <h3>3.6.10 Dealer</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>
+        Kezeli a játékteret, ő osztja ki véletlenszerűen a két játékosnak a kártyáit a játék elején és -közben, a játékosnak minden kör elején a függvénye által számított kristályt ad, de elvenni a játékos kezéből nem tud semmit, ahhoz csak hozzáadni tud.
+    </p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>User</li>
+        <li>HandController</li>
+        <li>OnGroundCardObject</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        Cards : ArrayList(card)
+        <br> Cristay :INT<br> NextCardIndex :INT<br>
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>shuffleDeck(card: List) - Összekavarja a megkapott kártyák sorrendjét.</li>
+        <li>getCard() - A játékosnak ez a függvény adja a kör elején a kártyákat (mindig a soron következőt kapja).</li>
+        <li>setCrystal() - Beállítja a játékosok kristályszámát.</li>
+    </ul>
+    <h3>3.6.11 Deck</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A felhasználók itt tudják kiválasztani, hogy mely kártyákat rakják be a paklijukba, amivel csatlakoznak majd a játékba.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>DbContext</li>
+        <li>OptionsViewController</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>Cards : ArrayList(card)<br></p>
+    <u>Operációk:</u>
+    <ul>
+        <li>setDeck(card: List) - Beállítja, hogy melyik kártya lista kerüljön be a játékos paklijába.</li>
+        <li>getDeck() - Lekérdezi milyen kártyák vannak a pakliba.</li>
+        <li>destroyDeck() - Törli a paklit, és így nem kell egyesével kiszedni belőle azokat, így újra lehet azt építeni.</li>
+    </ul>
+    <h3>3.6.12 DbContext</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Az adatbázis és a program osztályai közötti adatfolyamot lebonyolító osztály, gyakorlatilag egy köztes réteg.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>CardUnitOfWork</li>
+        <li>ShopUnitOfWork</li>
+        <li>UserUnitOfWork</li>
+        <li>RegistrationController</li>
+        <li>LoginController</li>
+        <li>Deck</li>
+        <li>UserDataManager</li>
+        <li>ShopController</li>
+    </ul>
+    <u>Operációk:</u>
+    <ul>
+        <li>save(dbContext: DbContext) - Lementi az adatbázisba a játékos által, vagy a játék által kapott új/változott adatokat.</li>
+        <li>oad(i_where: Object) - Betölti az adatbázisból a megfelelő adatokat.</li>
+    </ul>
+    <h3>3.6.13 CardUnitOfWork</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A kártyákat kezelő adatbázisból vesz ki, rak be, kezeli az adatokat.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>DbContext</li>
+    </ul>
+    <u>Operációk:</u>
+    <ul>
+        <li>get(i_where: Object) - Lekérdezi, az adott helyen lévő adatot az adatbázisból.</li>
+        <li>post(cardUOWork: CardUOWork) - Frissíti az adott helyen lévő adatot az adatbázisban.</li>
+        <li>put(cardUOWork: CardUOWork) - Belerakja az adatbázisba az adatot a soron következő szabad helyre.</li>
+        <li>delete(i_where: Object) - Törli az adatbázisból a megadott helyen található adatot.</li>
+    </ul>
+    <h3>3.6.14 UserUnitOfWork</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A felhasználókat kezelő adatbázisból vesz ki, rak be, kezeli az adatokat.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>DbContext</li>
+    </ul>
+    <u>Operációk:</u>
+    <ul>
+        <li>get(i_where: Object) - Lekérdezi, az adott helyen lévő adatot az adatbázisból.</li>
+        <li>post(cardUOWork: CardUOWork) - Frissíti az adott helyen lévő adatot az adatbázisban.</li>
+        <li>put(cardUOWork: CardUOWork) - Belerakja az adatbázisba az adatot a soron következő szabad helyre.</li>
+        <li>delete(i_where: Object) - Törli az adatbázisból a megadott helyen található adatot.</li>
+    </ul>
+    <h3>3.6.15 ShopUnitOfWork</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A boltot kezelő adatbázisból vesz ki, rak be, kezeli az adatokat.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>DbContext</li>
+    </ul>
+    <u>Operációk:</u>
+    <ul>
+        <li>get(i_where: Object) - Lekérdezi, az adott helyen lévő adatot az adatbázisból.</li>
+        <li>post(cardUOWork: CardUOWork) - Frissíti az adott helyen lévő adatot az adatbázisban.</li>
+        <li>put(cardUOWork: CardUOWork) - Belerakja az adatbázisba az adatot a soron következő szabad helyre.</li>
+        <li>delete(i_where: Object) - Törli az adatbázisból a megadott helyen található adatot.</li>
+    </ul>
+    <h3>3.6.16 LoginController</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A már regisztrált felhasználók belépését végizi</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>MainMenuViewController</li>
+        <li>DbContext</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>Username : STRING<br> Password : STRING<br></p>
+    <u>Operációk:</u>
+    <ul>
+        <li>loginUser(name: String, passw: String, email: String) - Bekéri a felhasználó nevét, vagy e-mail címét, és a jelszavát.</li>
+    </ul>
+    <h3>3.6.17 RegistrationController</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Még a rendszerben bent nem lévő játékosokat felviszi az adatbázisba (regisztrálja őket).</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>MainMenuViewController</li>
+        <li>DbContext</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        Name : STRING<br> BirthDay : DATE<br> Username : STRING<br> Password : STRING<br> Email : STRING<br>
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>newUser(name: String, passw: String, email: String) - Kér egy felhasználó nevet, egy email címet és egy jelszót. Ezekkel tud majd a felhasználó bejelentkezni a későbbiekben.</li>
+    </ul>
+    <h3>3.6.18 HandController</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Kezeli a játékos kezében levő lapokat, a játékos kristályainak a számát.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>Dealer</li>
+        <li>Hand</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        Cristay : INT<br> CardInHand : INT<br>
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>handCounter() - Számolja, hogy a játékos kezében mennyi kártya van, ha kap egyet hozzáad, ha lerak, akkor pedig elvesz.</li>
+        <li>getCrystal() - Lekérdezi, hogy éppen mennyi kristálya van a játékosnak.</li>
+    </ul>
+    <h3>3.6.19 OptionsViewController</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A beállítások menüt kezeli, ez egy grafikus felületet kezelő osztály.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>MainMenuViewController</li>
+        <li>SoundManager</li>
+        <li>DisplayManager</li>
+        <li>UserDataManager</li>
+        <li>Deck</li>
+    </ul>
+    <h3>3.6.20 PlayGroundViewController</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Kezeli a játék harcterének a grafikus megjelenítését.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>PlayController</li>
+        <li>User</li>
+    </ul>
+    <h3>3.6.21 PlayController</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Kezeli a játék match közbeni történéseiket, számolja, hogy mennyi idő telt el a játék kezdete óta, figyeli, hogy a játékosok a kör időkön ne tudjanak túlcsúszni, stb.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>MainMenuViewController</li>
+        <li>Level</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        OnGroundCardDB : INT<br> BonusEffect : INT<br> RoundCounter : INT<br> WinPlayer : BOOLEAN<br> Matchbeg : DATE <br>RoundBeg : INT<br> RoundEnd : INT<br> MatchEnd : DATE
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>startGame(cont : Controll) - Elindítja a játékot és meghívja a szükséges metódusokat</li>
+        <li>timeCounter() - Számolja az időt másodpercben az indítástól kezdve.</li>
+    </ul>
+    <h3>3.6.22 CardDescriptionController</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Leírja a kártyák tulajdonságát, mint a nevét és egy rövidebb leírást.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>EffectCardObject</li>
+        <li>GroundCardObject</li>
+        <li>AirCardObject</li>
+        <li>DestroyedCardObject</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>Descripotion : STRING <br></p>
+    <u>Operációk:</u>
+    <ul>
+        <li>getCardName() - Lekérdezi az adott kártyának a nevét.</li>
+        <li>getDescription() - Lekérdez egy rövidebb leírást az adott kártyáról, ami elmondja, hogy mit tud, mire képes.</li>
+    </ul>
+    <h3>3.6.23 ShopController</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Ez is egy grafikus felületet kezelő osztály, a boltnak az adott funkcióit kezeli le.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>MainMenuViewController</li>
+        <li>DbContext</li>
+    </ul>
+    <u>Operációk:</u>
+    <ul>
+        <li>buyDeck() - Kártya paklik vásárlását hajtja végre, véletlenszerűen kiválasztott paklit csinál és azt a felhasználó kártya adatbázisára irattatja.</li>
+        <li>buyGameCurrency() - A játékban használatos pénznemet lehet így venni, amivel paklikat lehet vásárolni.</li>
+    </ul>
+    <h3>3.6.24 DisplayManager</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Beállítja a játék felbontását, hogy teljes képernyőben legyen-e kiterjesztve, vagy sem.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>OptionsViewController</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>
+        Resolution : ENUM <br> FullScreen : BOOLEAN<br>
+    </p>
+    <u>Operációk:</u>
+    <ul>
+        <li>changeResolution(res: Enum) - Beállítja, hogy a játék milyen felbontásba legyen megnyitva.</li>
+        <li>fullscreen(on: Boolean) - Teljes képernyős módba tudja rakni a játékot és vissza tudja azt állítani egy ablakba.</li>
+    </ul>
+    <h3>3.6.25 UserDataManager</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Változtatni lehet a játékos felhasználóképét, a felhasználói nevét és a jelszavát.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>OptionsViewController</li>
+        <li>DbContext</li>
+    </ul>
+    <u>Operációk:</u>
+    <ul>
+        <li>setName(name: String) - Megváltoztatja a felhasználó nevét, újat ad neki.</li>
+        <li>setProfilePic(pic: Image) - Új, vagy pedig más profilképet állít be.</li>
+        <li>setPassword(passw: String) - Átállítja, új jelszót állít be a játékosnak.</li>
+    </ul>
+    <h3>3.6.26 OnGroundCardObject</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>A harctéren levő kártyákat kezeli, figyeli melyikek vannak lent és hogy hány darab.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>Dealer</li>
+        <li>Dealer</li>
+    </ul>
+    <u>Attribútumok:</u>
+    <p>CardDb : INT<br> Effected : BOOLEAN<br></p>
+    <u>Operációk:</u>
+    <ul>
+        <li>getCardNumber() - Lekérdezi, hogy mennyi kártya található a harctéren.</li>
+    </ul>
+    <h3>3.6.27 DestroyedCardObject</h3>
+    <u>Felelőssége, feladata:</u>
+    <p>Itt állítódik át az elpusztított, vagy pedig kijátszott kártya elpusztított/elhasználtra.</p>
+    <u>Együttműködők:</u>
+    <ul>
+        <li>CardObject</li>
+        <li>CardDescriptionController</li>
+    </ul>
+    <u>Operációk:</u>
+    <ul>
+        <li>isDestroyed() - Átállítja a kártyának a tulajdonságát elpusztultra/elhasználtra.</li>
+    </ul>  
   </body>
 </html>
