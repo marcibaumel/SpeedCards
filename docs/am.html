@@ -268,7 +268,176 @@
 
 				    </ul>
 	  		  <h3><a name="312"></a>3.1.2 Attribútumok azonosítása</h3>
-	  		  <p><br></p>
+	  		  	<p class = "h3">
+	  			<u>Osztályok és atribútumok:</u>
+				    <ul class = "h4">
+					<li>
+					    <u>User osztály:</u>
+					    <p>
+						FID : INT<br>Name : STRING<br>Password : STRING<br>Birthday : DATE<br> Permisson : ENUM<br>
+					    </p>
+					</li>
+					<li>
+					    <u>Level Osztaly:</u>
+					    <p>
+						WinExp : INT<br> LoseExp : INT<br> Multiplier : DOUBLE<br>
+					    </p>
+					</li>
+					<li>
+					    <u>CardObject Osztály:</u>
+					    <P>
+						DefPoint : INT<br> AtcPoint : INT<br> HealthPoint: INT<br> Destroyed : BOOLEAN<br>
+					    </P>
+					</li>
+					<li>
+					    <u>Hand osztály:</u>
+					    <P>
+						CardDb : INT<br> Cards : INT[5]<br>
+					    </P>
+					</li>
+					<li>
+					    <u>EffectCard Object Osztály:</u>
+					    <P>
+						ECID : INT<br> Name : STRING<br>Image : IMAGE ICON<br>Description : STRIG<br> HpEffect : INT<br> ApEffect : INT<br> OtherEffect : STRING<br><br>
+					    </P>
+					</li>
+					<li>
+					    <u>SoundManager osztály:</u>
+					    <P>
+						MusicVolume : INT<br> SoundVolume : INT<br> Mute : BOOLEAN<br>
+					    </P>
+					</li>
+					<li>
+					    <u>GroundCardObject Osztály:</u>
+					    <P>
+						TKID : INT<br> Name : STRING<br> Image : IMAGE ICON<br> Description : STRING<br> TypeID : INT<br> DefPoint : INT<br> AtcPoint : INT<br> HealthPoint : INT<br>
+					    </P>
+					</li>
+					<li>
+					    <u>AirCardObject Osztály:</u>
+					    <P>
+						TKID : INT<br> Name : STRING<br> Image : IMAGE ICON<br> Description : STRING<br> TypeID : INT<br> DefPoint : INT<br> AtcPoint : INT<br> HealthPoint : INT<br>
+					    </P>
+					</li>
+					<li>
+					    <u>Dealer Osztály:</u>
+					    <P>
+						Cards : ArrayList(card)
+						<br> Cristay :INT<br> NextCardIndex :INT<br>
+					    </P>
+					</li>
+					<li>
+					    <u>Deck Osztály:</u>
+					    <p>
+						Cards : ArrayList(card)<br>
+						<Card>
+					    </p>
+					</li>
+					<li>
+					    <u>DbContext Osztály:</u>
+					    <p>
+						Ez az osztály csak metódusoakt tartalmaz.<br>
+					    </p>
+					</li>
+					<li>
+					    <u>CardUnitOfWork Osztály:</u>
+					    <p>
+						Beolvassa az adatbázisból a szükséges adatokat ,és mikor a kártya meghívódik akkor példányosítódik, amit egy példányosító függvén hajt végre.<br>
+					    </p>
+					</li>
+					<li>
+					    <u>UserUnitOfWork Osztály:</u>
+					    <p>
+						metódust tartalmaz amely az adatbázisból a szükséges adaatokat betölti az adott usernek.<br>
+					    </p>
+					</li>
+					<li>
+					    <u>ShopUnitOfWork Osztály:</u>
+					    <p>
+						metódust tartalmaz amely az adatbázisból a szükséges adaatokat betölti az adott usernek.<br>
+					    </p>
+					</li>
+					<li>
+					    <u>LoginController Osztály:</u>
+					    <p>
+						Username : STRING<br> Password : STRING<br>
+					    </p>
+					</li>
+					<li>
+					    <u>RegistrationController Osztály:</u>
+					    <P>
+						Name : STRING<br> BirthDay : DATE<br> Username : STRING<br> Password : STRING<br> Email : STRING<br>
+					    </P>
+					</li>
+					<li>
+					    <u>MainMenuViewController Osztály:</u>
+					    <P>
+						Login : BOOLEAN<br>
+					    </P>
+					</li>
+					<li>
+					    <u>HandController Osztály:</u>
+					    <p>
+						Cristay : INT<br> CardInHand : INT<br>
+					    </p>
+					</li>
+					<li>
+					    <u>OptionsViewController Osztály:</u>
+					    <p>
+						csak metódusokat tartalmaz.<br>
+					    </p>
+					</li>
+					<li>
+					    <u>PlayGroundViewController:</u>
+					    <p>
+						Csak metódusokat tartalmaz.<br>
+					    </p>
+					</li>
+					<li>
+					    <u>PlayController Osztály:</u>
+					    <p>
+						OnGroundCardDB : INT<br> BonusEffect : INT<br> RoundCounter : INT<br> WinPlayer : BOOLEAN<br> Matchbeg : DATE <br>RoundBeg : INT<br> RoundEnd : INT<br> MatchEnd : DATE
+					    </p>
+					</li>
+					<li>
+					    <u>CardDescriptionController osztály:</u>
+					    <P>
+						Descripotion : STRING<br>
+					    </P>
+					</li>
+					<li>
+					    <u>ShopController osztály:</u>
+					    <p>
+						Csak metódusoak tartalmaz.<br>
+					    </p>
+					</li>
+					<li>
+					    <u>Display manager:</u>
+					    <p>
+						Resolution : ENUM
+						FullScreen : BOOLEAN
+					    </p>
+					</li>
+					<li>
+					    <u>UserData Manager:</u>
+					    <p>
+						Csak metódusokat tartamaz.<br>
+					    </p>
+					</li>
+					<li>
+					    <u>OnGroundCardObject Osztály:</u>
+					    <p>
+						CardDb : INT<br> Effected : BOOLEAN<br>
+					    </p>
+					</li>
+					<li>
+					    <u>DestroyedCardObject Osztály:</u>
+					    <p>
+						Csak metódusokat tartalmaz.<br>
+					    </p>
+					</li>
+				    </ul>
+	  			</p>
 	  		  <h3><a name="313"></a>3.1.3 Bázisosztályok keresése</h3>
 	  				<h4>A szoftverünkben található bázisosztályok:</h4>
 					<ul class="h4">
