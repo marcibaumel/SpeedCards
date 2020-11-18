@@ -23,7 +23,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button id="playButton" fx:id="playButton" mnemonicParsing="false" onAction="#playButton" prefHeight="112.0" prefWidth="272.0" text="Play">
+                  <Button id="playButton" fx:id="playButton" mnemonicParsing="false" onAction="#playButton" prefHeight="112.0" prefWidth="272.0">
                      <font>
                         <Font size="39.0" />
                      </font>
