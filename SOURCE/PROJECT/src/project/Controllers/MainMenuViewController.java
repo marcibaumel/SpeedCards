@@ -9,8 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.scene.image.ImageView;
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -35,6 +38,9 @@ public class MainMenuViewController implements Initializable {
 
     @FXML
     private Slider volumeSlider;
+
+    @FXML
+    private ImageView imgview;
 
     @FXML
     private void testButton(ActionEvent event){
@@ -91,6 +97,8 @@ public class MainMenuViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("logtset");
-
+        File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\testpic.jpg");
+        Image image = new Image (file.toURI().toString());
+        imgview.setImage(image);
     }
 }
