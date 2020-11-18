@@ -98,7 +98,11 @@ public class MainMenuViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("logtset");
         File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\testpic.jpg");
+        imgview.setFitWidth(1000);
+        imgview.setFitHeight(480);
+        imgview.setPreserveRatio(false);
         Image image = new Image (file.toURI().toString());
         imgview.setImage(image);
+
     }
 }
