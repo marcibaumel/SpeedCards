@@ -70,6 +70,10 @@ public class MainMenuViewController implements Initializable {
 
     }
 
+    public static int playFunction(){
+        return 1;
+    }
+
     @FXML
     public void playButton(ActionEvent event) {
         try {
@@ -83,6 +87,7 @@ public class MainMenuViewController implements Initializable {
         } catch(Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public void setBackground()
