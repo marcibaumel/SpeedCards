@@ -1,26 +1,36 @@
 package project.Controllers;
 
-import com.sun.media.jfxmediaimpl.platform.Platform;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import java.io.File;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.stage.Stage;
+import project.SoundManager;
 
 public class MainMenuViewController implements Initializable {
 
 
+    SoundManager musicObject=new SoundManager();
 
 
     @FXML
@@ -101,19 +111,6 @@ public class MainMenuViewController implements Initializable {
     }
 
     public void setPlayButton(){
-        /*
-        File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\startImg.png");
-        Image img=new Image(file.toURI().toString());
-        ImageView view= new ImageView(img);
-        view.setFitHeight(80);
-        view.setPreserveRatio(true);
-        playButton.setTranslateX(0);
-        playButton.setTranslateY(20);
-        //Setting the size of the button
-        playButton.setPrefSize(80, 80);
-        // playButton.setGraphic(view);
-        //playButton.setStyle("-fx-background-color: #000000");
-        */
 
         playButton.setStyle("-fx-border-color: transparent");
         playButton.setStyle("-fx-border-width: 0;-fx-background-radius: 0;\n" +
@@ -122,18 +119,7 @@ public class MainMenuViewController implements Initializable {
     }
 
     public void setOptionButton(){
-        /*
-        File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\optionsImg.png");
-        Image img=new Image(file.toURI().toString());
-        ImageView view= new ImageView(img);
-        view.setFitHeight(80);
-        view.setPreserveRatio(true);
-        optionButton.setTranslateX(0);
-        optionButton.setTranslateY(10);
-        //Setting the size of the button
-        optionButton.setPrefSize(80, 80);
-        optionButton.setGraphic(view);
-         */
+
         optionButton.setStyle("-fx-border-color: transparent");
         optionButton.setStyle("-fx-border-width: 0;-fx-background-radius: 0;\n" +
                 "    -fx-background-color: transparent;");
@@ -141,18 +127,7 @@ public class MainMenuViewController implements Initializable {
     }
 
     public void setExitButton(){
-       /*
-        File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\exitImg.png");
-        Image img=new Image(file.toURI().toString());
-        ImageView view= new ImageView(img);
-        view.setFitHeight(80);
-        view.setPreserveRatio(true);
-        exitButton.setTranslateX(0);
-        exitButton.setTranslateY(-20);
-        //Setting the size of the button
-        exitButton.setPrefSize(80, 80);
-        exitButton.setGraphic(view);
-        */
+
         exitButton.setStyle("-fx-border-color: transparent");
         exitButton.setStyle("-fx-border-width: 0;-fx-background-radius: 0;\n" +
                 "    -fx-background-color: transparent;");
@@ -168,7 +143,7 @@ public class MainMenuViewController implements Initializable {
         setPlayButton();
         setOptionButton();
         setExitButton();
-
+        musicObject.playMusic("src\\project\\Controllers\\test2.wav");
 
     }
 
