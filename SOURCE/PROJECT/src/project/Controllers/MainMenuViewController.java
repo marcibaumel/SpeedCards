@@ -87,7 +87,7 @@ public class MainMenuViewController implements Initializable {
 
     public void setBackground()
     {
-        File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\mainmenu.png");
+        File file= new File("src\\project\\media\\mainmenu.png");
         imgview.setFitWidth(720);
         imgview.setFitHeight(500);
         imgview.setPreserveRatio(false);
