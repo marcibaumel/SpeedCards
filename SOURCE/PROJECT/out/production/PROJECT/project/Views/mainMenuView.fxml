@@ -28,12 +28,12 @@
                         <Font size="39.0" />
                      </font>
                   </Button>
-                  <Button id="optionButton" fx:id="optionButton" mnemonicParsing="false" onAction="#optionsButton" prefHeight="112.0" prefWidth="272.0" text="Options" GridPane.rowIndex="1">
+                  <Button id="optionButton" fx:id="optionButton" mnemonicParsing="false" onAction="#optionsButton" prefHeight="112.0" prefWidth="272.0" GridPane.rowIndex="1">
                      <font>
                         <Font size="39.0" />
                      </font>
                   </Button>
-                  <Button id="exitButton" cancelButton="true" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="112.0" prefWidth="272.0" text="Exit" GridPane.rowIndex="2">
+                  <Button id="exitButton" fx:id="exitButton" cancelButton="true" mnemonicParsing="false" onAction="#exitButtonEvent" prefHeight="112.0" prefWidth="272.0" GridPane.rowIndex="2">
                      <font>
                         <Font size="39.0" />
                      </font>

@@ -30,6 +30,9 @@ public class MainMenuViewController implements Initializable {
     private Button exitButton;
 
     @FXML
+    private Button optionButton;
+
+    @FXML
     private Button playButton;
 
     @FXML
@@ -93,6 +96,7 @@ public class MainMenuViewController implements Initializable {
     }
 
     public void setPlayButton(){
+        /*
         File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\startImg.png");
         Image img=new Image(file.toURI().toString());
         ImageView view= new ImageView(img);
@@ -102,8 +106,54 @@ public class MainMenuViewController implements Initializable {
         playButton.setTranslateY(20);
         //Setting the size of the button
         playButton.setPrefSize(80, 80);
-        playButton.setGraphic(view);
+        // playButton.setGraphic(view);
+        //playButton.setStyle("-fx-background-color: #000000");
+        */
+
+        playButton.setStyle("-fx-border-color: transparent");
+        playButton.setStyle("-fx-border-width: 0;-fx-background-radius: 0;\n" +
+                "    -fx-background-color: transparent;");
+
     }
+
+    public void setOptionButton(){
+        /*
+        File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\optionsImg.png");
+        Image img=new Image(file.toURI().toString());
+        ImageView view= new ImageView(img);
+        view.setFitHeight(80);
+        view.setPreserveRatio(true);
+        optionButton.setTranslateX(0);
+        optionButton.setTranslateY(10);
+        //Setting the size of the button
+        optionButton.setPrefSize(80, 80);
+        optionButton.setGraphic(view);
+         */
+        optionButton.setStyle("-fx-border-color: transparent");
+        optionButton.setStyle("-fx-border-width: 0;-fx-background-radius: 0;\n" +
+                "    -fx-background-color: transparent;");
+
+    }
+
+    public void setExitButton(){
+       /*
+        File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\exitImg.png");
+        Image img=new Image(file.toURI().toString());
+        ImageView view= new ImageView(img);
+        view.setFitHeight(80);
+        view.setPreserveRatio(true);
+        exitButton.setTranslateX(0);
+        exitButton.setTranslateY(-20);
+        //Setting the size of the button
+        exitButton.setPrefSize(80, 80);
+        exitButton.setGraphic(view);
+        */
+        exitButton.setStyle("-fx-border-color: transparent");
+        exitButton.setStyle("-fx-border-width: 0;-fx-background-radius: 0;\n" +
+                "    -fx-background-color: transparent;");
+    }
+
+
 
 
     @Override
@@ -111,6 +161,9 @@ public class MainMenuViewController implements Initializable {
         System.out.println("logtset");
         setBackground();
         setPlayButton();
+        setOptionButton();
+        setExitButton();
+
 
     }
 
