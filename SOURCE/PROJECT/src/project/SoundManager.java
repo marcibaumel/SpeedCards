@@ -6,10 +6,19 @@ import javafx.scene.media.MediaPlayer;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import java.lang.Object;
+import javafx.scene.media.AudioClip;
 import javax.swing.*;
 import java.io.File;
+import java.nio.file.Paths;
+
 
 public class SoundManager {
+
+    private Clip clip;
+    private AudioClip audioClip;
+    private MediaPlayer mp;
+    private Media me;
 
     public void playMusic(String musicLocation)
     {
@@ -18,15 +27,13 @@ public class SoundManager {
 
             if(musicPath.exists())
             {
-
                 AudioInputStream audioInput= AudioSystem.getAudioInputStream(musicPath);
+                clip= AudioSystem.getClip();
 
-                Clip clip= AudioSystem.getClip();
+
                 clip.open(audioInput);
                 clip.start();
-                //clip.loop(Clip.LOOP_CONTINUOUSLY);
-
-
+                clip.loop(Clip.LOOP_CONTINUOUSLY);
             }
             else
             {
@@ -39,5 +46,22 @@ public class SoundManager {
         }
     }
 
+    /*
+    public void playAudioClip(String musicLocation)
+    {
+        String PATH=new File(musicLocation).getAbsolutePath();
+        me = new Media(new File(PATH).toURI().toString());
+        mp=new MediaPlayer(me);
+        mp.play();
+
+    }
+
+
+    public void setMusicVolume(int Volume)
+    {
+
+    }
+
+     */
 
 }

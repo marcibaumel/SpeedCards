@@ -1,5 +1,7 @@
 package project.Controllers;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -8,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.transform.Translate;
 import project.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,6 +32,8 @@ public class OptionsViewController implements Initializable {
     @FXML
     private ChoiceBox cbResolution;
 
+    @FXML
+    private Slider volumeSlider;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -51,12 +56,36 @@ public class OptionsViewController implements Initializable {
                     System.out.println("You play in HD");
                 }
                 });
-
-
-
-
-
-
+            showVolumeNumber();
     }
+
+    public void showVolumeNumber()
+    {
+
+        double newNumber;
+        Translate translate = new Translate();
+
+        volumeSlider.valueProperty().addListener(new ChangeListener<Number>() {
+            public void changed(ObservableValue <?extends Number>observable, Number oldValue, Number newValue){
+                //translate.setX((double) newValue);
+                //translate.setY(50);
+                //translate.setZ(100);
+
+                changeVolume(newValue);
+
+            }
+
+
+        });
+
+        //System.out.println(volumeSlider.getValue());
+    }
+    public void changeVolume(Number newValue){
+
+        volumeSlider.setValue(newValue.doubleValue());
+        System.out.println(newValue);
+        //return (int)newValue;
+    }
+
 
 }
