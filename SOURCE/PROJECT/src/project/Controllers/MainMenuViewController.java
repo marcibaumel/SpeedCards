@@ -112,9 +112,10 @@ public class MainMenuViewController implements Initializable {
 
     public void setPlayButton(){
 
-        playButton.setStyle("-fx-border-color: transparent");
-        playButton.setStyle("-fx-border-width: 0;-fx-background-radius: 0;\n" +
-                "    -fx-background-color: transparent;");
+        //playButton.setStyle("-fx-border-color: transparent");
+        playButton.setStyle("-fx-border-color: transparent;\n" +
+                            "-fx-border-width: 0;-fx-background-radius: 0;\n" +
+                            "-fx-background-color: transparent;");
 
     }
 

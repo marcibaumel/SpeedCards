@@ -2,7 +2,9 @@ package project.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
@@ -23,7 +25,44 @@ import java.util.ResourceBundle;
 
 public class PlayGroundViewController extends Application implements Initializable {
 
+    @FXML
+    private Button ground1;
 
+    @FXML
+    private Button ground2;
+
+    @FXML
+    private Button ground3;
+
+    @FXML
+    private Button E_ground1;
+
+    @FXML
+    private Button E_ground2;
+
+    @FXML
+    private Button E_ground3;
+
+    @FXML
+    private Button air1;
+
+    @FXML
+    private Button air2;
+
+    @FXML
+    private Button air3;
+
+    @FXML
+    private Button air4;
+
+    @FXML
+    private Button E_air1;
+
+    @FXML
+    private Button E_air2;
+
+    @FXML
+    private Button E_air3;
 
     @FXML
     private ImageView imageview;
@@ -73,8 +112,20 @@ public class PlayGroundViewController extends Application implements Initializab
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //imgLoad(card1_1Button);
         setProgressBars();
-        dealDamage(healthBar, 0.2);
-
+        //dealDamage(healthBar, 0.2);
+        setButtonStyle(air1);
+        setButtonStyle(air2);
+        setButtonStyle(air3);
+        setButtonStyle(air4);
+        setButtonStyle(E_air1);
+        setButtonStyle(E_air2);
+        setButtonStyle(E_air3);
+        setButtonStyle(E_ground1);
+        setButtonStyle(E_ground2);
+        setButtonStyle(E_ground3);
+        setButtonStyle(ground1);
+        setButtonStyle(ground2);
+        setButtonStyle(ground3);
     }
 
     public void setProgressBars()
@@ -93,8 +144,34 @@ public class PlayGroundViewController extends Application implements Initializab
         pb.setProgress(current-value);
     }
 
+    public void setButtonStyle(Button givenButton)
+    {
+        givenButton.setStyle("-fx-border-color: transparent;\n" +
+                "-fx-border-width: 0;-fx-background-radius: 0;\n" +
+                "-fx-background-color: transparent;");
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
+
+    }
+
+
+
+    @FXML
+    public void openCardDes(ActionEvent event) {
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardDes.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

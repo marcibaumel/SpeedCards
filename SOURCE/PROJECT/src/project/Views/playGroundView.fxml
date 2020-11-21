@@ -13,6 +13,22 @@
          </image></ImageView>
       <ProgressBar fx:id="healthBar" layoutX="719.0" layoutY="549.0" prefHeight="18.0" prefWidth="87.0" progress="1.0" />
       <ProgressBar fx:id="enemyHealthBar" layoutX="96.0" layoutY="50.0" prefHeight="18.0" prefWidth="87.0" progress="0.0" />
+      <Button fx:id="air1" layoutX="217.0" layoutY="413.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="air1" onAction="#openCardDes" />
+      <Button fx:id="air2" layoutX="322.0" layoutY="413.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="air2" />
+      <Button fx:id="air3" layoutX="449.0" layoutY="413.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="air3" />
+      <Button fx:id="air4" layoutX="558.0" layoutY="413.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="air4" />
+
+      <Button fx:id="E_air1" layoutX="217.0" layoutY="104.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="E_air1" />
+      <Button fx:id="E_air2" layoutX="322.0" layoutY="104.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="E_air2" />
+      <Button fx:id="E_air3" layoutX="434.0" layoutY="104.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="E_air3" />
+
+      <Button fx:id="ground1" layoutX="276.0" layoutY="315.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="ground1" />
+      <Button fx:id="ground2" layoutX="381.0" layoutY="315.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="ground2" />
+      <Button fx:id="ground3" layoutX="499.0" layoutY="315.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="ground3" />
+
+      <Button fx:id="E_ground1" layoutX="276.0" layoutY="199.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="E_ground1" />
+      <Button fx:id="E_ground2" layoutX="381.0" layoutY="199.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="E_ground2" />
+      <Button fx:id="E_ground3" layoutX="508.0" layoutY="199.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="E_ground3" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
