@@ -46,22 +46,11 @@ public class SoundManager {
         }
     }
 
-    /*
-    public void playAudioClip(String musicLocation)
-    {
-        String PATH=new File(musicLocation).getAbsolutePath();
-        me = new Media(new File(PATH).toURI().toString());
-        mp=new MediaPlayer(me);
-        mp.play();
-
-    }
-
-
-    public void setMusicVolume(int Volume)
+    public void playCardClip()
     {
 
     }
 
-     */
+
 
 }

@@ -143,7 +143,7 @@ public class MainMenuViewController implements Initializable {
         setPlayButton();
         setOptionButton();
         setExitButton();
-        musicObject.playMusic("src\\project\\Controllers\\test2.wav");
+        musicObject.playMusic("src\\project\\media\\test2.wav");
 
     }
 
