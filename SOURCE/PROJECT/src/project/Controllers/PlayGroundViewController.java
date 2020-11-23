@@ -147,6 +147,8 @@ public class PlayGroundViewController extends Application implements Initializab
         setButtonStyle(ground2);
         setButtonStyle(ground3);
         setCardStyle(card1,"src\\project\\media\\card1.jpg");
+        setCardStyle(card3,"src\\project\\media\\card1.jpg");
+        setCardStyle(card2,"src\\project\\media\\card2.jpg");
     }
 
     public void setProgressBars()
@@ -195,5 +197,24 @@ public class PlayGroundViewController extends Application implements Initializab
         }
 
     }
+
+    @FXML
+    public void openCard(ActionEvent event) {
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObjcet.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 
 }
