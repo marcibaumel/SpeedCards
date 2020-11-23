@@ -65,6 +65,15 @@ public class PlayGroundViewController extends Application implements Initializab
     private Button E_air3;
 
     @FXML
+    private Button card1;
+
+    @FXML
+    private Button card2;
+
+    @FXML
+    private Button card3;
+
+    @FXML
     private ImageView imageview;
 
     @FXML
@@ -108,6 +117,17 @@ public class PlayGroundViewController extends Application implements Initializab
     }
     */
 
+    private void setCardStyle(Button button, String path)
+    {
+        File file= new File(path);
+        Image image = new Image (file.toURI().toString());
+        ImageView view = new ImageView(image);
+        view.setFitHeight(70);
+        view.setFitWidth(50);
+        //view.setPreserveRatio(true);
+        button.setGraphic(view);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //imgLoad(card1_1Button);
@@ -126,6 +146,7 @@ public class PlayGroundViewController extends Application implements Initializab
         setButtonStyle(ground1);
         setButtonStyle(ground2);
         setButtonStyle(ground3);
+        setCardStyle(card1,"src\\project\\media\\card1.jpg");
     }
 
     public void setProgressBars()
