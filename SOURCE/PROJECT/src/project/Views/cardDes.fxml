@@ -21,7 +21,7 @@
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label fx:id="name_Label" layoutX="212.0" layoutY="9.0" prefHeight="82.0" prefWidth="164.0" textFill="WHITE">
+      <Label fx:id="name_Label" layoutX="212.0" layoutY="9.0" prefHeight="82.0" prefWidth="164.0" textFill="RED">
          <font>
             <Font size="18.0" />
          </font></Label>
@@ -39,5 +39,6 @@
          <font>
             <Font size="25.0" />
          </font></Label>
+
    </children>
 </AnchorPane>

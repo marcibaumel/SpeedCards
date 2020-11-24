@@ -28,7 +28,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class PlayGroundViewController extends CardObjectController implements Initializable {
+public class PlayGroundViewController implements Initializable {
 
     @FXML
     private Button ground1;
@@ -88,7 +88,7 @@ public class PlayGroundViewController extends CardObjectController implements In
     private ProgressBar enemyHealthBar;
 
     CardObjectController coc=new CardObjectController();
-    CardObject MINTA2=new CardObject(6, 7, "NÉV", "src\\project\\media\\card1.jpg", "String des");
+    CardObject MINTA2=new CardObject(6, 7, "NÉV2", "src\\project\\media\\card1.jpg", "String des");
 
     ClipManager clipManager=new ClipManager();
     /*
@@ -129,6 +129,9 @@ public class PlayGroundViewController extends CardObjectController implements In
     }
     */
 
+
+
+
     private void setCardStyle(Button button, String path)
     {
         File file= new File(path);
@@ -143,6 +146,7 @@ public class PlayGroundViewController extends CardObjectController implements In
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //imgLoad(card1_1Button);
+        coc.setMintaName(MINTA2);
         setProgressBars();
         //dealDamage(healthBar, 0.2);
         setButtonStyle(air1);
@@ -186,11 +190,6 @@ public class PlayGroundViewController extends CardObjectController implements In
                 "-fx-background-color: transparent;");
     }
 
-    @Override
-    public void start(Stage stage) throws Exception {
-
-    }
-
 
 
     @FXML
@@ -211,35 +210,56 @@ public class PlayGroundViewController extends CardObjectController implements In
     }
 
 
-    public static void Connecting() {
-        try {
-            System.out.println("Connector.Connecting(): Called");
-            CardObject MINTA2=new CardObject(6, 7, "NÉV", "src\\project\\media\\card1.jpg", "String des");
-            FXMLLoader loader = new FXMLLoader(CardObjectController.class.getResource("cardDes.fxml"));
-            loader.load();
-            CardObjectController controller = (CardObjectController) loader.getController();
-
-            controller.LabelWithout(MINTA2);
-        } catch (IOException ex) {
-            Logger.getLogger(Connector.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
 
     @FXML
     public void openCardDes1(ActionEvent event) {
+        //coc.testCard(MINTA2);
 
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardDes.fxml"));
-
             Parent root = (Parent) fxmlLoader.load();
+            //coc.test();
+
+
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            //coc.LabelWithout(MINTA2);
             stage.show();
+
 
         } catch(Exception e) {
             e.printStackTrace();
+
         }
+        //coc.test();
+
+
+
+    }
+
+    @FXML
+    public void openCardGround1(ActionEvent event) {
+        //coc.testCard(MINTA2);
+
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/groundCard.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            //coc.test();
+
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            //coc.LabelWithout(MINTA2);
+            stage.show();
+
+
+        } catch(Exception e) {
+            e.printStackTrace();
+
+        }
+        //coc.test();
 
 
 

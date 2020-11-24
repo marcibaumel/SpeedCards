@@ -22,7 +22,7 @@ public class CardObjectController extends Application implements Initializable {
     A normál kártyákat kezeli
      */
 
-    CardObject MINTA=new CardObject(6, 7, "NÉV", "src\\project\\media\\card1.jpg", "String des");
+    CardObject MINTA=new CardObject();
 
 
 
@@ -42,9 +42,15 @@ public class CardObjectController extends Application implements Initializable {
     public Label name_Label;
 
     @FXML
+    public Button rak_name;
+
+    @FXML
     public ImageView card_Img;
 
     //public static Label static_label;
+
+    //PlayGroundViewController pg=new PlayGroundViewController();
+
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -67,13 +73,34 @@ public class CardObjectController extends Application implements Initializable {
 
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        //setLabels(MINTA, name_Label, des_Label, attackPoint, healthPoint, card_Img);
-        LabelWithout(MINTA);
 
-
+    public void test(){
+        System.out.println("Hello");
     }
+
+    @FXML
+    public CardObject testCard(CardObject card)
+    {
+        System.out.println(card.getCardName());
+        MINTA=card;
+        System.out.println(String.valueOf(MINTA.getAttackPoint()));
+        String rák=String.valueOf(MINTA.getAttackPoint());
+        //name_Label.setText(rák);
+        return MINTA;
+    }
+
+
+
+    public void setMintaName(CardObject card)
+    {
+        MINTA.setCardName(card.getCardName());
+        System.out.println(MINTA.getCardName());
+    }
+
+
+    /*
+    public void setNewMinta(CardObject )
+    */
 
     @FXML
     public void setLabels(CardObject card, Label nameLabel, Label desLabel, Label attackLabel, Label healtLabel, ImageView img){
@@ -84,13 +111,25 @@ public class CardObjectController extends Application implements Initializable {
         setCardStyle(img, card.getImgPath());
     }
 
-    @FXML
+
+
+
     public void LabelWithout(CardObject card)
     {
         name_Label.setText(card.getCardName());
-        des_Label.setText(card.getDes());
-        attackPoint.setText(String.valueOf(card.getAttackPoint()));
-        healthPoint.setText(String.valueOf(card.getHealth()));
-        setCardStyle(card_Img, card.getImgPath());
+        //des_Label.setText(card.getDes());
+        //attackPoint.setText(String.valueOf(card.getAttackPoint()));
+        //healthPoint.setText(String.valueOf(card.getHealth()));
+        //setCardStyle(card_Img, card.getImgPath());
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        //setLabels(MINTA, name_Label, des_Label, attackPoint, healthPoint, card_Img);
+
+        LabelWithout(MINTA);
+
+
+
     }
 }

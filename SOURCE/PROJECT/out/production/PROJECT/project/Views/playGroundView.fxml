@@ -28,7 +28,7 @@
       <Button fx:id="E_air2" layoutX="322.0" layoutY="104.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="E_air2" />
       <Button fx:id="E_air3" layoutX="434.0" layoutY="104.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="E_air3" />
 
-      <Button fx:id="ground1" layoutX="276.0" layoutY="315.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="ground1" onAction="#openCardDes" />
+      <Button fx:id="ground1" layoutX="276.0" layoutY="315.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="ground1" onAction="#openCardGround1" />
       <Button fx:id="ground2" layoutX="381.0" layoutY="315.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="ground2" onAction="#openCardDes"/>
       <Button fx:id="ground3" layoutX="499.0" layoutY="315.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="59.0" text="ground3" onAction="#openCardDes"/>
 

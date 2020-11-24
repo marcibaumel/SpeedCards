@@ -15,6 +15,9 @@ public class CardObject {
         this.des=des;
     }
 
+    public CardObject(){
+        
+    }
 
 
     public void setImgPath(String imgPath) {
