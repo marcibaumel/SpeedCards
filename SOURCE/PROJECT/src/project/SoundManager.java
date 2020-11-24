@@ -52,5 +52,8 @@ public class SoundManager {
     }
 
 
+    public static int testFunction(){
+        return 1;
+    }
 
 }

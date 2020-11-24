@@ -1,5 +1,6 @@
 package project.Controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.application.Application;
@@ -19,6 +20,9 @@ public class CardController extends Application implements Initializable {
     @FXML
     private Button card1;
 
+    @FXML
+    private Button downButton;
+
     @Override
     public void start(Stage stage) throws Exception {
 
@@ -27,5 +31,12 @@ public class CardController extends Application implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+
+    @FXML
+    private void downFunction(ActionEvent event)
+    {
+        Stage stage = (Stage) downButton.getScene().getWindow();
+        stage.close();
     }
 }

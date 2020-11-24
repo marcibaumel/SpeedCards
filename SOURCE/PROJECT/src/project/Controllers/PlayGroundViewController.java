@@ -210,7 +210,7 @@ public class PlayGroundViewController extends CardObjectController implements In
         clipManager.playClip("src\\project\\media\\clip.wav");
     }
 
-    
+
     public static void Connecting() {
         try {
             System.out.println("Connector.Connecting(): Called");
