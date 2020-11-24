@@ -1,5 +1,6 @@
 package project.Controllers;
 
+import com.sun.jdi.connect.Connector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,8 +22,11 @@ import project.ClipManager;
 import project.Model.CardObject;
 import java.awt.image.*;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class PlayGroundViewController extends CardObjectController implements Initializable {
 
@@ -206,7 +210,20 @@ public class PlayGroundViewController extends CardObjectController implements In
         clipManager.playClip("src\\project\\media\\clip.wav");
     }
 
+    
+    public static void Connecting() {
+        try {
+            System.out.println("Connector.Connecting(): Called");
+            CardObject MINTA2=new CardObject(6, 7, "NÉV", "src\\project\\media\\card1.jpg", "String des");
+            FXMLLoader loader = new FXMLLoader(CardObjectController.class.getResource("cardDes.fxml"));
+            loader.load();
+            CardObjectController controller = (CardObjectController) loader.getController();
 
+            controller.LabelWithout(MINTA2);
+        } catch (IOException ex) {
+            Logger.getLogger(Connector.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     @FXML
     public void openCardDes1(ActionEvent event) {
@@ -214,7 +231,7 @@ public class PlayGroundViewController extends CardObjectController implements In
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardDes.fxml"));
-            coc.LabelWithout(MINTA2);
+
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
