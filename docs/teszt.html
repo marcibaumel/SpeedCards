@@ -1,11 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesztek</title>
+    <title>Tesztelési Terv</title>
+    <style>
+        h1 {
+            margin-left: 0.5cm;
+        }
+
+        .h1 {
+            margin-left: 1cm;
+        }
+
+        h2 {
+            margin-left: 1cm;
+        }
+
+        .h2 {
+            margin-left: 1.5cm;
+        }
+
+        h3 {
+            margin-left: 1.5cm;
+        }
+
+        .h3 {
+            margin-left: 2cm;
+        }
+
+        h4 {
+            margin-left: 2cm;
+        }
+
+        .h4 {
+            margin-left: 2.5cm;
+        }
+
+        h5 {
+            margin-left: 2.5cm;
+        }
+
+        .h5 {
+            margin-left: 3cm;
+        }
+	.h6 {
+            margin-left: 3.5cm;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <p><br></p>
+    <p align="left">
+        <font style="font-size: 22pt;" size="6">Csoport neve: SpeedCards</font><br><br><br><br><br><br>
+    </p>
+    <p align="center">
+        <font style="font-size: 26pt;" size="6"><b>Tesztelési Terv</b></font>
+    </p>
+    <p><br><br><br></p>
+    <p align="center">
+        <font size="4">Gyakorlatvezető:</font>
+    </p>
+    <p align="center">
+        <font style="font-size: 22pt;" size="6">ÁRVAI LÁSZLÓ</font>
+    </p>
+    <p><br></p>
+    <p align="left">
+        <font style="font-size: 16pt;" size="4">Csoport tagok:</font>
+    </p>
+    <p><br></p>
+
+
+    <table border="1" cellpadding="4" cellspacing="3" width="90%">
+        <tbody>
+            <tr valign="top">
+                <td width="120">Baumel Márton</td>
+                <td width="80">O09CTQ</td>
+                <td width="270">marcibaumel@gmail.com</td>
+            </tr>
+            <tr valign="top">
+                <td width="120">Korita Zsófia</td>
+                <td width="80">W63HPU</td>
+                <td width="270">korita.zsofi12@gmail.com</td>
+            </tr>
+            <tr valign="top">
+                <td width="120">Edl Levente</td>
+                <td width="80">JEKPUI</td>
+                <td width="270">husi5644@gmail.com</td>
+            </tr>
+            <tr valign="top">
+                <td width="120">Markó Roland</td>
+                <td width="80">FRNJTJ</td>
+                <td width="270">marko.roland.2000@gmail.com</td>
+            </tr>
+            <tr valign="top">
+                <td width="120">Husóczki Dániel</td>
+                <td width="80">HLO5ZK</td>
+                <td width="270">husoczkidaniel@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><br></p>
+
+    <p><br></p>
+    <p> <br></p>
+    <p align="center"><b>Történet</b></p>
+    <p><br></p>
+    <table border="1" width="90%">
+        <thead>
+            <tr valign="top">
+                <th width="90">Dátum</th>
+                <th width="60">Verzió</th>
+                <th width="300">Leírás</th>
+                <th width="160">Szerző</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr valign="top">
+                <td width="90">2020.11.24</td>
+                <td width="60">1.0</td>
+                <td width="300">Dokumentum Létrehozás</td>
+                <td width="160">Baumel Márton</td>
+            </tr>
+        </tbody>
+    </table>
+<body>
+    <p>
+<strong>Tesztelés:</strong>
+<br><br>
+Tesztelésre azért van szükségünk a program írása közben, megtudjunk arról bizonyosodni, hogy a korábban írt program részek jól funkcionálnak-e vagy esetleg valamilyen hibát dobnak fel az új kód részlet beillesztésével.  
+
+Mivel verziókövető szoftvert is használunk ez elengedhetetlen, hogy ténylegesen átláthatóvá tudjuk tenni az általunk írt programot
+
+<br><br>
+<strong>Módszerek:</strong>
+<br><br>
+-Kód vizsgálat
+<br><br>
+-Komponens/ Funkció Teszt (JUnite 4)
+<br><br>
+-Működés és Viselkedés vizsgálat a gyakorlatban
+<br><br>
+<strong>Kód ismerete alapján történő tesztelési technikák:</strong>
+<br><br>
+I. Fekete doboz (black-box) módszerek: A specifikáció alapján készülnek a tesztesetek, anélkül, hogy bármit tudnánk a rendszer belső működéséről vagy a forráskódról. A tesztelő a felhasználói interfészen keresztül szolgáltatja a bemeneteket, és vizsgálja a kimeneteket.  Hatékony és jól alkalmazható nagy kód szegmensben.  Közepesen képzett tesztelők nagy számban tesztelhetik az alkalmazást, anélkül, hogy ismernék az implementációt, a programozási nyelvet vagy az operációs rendszert.  A tesztelő csak korlátozott mértékben ismeri az alkalmazást, ezért kevésbé hatékony lehet a tesztelés.  Korlátozott lefedettség: csak néhány kiválasztott teszt-forgatókönyv kerül végrehajtásra. 
+<br><br>
+II. Fehérdoboz (white-box) módszerek: Strukturális teszt, a forráskód alapján készülnek a tesztesetek. A tesztelőnek meg kell ismernie a forráskódot, meg kell értenie, ezért magasan képzettnek kell lennie. Általában ezeket a struktúrákat teszteljük:  kódsorok,  elágazások,  metódusok,  osztályok,  funkciók,  modulok. 
+<br><br>
+III. Szürke dobozos (grey-box) tesztelés: A fekete és a fehér dobozos megközelítés egyes elemei egyszerre kerülnek alkalmazásra. Ebben a megközelítésben a tesztelő ismeri a tesztelt egység bizonyos belső részeit, amit a célzott tesztesetek kidolgozásához felhasznál. A teszt lefuttatása azonban fekete doboz módjára történik, ugyanis semmilyen belső információt nem tartunk nyílván a tesztelt egységről, csak a kimeneteket vizsgáljuk.
+
+
+
+
+<br><br>
+
+<strong>A felderítendő hibák:</strong>
+<br><br>
+<lu>
+<br><br>
+Bemeneti/kimeneti hibák:
+<li>helytelen bemenet elfogadás</li>
+<li>helyes bemenet megtagadás</li>
+<br><br>
+Logikai hiba:
+
+<li>hiányzó/duplikált esetek</li>
+<li>rossz operátorok</li>
+<li>kimaradt feltételek</li>
+<br><br>
+Számítási hiba:
+
+<li>rossz algoritmus</li>
+<li>rossz belső függvény</li>
+<li>helytelen operandus/művelet</li>
+<li>hiányzó számítások és műveletek</li>
+<br><br>
+Adathiba:
+
+<li>helytelen inicializáció</li>
+<li>rossz változóhasználat</li>
+</lu>
+<br><br>
+Alapfunkció minta tesztjeinek felsorolása:
+<br><br>
+MainMenuViewController Tesztek:
+<br>
+-playFunctionTest()<br>
+-functionTest()<br>
+-imgLoadTest()<br>
+-exitButtonTest()<br>
+<br><br>
+OptionsViewController Tesztek:<br>
+-choiceBoxTest()<br>
+-sliderTest()<br>
+<br><br>
+PlayGroundViewController Tesztek:<br>
+-buttonTestFunction()<br>
+-startTest()<br>
+<br><br>
+SoundObject Tesztek:<br>
+-loadSoundTest()<br>
+<br><br>
+ClipObject Tesztek:<br>
+-loadClipTest()<br>
+
+<br><br>
+Program Validálás:
+<br><br>
+Béta teszt:
+<br><br>
+Lehetőséget adunk pár felhasználónak, hogy kitudja próbálni az alkalmazást, ezzel segítve az esetleges hibák felderítését.   
+
+<br><br>
+<br><br>
+Forrás:
+<br><br>
+http://info.nytta.hu/munkak/14sz/1128_teszt_02.pdf
+
+    </p>
 </body>
 </html>
