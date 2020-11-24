@@ -126,6 +126,14 @@
                 <td width="160">Baumel Márton</td>
             </tr>
         </tbody>
+        <tbody>
+            <tr valign="top">
+                <td width="90">2020.11.24</td>
+                <td width="60">1.1</td>
+                <td width="300">Tesztek Kifejtése</td>
+                <td width="160">Baumel Márton</td>
+            </tr>
+        </tbody>
     </table>
 <body>
     <p>
@@ -146,11 +154,17 @@ Mivel verziókövető szoftvert is használunk ez elengedhetetlen, hogy tényleg
 <br><br>
 <strong>Kód ismerete alapján történő tesztelési technikák:</strong>
 <br><br>
-I. Fekete doboz (black-box) módszerek: A specifikáció alapján készülnek a tesztesetek, anélkül, hogy bármit tudnánk a rendszer belső működéséről vagy a forráskódról. A tesztelő a felhasználói interfészen keresztül szolgáltatja a bemeneteket, és vizsgálja a kimeneteket.  Hatékony és jól alkalmazható nagy kód szegmensben.  Közepesen képzett tesztelők nagy számban tesztelhetik az alkalmazást, anélkül, hogy ismernék az implementációt, a programozási nyelvet vagy az operációs rendszert.  A tesztelő csak korlátozott mértékben ismeri az alkalmazást, ezért kevésbé hatékony lehet a tesztelés.  Korlátozott lefedettség: csak néhány kiválasztott teszt-forgatókönyv kerül végrehajtásra. 
+I. Fekete doboz (black-box) módszerek: 
 <br><br>
-II. Fehérdoboz (white-box) módszerek: Strukturális teszt, a forráskód alapján készülnek a tesztesetek. A tesztelőnek meg kell ismernie a forráskódot, meg kell értenie, ezért magasan képzettnek kell lennie. Általában ezeket a struktúrákat teszteljük:  kódsorok,  elágazások,  metódusok,  osztályok,  funkciók,  modulok. 
+A specifikáció alapján készülnek a tesztesetek, anélkül, hogy bármit tudnánk a rendszer belső működéséről vagy a forráskódról. A tesztelő a felhasználói interfészen keresztül szolgáltatja a bemeneteket, és vizsgálja a kimeneteket.  Hatékony és jól alkalmazható nagy kód szegmensben.  Közepesen képzett tesztelők nagy számban tesztelhetik az alkalmazást, anélkül, hogy ismernék az implementációt, a programozási nyelvet vagy az operációs rendszert.  A tesztelő csak korlátozott mértékben ismeri az alkalmazást, ezért kevésbé hatékony lehet a tesztelés.  Korlátozott lefedettség: csak néhány kiválasztott teszt-forgatókönyv kerül végrehajtásra. 
 <br><br>
-III. Szürke dobozos (grey-box) tesztelés: A fekete és a fehér dobozos megközelítés egyes elemei egyszerre kerülnek alkalmazásra. Ebben a megközelítésben a tesztelő ismeri a tesztelt egység bizonyos belső részeit, amit a célzott tesztesetek kidolgozásához felhasznál. A teszt lefuttatása azonban fekete doboz módjára történik, ugyanis semmilyen belső információt nem tartunk nyílván a tesztelt egységről, csak a kimeneteket vizsgáljuk.
+II. Fehérdoboz (white-box) módszerek: 
+<br><br>
+Strukturális teszt, a forráskód alapján készülnek a tesztesetek. A tesztelőnek meg kell ismernie a forráskódot, meg kell értenie, ezért magasan képzettnek kell lennie. Általában ezeket a struktúrákat teszteljük:  kódsorok,  elágazások,  metódusok,  osztályok,  funkciók,  modulok. 
+<br><br>
+III. Szürke dobozos (grey-box) tesztelés: 
+<br><br>
+A fekete és a fehér dobozos megközelítés egyes elemei egyszerre kerülnek alkalmazásra. Ebben a megközelítésben a tesztelő ismeri a tesztelt egység bizonyos belső részeit, amit a célzott tesztesetek kidolgozásához felhasznál. A teszt lefuttatása azonban fekete doboz módjára történik, ugyanis semmilyen belső információt nem tartunk nyílván a tesztelt egységről, csak a kimeneteket vizsgáljuk.
 
 
 
@@ -158,7 +172,7 @@ III. Szürke dobozos (grey-box) tesztelés: A fekete és a fehér dobozos megkö
 <br><br>
 
 <strong>A felderítendő hibák:</strong>
-<br><br>
+<br>
 <lu>
 <br><br>
 Bemeneti/kimeneti hibák:
@@ -184,31 +198,217 @@ Adathiba:
 <li>rossz változóhasználat</li>
 </lu>
 <br><br>
-Alapfunkció minta tesztjeinek felsorolása:
+<strong>Manuális Tesztek</strong>
 <br><br>
-MainMenuViewController Tesztek:
-<br>
--playFunctionTest()<br>
--functionTest()<br>
--imgLoadTest()<br>
--exitButtonTest()<br>
 <br><br>
-OptionsViewController Tesztek:<br>
--choiceBoxTest()<br>
--sliderTest()<br>
-<br><br>
-PlayGroundViewController Tesztek:<br>
--buttonTestFunction()<br>
--startTest()<br>
-<br><br>
-SoundObject Tesztek:<br>
--loadSoundTest()<br>
-<br><br>
-ClipObject Tesztek:<br>
--loadClipTest()<br>
+<table style="width:100%" border="1">
+    <tr>
+      <th>Teszt Név</th>
+      <th>Teszt Leírás</th>
+      <th>Teszt Pozitív Kimenetele</th>
+    </tr>
+    <tr>
+      <td>Főmenü-Start Gomb Teszt</td>
+      <td>Miután a felhasználó elindítja a programot az első képernyő amit látni fog az a Főmenü lesz, itt lehetősége van kiválasztani a Play gombot amivel egy generált játék indul el.
+    </td>
+      <td>A teszt akkor tekinthető sikeresnek, ha a program elindul és a Play gomb megnyomása után, 2 másodpercen belül betölt egy generált játék.
+    </td>
+    </tr>
+    <tr>
+      <td>Program Indítása Teszt</td>
+      <td>A felhasználó ha rákattint a “a program neve”.jar fájlra, hogy elindítsa a programot. </td>
+      <td>A teszt akkor tekinthető sikeresnek, ha a program sikeresen elindul és betölt a főmenü</td>
+    </tr>
+    <tr>
+        <td>Beállítások Megnyitása Teszt
+        </td>
+        <td>Miután a felhasználó elindítja a programot az első képernyő amit látni fog az a Főmenü lesz, itt lehetősége van kiválasztani a Options gombot amivel megjelenik az Options menü</td>
+        <td>A teszt akkor tekinthető sikeresnek, ha az Options menü megnyitódik</td>
+      </tr>
+    
+    <tr>
+        <td>Felbontás Beállítás Teszt</td>
+        <td>Ha felhasználó megnyitotta a Options menüt akkor lehetősége van a felbontást beállítani. </td>
+        <td>A teszt akkor tekinthető sikeresnek, ha a kíván felbontás alapján töltődik be a program
+        </td>
+    </tr>
+
+    <tr>
+        <td>Hangerő Beállítás Teszt</td>
+        <td>Ha felhasználó megnyitotta a Options menüt akkor lehetősége van a hangerőt beállítani.</td>
+        <td>A teszt akkor tekinthető sikeresnek, ha a hangerő értéke alapján megváltozik a program hangereje</td>
+    </tr>
+
+    <tr>
+        <td>Exit Button Teszt</td>
+        <td>Ha felhasználó ki szeretne lépni a játékból akkor a fő menüből az Exit gomb segítségével tudja ezt megtenni</td>
+        <td>A teszt akkor tekinthető sikeresnek, ha a Főmenün lévő Exit gomb segítségével ki tudunk lépni a programból.
+        </td>
+    </tr>
+
+    <tr>
+        <td>Zene Teszt</td>
+        <td>A felhasználó hallja a betöltött zenét</td>
+        <td>A teszt akkor tekinthető sikeresnek, ha a program sikeresen betölti a zene fájlt és az lejátsza
+        </td>
+    </tr>
+
+    <tr>
+        <td>Klip Hang Teszt</td>
+        <td>Valamilyen gomb használata esetén egy Clip hangot tölt be.
+        </td>
+        <td>A teszt akkor tekinthető sikeresnek, ha a kiválasztott gomb, ami rendelkezik ezzel a tulajdonsággal az lejátsza ezt a hangot
+        </td>
+    </tr>
+
+    <tr>
+        <td>Kártya Gomb Teszt
+        </td>
+        <td>Ha a Generált Játékba rányomunk a kártya gombra akkor betölti a kiválasztott kártya adatait.</td>
+        <td>A teszt akkor tekinthető sikeresnek ha a kártya leírása megjelenik pontosan a képernyőn
+        </td>
+    </tr>
+
+    <tr>
+        <td>Kör Befejezés Teszt</td>
+        <td>Ha felhasználó végzett a lapok kijátszásával, akkor várnia kell 30 másodpercet és automatikusan megkapja az ellenfél a kört vagy megnyomja a Next Turn gombot
+        </td>
+        <td>A teszt akkor tekinthető sikeresnek ha a kör tovább adódik az ellenfélnek valamilyen módon
+        </td>
+    </tr>
+</table>
+<br><br><br><br>
+<strong>Automatizált Tesztek:</strong>
+<br><br><br><br>
+<table border="1" width="90%">
+    <thead>
+      <tr valign="top">
+        <th width="300">Csoport Név</th>
+        <th width="500">Funkció Név</th>
+        <th width="500">Funkció Leírás</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        <tr valign="top">
+        <td >MainMenuViewController Tesztek</td>
+        <td >playFunctionTest()</td>
+        <td >A playButton működéséről bizonyosodik meg</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >MainMenuViewController Tesztek</td>
+        <td >functionTest()
+        </td>
+        <td >A menü betöltéséről bizonyosodik meg
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >MainMenuViewController Tesztek</td>
+        <td >imgLoadTest()</td>
+        <td >A képek betöltéséről bizonyosodik meg</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >MainMenuViewController Tesztek</td>
+        <td >exitButtonTest()</td>
+        <td >Az exit button button működését teszteli le</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >OptionsViewController Tesztek</td>
+        <td >choiceBoxTest()</td>
+        <td >A choice box működéséről bizonyosodik meg</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >OptionsViewController Tesztek</td>
+        <td >sliderTest()</td>
+        <td >A slider működéséről bizonyosodik meg</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >OptionsViewController Tesztek</td>
+        <td >valueOfVolumeTetst()</td>
+        <td >A hangnak az értékét vizsgálja meg
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >PlayGroundViewController Tesztek</td>
+        <td >buttonTestFunction()
+        </td>
+        <td >Arról bizonyosodik meg, hogy rendes adatokat tölt-e be a program</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >PlayGroundViewController Tesztek</td>
+        <td >startTest()
+        </td>
+        <td >Arról bizonyosodik meg, hogy elindult-e a játék</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >PlayGroundViewController Tesztek</td>
+        <td >endButtonTest()</td>
+        <td >A játék lezárásáról bizonyosodik meg
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >PlayGroundViewController Tesztek</td>
+        <td >cardShowButtonTest()</td>
+        <td >A lapok mutatásáról bizonyosodik meg</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >PlayGroundViewController Tesztek</td>
+        <td >cardImgLoadTest()</td>
+        <td >A lapokon található kép betöltéséről/eléréséről bizonyosodik meg</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >PlayGroundViewController Tesztek</td>
+        <td >cardSetStyleTest()</td>
+        <td >A lapok stílusának a beállításáról bizonyosodik meg</td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >SoundObject Tesztek:</td>
+        <td >loadSoundTest()</td>
+        <td >A hangot biztosító fájl eléréséről bizonyosodik meg
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+        <tr valign="top">
+        <td >ClipObject Tesztek</td>
+        <td >loadClipTest()</td>
+        <td >A klip eléréséről bizonyosodik meg
+        </td>
+      </tr>
+    </tbody>
+
+
+
+</table>
 
 <br><br>
-Program Validálás:
+<strong>Program Validálás:</strong>
 <br><br>
 Béta teszt:
 <br><br>
