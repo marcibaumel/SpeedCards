@@ -17,13 +17,14 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import project.ClipManager;
 import project.Model.CardObject;
 import java.awt.image.*;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PlayGroundViewController extends Application implements Initializable {
+public class PlayGroundViewController extends CardObjectController implements Initializable {
 
     @FXML
     private Button ground1;
@@ -82,6 +83,11 @@ public class PlayGroundViewController extends Application implements Initializab
     @FXML
     private ProgressBar enemyHealthBar;
 
+    CardObjectController coc=new CardObjectController();
+    CardObject MINTA2=new CardObject(6, 7, "NÉV", "src\\project\\media\\card1.jpg", "String des");
+
+    ClipManager clipManager=new ClipManager();
+    /*
     @FXML
     private void testButton(ActionEvent event){
         System.out.println("logButton");
@@ -90,6 +96,8 @@ public class PlayGroundViewController extends Application implements Initializab
         Image image = new Image (file.toURI().toString());
         imageview.setImage(image);
     }
+    */
+
 
     /*
     @FXML
@@ -195,6 +203,28 @@ public class PlayGroundViewController extends Application implements Initializab
         } catch(Exception e) {
             e.printStackTrace();
         }
+        clipManager.playClip("src\\project\\media\\clip.wav");
+    }
+
+
+
+    @FXML
+    public void openCardDes1(ActionEvent event) {
+
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardDes.fxml"));
+            coc.LabelWithout(MINTA2);
+            Parent root = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+
 
     }
 
@@ -202,7 +232,7 @@ public class PlayGroundViewController extends Application implements Initializab
     public void openCard(ActionEvent event) {
         try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObjcet.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObject.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

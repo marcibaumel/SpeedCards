@@ -17,15 +17,27 @@
             <Image url="@../media/des.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="des_Label" alignment="TOP_LEFT" layoutX="212.0" layoutY="103.0" prefHeight="209.0" prefWidth="346.0" text="name_Label" textFill="WHITE" />
-      <Label fx:id="name_Label" layoutX="212.0" layoutY="9.0" prefHeight="82.0" prefWidth="164.0" text="name_Label" textFill="WHITE" />
-      <Button fx:id="downButton" layoutX="169.0" layoutY="338.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" text="downButton">
+      <Label fx:id="des_Label" alignment="TOP_LEFT" layoutX="212.0" layoutY="103.0" prefHeight="209.0" prefWidth="346.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="name_Label" layoutX="212.0" layoutY="9.0" prefHeight="82.0" prefWidth="164.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="downButton" layoutX="169.0" layoutY="338.0" mnemonicParsing="false" onAction="#downFunction" prefHeight="50.0" prefWidth="164.0" text="DOWN">
          <font>
             <Font size="23.0" />
          </font>
       </Button>
       <ImageView fx:id="card_Img" fitHeight="263.0" fitWidth="164.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="healthPoint" layoutX="371.0" layoutY="336.0" prefHeight="50.0" prefWidth="74.0" text="healthPoint" textFill="RED" />
-      <Label fx:id="attackPoint" layoutX="484.0" layoutY="345.0" prefHeight="33.0" prefWidth="74.0" text="attackPoint" textFill="#ddff00" />
+      <Label fx:id="healthPoint" layoutX="371.0" layoutY="336.0" prefHeight="50.0" prefWidth="74.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <Label fx:id="attackPoint" layoutX="484.0" layoutY="345.0" prefHeight="33.0" prefWidth="74.0" textFill="#ddff00">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
    </children>
 </AnchorPane>

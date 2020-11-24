@@ -80,7 +80,11 @@ public class MainMenuViewController implements Initializable {
 
     }
 
-    public static int playFunction(){
+    public static int testFunction(){
+        return 1;
+    }
+
+    public static int testPlayFunction(){
         return 1;
     }
 
@@ -93,6 +97,7 @@ public class MainMenuViewController implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
+            testPlayFunction();
 
         } catch(Exception e) {
             e.printStackTrace();
@@ -108,6 +113,8 @@ public class MainMenuViewController implements Initializable {
         imgview.setPreserveRatio(false);
         Image image = new Image (file.toURI().toString());
         imgview.setImage(image);
+        testPlayFunction();
+
     }
 
     public void setPlayButton(){
@@ -116,6 +123,7 @@ public class MainMenuViewController implements Initializable {
         playButton.setStyle("-fx-border-color: transparent;\n" +
                             "-fx-border-width: 0;-fx-background-radius: 0;\n" +
                             "-fx-background-color: transparent;");
+        testPlayFunction();
 
     }
 
@@ -124,6 +132,7 @@ public class MainMenuViewController implements Initializable {
         optionButton.setStyle("-fx-border-color: transparent");
         optionButton.setStyle("-fx-border-width: 0;-fx-background-radius: 0;\n" +
                 "    -fx-background-color: transparent;");
+        testPlayFunction();
 
     }
 
@@ -132,6 +141,7 @@ public class MainMenuViewController implements Initializable {
         exitButton.setStyle("-fx-border-color: transparent");
         exitButton.setStyle("-fx-border-width: 0;-fx-background-radius: 0;\n" +
                 "    -fx-background-color: transparent;");
+        testPlayFunction();
     }
 
 
@@ -144,7 +154,8 @@ public class MainMenuViewController implements Initializable {
         setPlayButton();
         setOptionButton();
         setExitButton();
-        musicObject.playMusic("src\\project\\media\\test2.wav");
+        //musicObject.playMusic("src\\project\\media\\test2.wav");
+        testPlayFunction();
 
     }
 

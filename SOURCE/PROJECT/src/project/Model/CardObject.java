@@ -4,14 +4,34 @@ public class CardObject {
     private int attackPoint;
     private int health;
     private String cardName;
+    private String imgPath;
+    private String des;
 
-    public void setCard(int attackPoint, int health, String cardName)
-    {
+    public CardObject(int attackPoint, int health, String cardName, String imgPath, String des) {
         this.attackPoint=attackPoint;
         this.health=health;
         this.cardName=cardName;
+        this.imgPath=imgPath;
+        this.des=des;
     }
 
+
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    public void setDes(String des) {
+        this.des = des;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public String getDes() {
+        return des;
+    }
 
     public int getAttackPoint() {
         return attackPoint;
@@ -39,4 +59,6 @@ public class CardObject {
         this.cardName = cardName;
         return this;
     }
+
+
 }
