@@ -255,6 +255,71 @@
 		  <p><br></p>
 		  <h2><a name="23"></a>2.3. Alrendszerek</h2>
 		  <p><br></p>
+		  <h4>
+			<strong>2.3 Alrendszerek</strong>
+			<br><br>
+			A Projekt több alrendszerre bontjuk, amik a funkcionálisan összetartozó osztályokat tartalmazzák.
+			<br><br>
+			<strong>controllers</strong>
+			<br><br>
+			Ez az alrendszer tartalmazza a Controller osztályokat amelyek valamilyen eseményt kontrollálnak az alkalmazásban.
+			<br><br>
+			<ul>
+			<li>CardController</li>
+			<li>CartObjectController</li>
+			<li>MainMenuViewController</li>
+			<li>OptionsViewController</li>
+			<li>PlayGroundViewController</li>
+			<li>PlayController</li>
+			<li>ShopController</li>
+			<li>LoginController</li>
+			<li>RegistrationController</li>
+			</ul>
+			<br><br>
+			<strong>media</strong>
+			A media osztály magába foglalja az alkalmazásban használt textúrákat és hangokat, amelyeket más osztályok felhasználnak.
+			<br><br>
+			<li>SoundManager</li>
+			<br><br>
+			model
+			A model osztályban találhatjuk az alkalmazásban használt modell osztályokat, ilyen például a különböző fajta kártyák modelljei.
+			<br><br>
+
+			<ul>
+			<li>AirCardObject</li>
+			<li>CardObject</li>
+			<li>Enemy</li>
+			<li>GroundCardObject</li>
+			<li>OnGroundCardObject</li>
+			<li>DestroyedCardObject</li>
+			<li>EffectCardObject</li>
+			<li>Player</li>
+		</ul>
+			<br><br>
+			<strong>views</strong>
+			A views csoport tartalmazza az alkalmazásban lévő a grafikus megjelenítésre alkalmazott osztályokat.
+			<br><br>
+			<ul>
+			<li>User</li>
+			<li>Hand</li>
+			<li>Deck</li>
+			<li>Dealer</li>
+			<li>DisplayManager</li>
+			<li>mainMenuView</li>
+			<li>optionsView</li>
+			<li>playGroundView</li>
+			</ul>
+			<strong>dataAcces</strong><br><br>
+			Ebben az alrendszerben szerepelnek azok az osztályok, amellyekkel az alkalmazás kommunikál az adatbázissal.
+			<br><br>
+			<ul>
+			<li>DbContext</li>
+			<li>UserDataManager</li>
+			<li>UserUnitOfWork</li>
+			<li>ShopUnitOfWork</li>
+		   </ul>
+		  </h4>
+
 	  <h1><a name="3"></a>3. Az első alrendszer modellje</h1>
 	  <p><br></p>
 		  <h2><a name="31"></a>3.1 Statikus modell</h2>
