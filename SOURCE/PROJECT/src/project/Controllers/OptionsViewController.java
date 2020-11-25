@@ -28,6 +28,13 @@ public class OptionsViewController implements Initializable {
 
     String test;
 
+    public static int choiceBoxTest(){
+        return 1;
+    }
+
+    public static int sliderTest(){
+        return 1;
+    }
 
     @FXML
     private ChoiceBox cbResolution;
