@@ -111,7 +111,7 @@ public class CardObjectController extends Application implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
-        Modder(i);
+        //Modder(i);
 
 
         LabelWithout(AirUnite);

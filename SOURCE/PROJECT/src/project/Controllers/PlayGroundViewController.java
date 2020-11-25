@@ -169,6 +169,7 @@ public class PlayGroundViewController implements Initializable {
         setCardStyle(card1,"src\\project\\media\\card1.jpg");
         setCardStyle(card3,"src\\project\\media\\card1.jpg");
         setCardStyle(card2,"src\\project\\media\\card2.jpg");
+        counter();
 
         /*
         Timer timer = new Timer();
@@ -296,6 +297,14 @@ public class PlayGroundViewController implements Initializable {
     }
 
 
+    public void counter()
+    {
+        CardObjectController co=new CardObjectController();
+        //CardObjectController2 co2=new CardObjectController2();
+        GroundCardController gc=new GroundCardController();
+        int sum=co.MINTA.getAttackPoint()*4+gc.groundUnite.getAttackPoint()*3;
+        System.out.println(sum);
+    }
 
     @FXML
     public void openCard(ActionEvent event) {
@@ -303,6 +312,10 @@ public class PlayGroundViewController implements Initializable {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObject.fxml"));
             Parent root = (Parent) fxmlLoader.load();
+
+            //System.out.println(String.valueOf(fxmlLoader.getController()));
+
+
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
@@ -320,7 +333,7 @@ public class PlayGroundViewController implements Initializable {
     public void openCard2(ActionEvent event) {
 
         try {
-            card2.setVisible(false);
+            //card2.setVisible(false);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObject2.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
