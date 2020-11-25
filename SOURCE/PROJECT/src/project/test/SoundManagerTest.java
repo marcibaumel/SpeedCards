@@ -13,4 +13,7 @@ public class SoundManagerTest {
         Assert.assertEquals(0, 0);
     }
 
+    @Test
+    public void loadSoundTest() {
+    }
 }
