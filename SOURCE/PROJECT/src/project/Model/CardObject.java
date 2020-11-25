@@ -19,6 +19,7 @@ public class CardObject {
         
     }
 
+    //CardObject AirUnite=new CardObject(0, 3, "Air Card", "src\\project\\media\\air.jpg", "Air Unite");
 
     public void setImgPath(String imgPath) {
         this.imgPath = imgPath;

@@ -90,6 +90,7 @@ public class MainMenuViewController implements Initializable {
 
     @FXML
     public void playButton(ActionEvent event) {
+
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/playGroundView.fxml"));

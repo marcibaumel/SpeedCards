@@ -48,13 +48,19 @@ public class CardObjectController extends Application implements Initializable {
 
 
 
-    CardObject AirUnite=new CardObject(3, 2, "Air Card", "src\\project\\media\\air.jpg", "Air Unite");
+    CardObject AirUnite=new CardObject(0, 3, "Air Card", "src\\project\\media\\air.jpg", "Air Unite");
 
     @Override
     public void start(Stage stage) throws Exception {
 
     }
 
+    public void bonusHealth()
+    {
+        AirUnite.setHealth(5);
+        System.out.println("Air units get 2 more hp");
+        System.out.println(AirUnite.getHealth());
+    }
 
     @FXML
     private void downFunction(ActionEvent event)
@@ -74,24 +80,6 @@ public class CardObjectController extends Application implements Initializable {
     }
 
 
-    /*
-    public void test(){
-        System.out.println("Hello");
-    }
-
-    @FXML
-    public CardObject testCard(CardObject card)
-    {
-        System.out.println(card.getCardName());
-        MINTA=card;
-        System.out.println(String.valueOf(MINTA.getAttackPoint()));
-        String rák=String.valueOf(MINTA.getAttackPoint());
-        //name_Label.setText(rák);
-        return MINTA;
-    }
-    */
-
-
 
     public void setMintaName(CardObject card)
     {
@@ -101,17 +89,13 @@ public class CardObjectController extends Application implements Initializable {
 
 
 
+    int i=1;
 
-    @FXML
-    public void setLabels(CardObject card, Label nameLabel, Label desLabel, Label attackLabel, Label healtLabel, ImageView img){
-        nameLabel.setText(card.getCardName());
-        desLabel.setText(card.getDes());
-        attackLabel.setText(String.valueOf(card.getAttackPoint()));
-        healtLabel.setText(String.valueOf(card.getHealth()));
-        setCardStyle(img, card.getImgPath());
+    public void Modder(int i){
+        if(i==1){
+            bonusHealth();
+        }
     }
-
-
 
 
     public void LabelWithout(CardObject card)
@@ -125,7 +109,13 @@ public class CardObjectController extends Application implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+        Modder(i);
+
+
         LabelWithout(AirUnite);
+
 
     }
 }

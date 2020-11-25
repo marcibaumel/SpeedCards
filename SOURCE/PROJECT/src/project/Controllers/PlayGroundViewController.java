@@ -1,32 +1,25 @@
 package project.Controllers;
 
-import com.sun.jdi.connect.Connector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import project.ClipManager;
 import project.Model.CardObject;
-import java.awt.image.*;
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class PlayGroundViewController implements Initializable {
 
@@ -73,10 +66,19 @@ public class PlayGroundViewController implements Initializable {
     private Button card1;
 
     @FXML
-    private Button card2;
+    public Button card2;
 
     @FXML
     private Button card3;
+
+    @FXML
+    private Button exit_Button;
+
+    @FXML
+    private Button end_Button;
+
+    @FXML
+    private Label won_Label;
 
     @FXML
     private ImageView imageview;
@@ -146,6 +148,8 @@ public class PlayGroundViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //imgLoad(card1_1Button);
+        exit_Button.setVisible(false);
+        won_Label.setVisible(false);
         coc.setMintaName(MINTA2);
         setProgressBars();
         //dealDamage(healthBar, 0.2);
@@ -165,6 +169,17 @@ public class PlayGroundViewController implements Initializable {
         setCardStyle(card1,"src\\project\\media\\card1.jpg");
         setCardStyle(card3,"src\\project\\media\\card1.jpg");
         setCardStyle(card2,"src\\project\\media\\card2.jpg");
+
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("Running: " + new java.util.Date());
+
+            }
+        }, 0, 1000);
+
+
     }
 
     public void setProgressBars()
@@ -190,6 +205,18 @@ public class PlayGroundViewController implements Initializable {
                 "-fx-background-color: transparent;");
     }
 
+    @FXML
+    public void endGame(ActionEvent event)
+    {
+        won_Label.setVisible(true);
+        exit_Button.setVisible(true);
+    }
+
+    @FXML
+    public void exitGame(ActionEvent event)
+    {
+        ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
+    }
 
 
     @FXML
@@ -265,6 +292,8 @@ public class PlayGroundViewController implements Initializable {
 
     }
 
+
+
     @FXML
     public void openCard(ActionEvent event) {
         try {
@@ -282,15 +311,19 @@ public class PlayGroundViewController implements Initializable {
 
     }
 
+    //CardObjectController2 co2=new CardObjectController2();
+
     @FXML
     public void openCard2(ActionEvent event) {
-        try {
 
+        try {
+            card2.setVisible(false);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObject2.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
+            //coc.bonusHealth();
 
 
         } catch(Exception e) {
@@ -299,6 +332,13 @@ public class PlayGroundViewController implements Initializable {
 
     }
 
+    /*
+    public void card2IsPlayed()
+    {
+        int e=co2.counter();
+        System.out.println(e);
+    }
+    */
 
 
 }

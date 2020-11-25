@@ -32,10 +32,16 @@ public class CardObjectController2 extends Application implements Initializable 
     @FXML
     public ImageView card_Img;
 
+    public int i=0;
+
+
+
     @FXML
     public Button play_Button;
 
     AffectCard ac2=new AffectCard("Your unite get 2 health point",0,2,30,"Baby Yoda","src\\project\\media\\card2.jpg");
+
+    //PlayGroundViewController pg=new PlayGroundViewController();
 
     @FXML
     private void downFunction(ActionEvent event)
@@ -43,6 +49,18 @@ public class CardObjectController2 extends Application implements Initializable 
         Stage stage = (Stage) downButton.getScene().getWindow();
         stage.close();
     }
+
+    PlayGroundViewController pg= new PlayGroundViewController();
+
+    @FXML
+    public void playButton(ActionEvent event) {
+        //pg.card2.setVisible(false);
+
+        ((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
+
+    }
+
+
 
 
 
