@@ -5,6 +5,35 @@ public class AffectCard {
     private int ModderAttack;
     private int ModderHealth;
     private int Price;
+    private String Name;
+    private String Path;
+
+
+    public AffectCard()
+    {
+
+    }
+
+    public AffectCard(String Description, int ModderAttack, int ModderHealth, int Price, String name, String path){
+        this.Description=Description;
+        this.ModderAttack=ModderHealth;
+        this.ModderHealth=ModderHealth;
+        this.Price=Price;
+        this.Name=name;
+        this.Path=path;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+
+    public String getImgPath(){return Path;}
+
 
     public String getDescription() {
         return Description;

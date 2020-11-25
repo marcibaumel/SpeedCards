@@ -25,7 +25,6 @@ public class CardObjectController extends Application implements Initializable {
     CardObject MINTA=new CardObject();
 
 
-
     @FXML
     public Button downButton;
 
@@ -47,10 +46,9 @@ public class CardObjectController extends Application implements Initializable {
     @FXML
     public ImageView card_Img;
 
-    //public static Label static_label;
 
-    //PlayGroundViewController pg=new PlayGroundViewController();
 
+    CardObject AirUnite=new CardObject(3, 2, "Air Card", "src\\project\\media\\air.jpg", "Air Unite");
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -70,10 +68,13 @@ public class CardObjectController extends Application implements Initializable {
         File file= new File(path);
         Image image = new Image (file.toURI().toString());
         viewImage.setImage(image);
-
+        viewImage.setPreserveRatio(false);
+        viewImage.setFitWidth(150);
+        viewImage.setFitHeight(250);
     }
 
 
+    /*
     public void test(){
         System.out.println("Hello");
     }
@@ -88,6 +89,7 @@ public class CardObjectController extends Application implements Initializable {
         //name_Label.setText(rák);
         return MINTA;
     }
+    */
 
 
 
@@ -98,9 +100,7 @@ public class CardObjectController extends Application implements Initializable {
     }
 
 
-    /*
-    public void setNewMinta(CardObject )
-    */
+
 
     @FXML
     public void setLabels(CardObject card, Label nameLabel, Label desLabel, Label attackLabel, Label healtLabel, ImageView img){
@@ -117,19 +117,15 @@ public class CardObjectController extends Application implements Initializable {
     public void LabelWithout(CardObject card)
     {
         name_Label.setText(card.getCardName());
-        //des_Label.setText(card.getDes());
-        //attackPoint.setText(String.valueOf(card.getAttackPoint()));
-        //healthPoint.setText(String.valueOf(card.getHealth()));
-        //setCardStyle(card_Img, card.getImgPath());
+        des_Label.setText(card.getDes());
+        attackPoint.setText(String.valueOf(card.getAttackPoint()));
+        healthPoint.setText(String.valueOf(card.getHealth()));
+        setCardStyle(card_Img, card.getImgPath());
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //setLabels(MINTA, name_Label, des_Label, attackPoint, healthPoint, card_Img);
-
-        LabelWithout(MINTA);
-
-
+        LabelWithout(AirUnite);
 
     }
 }

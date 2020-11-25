@@ -1,9 +1,8 @@
 package project.Controllers;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.application.Application;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,17 +10,15 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import project.Model.AffectCard;
-import project.Model.CardObject;
 
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class CardController extends Application implements Initializable {
+public class CardObjectController2 extends Application implements Initializable {
 
-    /*
-    A metódussal rendelkező kártyákat kezeli
-     */
+    @FXML
+    private Button downButton;
 
     @FXML
     public Label des_Label;
@@ -36,12 +33,18 @@ public class CardController extends Application implements Initializable {
     public ImageView card_Img;
 
     @FXML
-    private Button downButton;
-
-    @FXML
     public Button play_Button;
 
-    AffectCard ac=new AffectCard("Your ground unite get 3 more attack point.",2,0,50,"Attack Boost","src\\project\\media\\card1.jpg");
+    AffectCard ac2=new AffectCard("Your unite get 2 health point",0,2,30,"Baby Yoda","src\\project\\media\\card2.jpg");
+
+    @FXML
+    private void downFunction(ActionEvent event)
+    {
+        Stage stage = (Stage) downButton.getScene().getWindow();
+        stage.close();
+    }
+
+
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -50,7 +53,8 @@ public class CardController extends Application implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        LabelWithout(ac);
+
+        LabelWithout(ac2);
     }
 
     public void setCardStyle(ImageView viewImage, String path)
@@ -72,10 +76,6 @@ public class CardController extends Application implements Initializable {
     }
 
 
-    @FXML
-    private void downFunction(ActionEvent event)
-    {
-        Stage stage = (Stage) downButton.getScene().getWindow();
-        stage.close();
-    }
+
+
 }

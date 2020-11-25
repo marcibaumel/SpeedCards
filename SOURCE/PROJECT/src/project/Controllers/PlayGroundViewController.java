@@ -206,7 +206,7 @@ public class PlayGroundViewController implements Initializable {
         } catch(Exception e) {
             e.printStackTrace();
         }
-        clipManager.playClip("src\\project\\media\\clip.wav");
+        //clipManager.playClip("src\\project\\media\\clip.wav");
     }
 
 
@@ -270,6 +270,23 @@ public class PlayGroundViewController implements Initializable {
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObject.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    public void openCard2(ActionEvent event) {
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObject2.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

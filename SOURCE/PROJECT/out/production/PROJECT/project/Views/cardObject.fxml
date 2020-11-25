@@ -18,24 +18,24 @@
                 <Image url="@../media/des.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="des_Label" alignment="TOP_LEFT" layoutX="212.0" layoutY="103.0" prefHeight="209.0" prefWidth="346.0" text="DES" textFill="WHITE" />
+        <Label fx:id="des_Label" alignment="TOP_LEFT" layoutX="212.0" layoutY="103.0" prefHeight="209.0" prefWidth="346.0" textFill="WHITE" />
         <ImageView fitHeight="100.0" fitWidth="129.0" layoutX="385.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../media/crystal_1.png" />
             </image>
         </ImageView>
-        <Label fx:id="name_Label" layoutX="212.0" layoutY="9.0" prefHeight="82.0" prefWidth="164.0" text="Name" textFill="WHITE" />
-        <Button fx:id="downButton" layoutX="223.0"  onAction="#downFunction" layoutY="338.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" text="Down">
+        <Label fx:id="name_Label" layoutX="212.0" layoutY="9.0" prefHeight="82.0" prefWidth="164.0" textFill="WHITE" />
+        <Button fx:id="downButton" layoutX="223.0" layoutY="338.0" mnemonicParsing="false" onAction="#downFunction" prefHeight="42.0" prefWidth="110.0" text="Down">
             <font>
                 <Font size="23.0" />
             </font>
         </Button>
-        <Button layoutX="394.0" layoutY="342.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="116.0" text="Play It">
+        <Button fx:id="play_Button" layoutX="394.0" layoutY="342.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="116.0" text="Play It">
             <font>
                 <Font size="20.0" />
             </font>
         </Button>
         <ImageView fx:id="card_Img" fitHeight="263.0" fitWidth="164.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
-        <Label fx:id="crystal_Label" layoutX="483.0" layoutY="25.0" prefHeight="50.0" prefWidth="103.0" text="Label" textFill="#0073ff" />
+        <Label fx:id="crystal_Label" layoutX="483.0" layoutY="25.0" prefHeight="50.0" prefWidth="103.0" textFill="#0073ff" />
     </children>
 </AnchorPane>
