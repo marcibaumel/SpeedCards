@@ -170,6 +170,7 @@ public class PlayGroundViewController implements Initializable {
         setCardStyle(card3,"src\\project\\media\\card1.jpg");
         setCardStyle(card2,"src\\project\\media\\card2.jpg");
 
+        /*
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -178,6 +179,8 @@ public class PlayGroundViewController implements Initializable {
 
             }
         }, 0, 1000);
+
+         */
 
 
     }

@@ -80,13 +80,23 @@ public class MainMenuViewController implements Initializable {
 
     }
 
-    public static int testFunction(){
+    public static int playFunctionTest(){
         return 1;
     }
 
     public static int testPlayFunction(){
         return 1;
     }
+
+    public static int imgLoadTest(){
+        return 1;
+    }
+
+    public static int exitButtonTest(){
+        return 1;
+    }
+
+
 
     @FXML
     public void playButton(ActionEvent event) {

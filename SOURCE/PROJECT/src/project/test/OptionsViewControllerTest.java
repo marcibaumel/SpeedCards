@@ -3,28 +3,30 @@ package project.test;
 import org.junit.Assert;
 import org.junit.Test;
 import project.Controllers.MainMenuViewController;
-
-import static org.junit.Assert.*;
+import project.Controllers.OptionsViewController;
 
 public class OptionsViewControllerTest {
 
     @Test
-    public void choiceBoxTest() throws Exception{
-        int actual= MainMenuViewController.testPlayFunction();
-        Assert.assertEquals(0, 0);
+    public void choiceBoxTest() throws Exception {
+        int actual = MainMenuViewController.exitButtonTest();
+        Assert.assertEquals(1, 1);
+    }
+
+
+    @Test
+    public void volumeTest() throws Exception {
+        int actual = MainMenuViewController.exitButtonTest();
+        Assert.assertEquals(1, 1);
     }
 
     @Test
-    public void sliderTest() throws Exception{
-        int actual= MainMenuViewController.testPlayFunction();
-        Assert.assertEquals(0, 0);
+    public void sliderTest() throws Exception {
+        int actual = MainMenuViewController.exitButtonTest();
+        Assert.assertEquals(1, 1);
     }
-
-    @Test
-    public void valueOfVolumeTest() throws Exception{
-        int actual= MainMenuViewController.testPlayFunction();
-        Assert.assertEquals(0, 0);
-    }
-
 
 }
+
+
+

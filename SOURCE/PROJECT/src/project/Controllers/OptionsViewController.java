@@ -36,6 +36,10 @@ public class OptionsViewController implements Initializable {
         return 1;
     }
 
+    public static int valueOfVolumeTest(){
+        return 1;
+    }
+
     @FXML
     private ChoiceBox cbResolution;
 

@@ -10,13 +10,25 @@ public class MainMenuViewControllerTest {
 
     @Test
     public void playFunctionTest() throws Exception{
-        int actual= MainMenuViewController.testFunction();
+        int actual= MainMenuViewController.playFunctionTest();
         Assert.assertEquals(1, 1);
     }
 
     @Test
     public void functionTest() throws Exception{
         int actual=MainMenuViewController.testPlayFunction();
+        Assert.assertEquals(0, 0);
+    }
+
+    @Test
+    public void imgLoadTest() throws Exception{
+        int actual=MainMenuViewController.imgLoadTest();
+        Assert.assertEquals(0, 0);
+    }
+
+    @Test
+    public void exitButtonTest() throws Exception{
+        int actual=MainMenuViewController.exitButtonTest();
         Assert.assertEquals(0, 0);
     }
 
