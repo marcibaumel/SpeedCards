@@ -11,8 +11,10 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import project.ClipManager;
+import project.Model.AffectCard;
 import project.Model.CardObject;
 import java.io.File;
 import java.net.URL;
@@ -89,48 +91,55 @@ public class PlayGroundViewController implements Initializable {
     @FXML
     private ProgressBar enemyHealthBar;
 
-    CardObjectController coc=new CardObjectController();
-    CardObject MINTA2=new CardObject(6, 7, "NÉV2", "src\\project\\media\\card1.jpg", "String des");
+    @FXML
+    public Button downButton;
 
+    @FXML
+    public Label des_Label;
+
+    @FXML
+    public Label healthPoint;
+
+    @FXML
+    public Label attackPoint;
+
+    @FXML
+    public Label name_Label;
+
+    @FXML
+    public AnchorPane cardDes_Pane;
+
+    @FXML
+    public ImageView card_Img;
+
+    @FXML
+    public AnchorPane cardObject_Pane;
+
+    @FXML
+    public Label objectDes_Label;
+
+    @FXML
+    public Label objectName_Label;
+
+    @FXML
+    public Button objectDownButton;
+
+    @FXML
+    public Button play_Button;
+
+    @FXML
+    public Label crystal_Label;
+
+    @FXML
+    public ImageView objectCard_Img;
+
+
+
+    CardObject groundObject1=new CardObject(10,15,"Pista","src\\project\\media\\gb.jpg", "Solider Ground Unite");
+    CardObject airCard=new CardObject(0, 3, "Air Card", "src\\project\\media\\air.jpg", "Air Unite");
+    AffectCard ac1=new AffectCard("Give +3 dmg for ground unite", 3, 0, 75, "Booster", "src\\project\\media\\card2.jpg");
+    AffectCard ac2=new AffectCard("Give +1 dmg for ground unite", 1, 0, 10, "Booster", "src\\project\\media\\card1.jpg");
     ClipManager clipManager=new ClipManager();
-    /*
-    @FXML
-    private void testButton(ActionEvent event){
-        System.out.println("logButton");
-        //MediaPlayer.play();
-        File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\testpic.jpg");
-        Image image = new Image (file.toURI().toString());
-        imageview.setImage(image);
-    }
-    */
-
-
-    /*
-    @FXML
-    private void imgLoad(Button button){
-        //String path="/Views/testpic.jpg";
-
-        /*
-        Image img = new Image("/Views/testpic.jpg");
-        ImageView view = new ImageView(img);
-
-        //Teszt Miatt
-        button.setTranslateX(200);
-        button.setTranslateY(25);
-        //Setting the size of the button
-        button.setPrefSize(80, 80);
-        //Setting a graphic to the button
-        button.setGraphic(view);
-
-        File file= new File("D:\\WORK\\EGYETEM\\3 FÉLÉV\\Swt\\PROJEKT FELADAT\\CODE\\SpeedCard\\SOURCE\\PROJECT\\src\\project\\media\\testpic.jpg");
-        Image image = new Image (file.toURI().toString());
-        ImageView view = new ImageView(image);
-        view.setFitHeight(70);
-        view.setPreserveRatio(true);
-        card1_1Button.setGraphic(view);
-    }
-    */
-
 
 
 
@@ -145,14 +154,7 @@ public class PlayGroundViewController implements Initializable {
         button.setGraphic(view);
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        //imgLoad(card1_1Button);
-        exit_Button.setVisible(false);
-        won_Label.setVisible(false);
-        coc.setMintaName(MINTA2);
-        setProgressBars();
-        //dealDamage(healthBar, 0.2);
+    private void setButtons(){
         setButtonStyle(air1);
         setButtonStyle(air2);
         setButtonStyle(air3);
@@ -169,21 +171,55 @@ public class PlayGroundViewController implements Initializable {
         setCardStyle(card1,"src\\project\\media\\card1.jpg");
         setCardStyle(card3,"src\\project\\media\\card1.jpg");
         setCardStyle(card2,"src\\project\\media\\card2.jpg");
-        counter();
-
-        /*
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                System.out.println("Running: " + new java.util.Date());
-
-            }
-        }, 0, 1000);
-
-         */
+    }
 
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        //imgLoad(card1_1Button);
+        //dealDamage(healthBar, 0.2);
+
+        exit_Button.setVisible(false);
+        won_Label.setVisible(false);
+        setButtons();
+        setProgressBars();
+        cardDes_Pane.setVisible(false);
+        cardObject_Pane.setVisible(false);
+
+    }
+
+    public void LabelWithout(CardObject card)
+    {
+        name_Label.setText(card.getCardName());
+        des_Label.setText(card.getDes());
+        attackPoint.setText(String.valueOf(card.getAttackPoint()));
+        healthPoint.setText(String.valueOf(card.getHealth()));
+        setCardStyle(card_Img, card.getImgPath());
+    }
+
+    public void setCardStyle(ImageView viewImage, String path)
+    {
+        File file= new File(path);
+        Image image = new Image (file.toURI().toString());
+        viewImage.setImage(image);
+        viewImage.setPreserveRatio(false);
+        viewImage.setFitWidth(150);
+        viewImage.setFitHeight(250);
+    }
+
+
+    @FXML
+    public void openCardGround1(ActionEvent event) {
+        LabelWithout(groundObject1);
+        cardDes_Pane.setVisible(true);
+    }
+
+    @FXML
+    public void putDownCard(ActionEvent event)
+    {
+        cardDes_Pane.setVisible(false);
+        cardObject_Pane.setVisible(false);
     }
 
     public void setProgressBars()
@@ -196,11 +232,7 @@ public class PlayGroundViewController implements Initializable {
         System.out.println("Enemy HP: "+enemyHealthBar.getProgress());
     }
 
-    public void dealDamage(ProgressBar pb, double value)
-    {
-        double current= pb.getProgress();
-        pb.setProgress(current-value);
-    }
+
 
     public void setButtonStyle(Button givenButton)
     {
@@ -225,126 +257,35 @@ public class PlayGroundViewController implements Initializable {
 
     @FXML
     public void openCardDes(ActionEvent event) {
-        try {
-
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardDes.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-
-
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        //clipManager.playClip("src\\project\\media\\clip.wav");
+        LabelWithout(airCard);
+        cardDes_Pane.setVisible(true);
     }
 
 
 
     @FXML
-    public void openCardDes1(ActionEvent event) {
-        //coc.testCard(MINTA2);
-
-        try {
-
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardDes.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            //coc.test();
-
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            //coc.LabelWithout(MINTA2);
-            stage.show();
-
-
-        } catch(Exception e) {
-            e.printStackTrace();
-
-        }
-        //coc.test();
-
-
-
-    }
-
-    @FXML
-    public void openCardGround1(ActionEvent event) {
-        //coc.testCard(MINTA2);
-
-        try {
-
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/groundCard.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            //coc.test();
-
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            //coc.LabelWithout(MINTA2);
-            stage.show();
-
-
-        } catch(Exception e) {
-            e.printStackTrace();
-
-        }
-        //coc.test();
-
-
+    public void openCardObject(ActionEvent event) {
+            LabelWithoutObject(ac1);
+            cardObject_Pane.setVisible(true);
 
     }
 
 
-    public void counter()
+    public void LabelWithoutObject(AffectCard card)
     {
-        CardObjectController co=new CardObjectController();
-        //CardObjectController2 co2=new CardObjectController2();
-        GroundCardController gc=new GroundCardController();
-        int sum=co.MINTA.getAttackPoint()*4+gc.groundUnite.getAttackPoint()*3;
-        System.out.println(sum);
+        objectName_Label.setText(card.getName());
+        objectDes_Label.setText(card.getDescription());
+        crystal_Label.setText(String.valueOf(card.getPrice()));
+        setCardStyle(objectCard_Img, card.getImgPath());
     }
 
-    @FXML
-    public void openCard(ActionEvent event) {
-        try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObject.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-
-            //System.out.println(String.valueOf(fxmlLoader.getController()));
-
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-
-
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    //CardObjectController2 co2=new CardObjectController2();
 
     @FXML
-    public void openCard2(ActionEvent event) {
+    public void openCardObject2(ActionEvent event) {
 
-        try {
-            //card2.setVisible(false);
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/Views/cardObject2.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-            //coc.bonusHealth();
-
-
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+        LabelWithoutObject(ac2);
+        cardObject_Pane.setVisible(true);
 
     }
 
