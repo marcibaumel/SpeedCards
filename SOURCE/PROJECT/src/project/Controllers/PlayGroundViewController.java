@@ -307,8 +307,6 @@ public class PlayGroundViewController implements Initializable {
         System.out.println("Enemy HP: "+enemyHealthBar.getProgress());
     }
 
-
-
     public void setButtonStyle(Button givenButton)
     {
         givenButton.setStyle("-fx-border-color: transparent;\n" +
@@ -319,8 +317,19 @@ public class PlayGroundViewController implements Initializable {
     @FXML
     public void endGame(ActionEvent event)
     {
+        if(counter()<50)
+        {
+            won_Label.setText("You lost");
+        }
         won_Label.setVisible(true);
         exit_Button.setVisible(true);
+    }
+
+    public int counter()
+    {
+        int count=(groundObject1.getAttackPoint()*4);
+        System.out.println(count);
+        return count;
     }
 
     @FXML
