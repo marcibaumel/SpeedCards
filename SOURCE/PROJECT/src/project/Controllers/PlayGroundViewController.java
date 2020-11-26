@@ -133,6 +133,48 @@ public class PlayGroundViewController implements Initializable {
     @FXML
     public ImageView objectCard_Img;
 
+    @FXML
+    public AnchorPane cardObject_Pane2;
+
+    @FXML
+    public Label objectDes_Label2;
+
+    @FXML
+    public Label objectName_Label2;
+
+    @FXML
+    public Button objectDownButton2;
+
+    @FXML
+    public Button play_Button2;
+
+    @FXML
+    public Label crystal_Label2;
+
+    @FXML
+    public ImageView objectCard_Img2;
+
+    @FXML
+    public AnchorPane cardObject_Pane3;
+
+    @FXML
+    public Label objectDes_Label3;
+
+    @FXML
+    public Label objectName_Label3;
+
+    @FXML
+    public Button objectDownButton3;
+
+    @FXML
+    public Button play_Button3;
+
+    @FXML
+    public Label crystal_Label3;
+
+    @FXML
+    public ImageView objectCard_Img3;
+
 
 
     CardObject groundObject1=new CardObject(10,15,"Pista","src\\project\\media\\gb.jpg", "Solider Ground Unite");
@@ -141,13 +183,13 @@ public class PlayGroundViewController implements Initializable {
     AffectCard ac2=new AffectCard("Give +1 dmg for ground unite", 1, 0, 10, "Booster", "src\\project\\media\\card1.jpg");
     ClipManager clipManager=new ClipManager();
 
-    public void playThat(int bonus, Button button,int i) {
-        //int bonus=acCard.getModderAttack();
+    public void playThat(int bonus, Button button) {
         int base=this.groundObject1.getAttackPoint();
         this.groundObject1.setAttackPoint(bonus+base);
-        //this.groundObject1.setHealth(groundObject1.getHealth() + object.getModderHealth());
         button.setVisible(false);
         cardObject_Pane.setVisible(false);
+        cardObject_Pane2.setVisible(false);
+        cardObject_Pane3.setVisible(false);
         System.out.println(bonus);
         System.out.println(groundObject1.getAttackPoint());
     }
@@ -155,7 +197,19 @@ public class PlayGroundViewController implements Initializable {
     @FXML
     public void play2(ActionEvent event){
         System.out.println(ac2.getModderAttack());
-        playThat(2, card2,2);
+        playThat(1, card2);
+
+    }
+
+    @FXML
+    public void play(ActionEvent event){
+        playThat(3,card1);
+
+    }
+
+    @FXML
+    public void play3(ActionEvent event){
+        playThat(3,card3);
     }
 
 
@@ -202,6 +256,8 @@ public class PlayGroundViewController implements Initializable {
         setProgressBars();
         cardDes_Pane.setVisible(false);
         cardObject_Pane.setVisible(false);
+        cardObject_Pane2.setVisible(false);
+        cardObject_Pane3.setVisible(false);
 
     }
 
@@ -236,6 +292,9 @@ public class PlayGroundViewController implements Initializable {
     {
         cardDes_Pane.setVisible(false);
         cardObject_Pane.setVisible(false);
+        cardObject_Pane2.setVisible(false);
+        cardObject_Pane3.setVisible(false);
+
     }
 
     public void setProgressBars()
@@ -293,13 +352,36 @@ public class PlayGroundViewController implements Initializable {
         setCardStyle(objectCard_Img, card.getImgPath());
     }
 
-
+    public void LabelWithoutObject2(AffectCard card)
+    {
+        objectName_Label2.setText(card.getName());
+        objectDes_Label2.setText(card.getDescription());
+        crystal_Label2.setText(String.valueOf(card.getPrice()));
+        setCardStyle(objectCard_Img2, card.getImgPath());
+    }
 
     @FXML
     public void openCardObject2(ActionEvent event) {
 
-        LabelWithoutObject(ac2);
-        cardObject_Pane.setVisible(true);
+        LabelWithoutObject2(ac2);
+        cardObject_Pane2.setVisible(true);
+
+    }
+
+    public void LabelWithoutObject3(AffectCard card)
+    {
+        objectName_Label3.setText(card.getName());
+        objectDes_Label3.setText(card.getDescription());
+        crystal_Label3.setText(String.valueOf(card.getPrice()));
+        setCardStyle(objectCard_Img3, card.getImgPath());
+    }
+
+
+    @FXML
+    public void openCardObject3(ActionEvent event) {
+
+        LabelWithoutObject3(ac2);
+        cardObject_Pane3.setVisible(true);
 
     }
 

@@ -17,7 +17,7 @@
 
       <Button fx:id="card1" layoutX="247.0" layoutY="516.0" mnemonicParsing="false" onAction="#openCardObject2" prefHeight="84.0" prefWidth="59.0" />
       <Button fx:id="card2" layoutX="375.0" layoutY="516.0" mnemonicParsing="false" onAction="#openCardObject" prefHeight="84.0" prefWidth="59.0" />
-      <Button fx:id="card3" layoutX="499.0" layoutY="516.0" mnemonicParsing="false" onAction="#openCardObject2" prefHeight="84.0" prefWidth="59.0" />
+      <Button fx:id="card3" layoutX="499.0" layoutY="516.0" mnemonicParsing="false" onAction="#openCardObject3" prefHeight="84.0" prefWidth="59.0" />
 
 
       <Button fx:id="air1" layoutX="217.0" layoutY="413.0" mnemonicParsing="false" onAction="#openCardDes" prefHeight="84.0" prefWidth="59.0" />
@@ -121,6 +121,92 @@
             </Button>
             <ImageView fx:id="objectCard_Img" fitHeight="263.0" fitWidth="164.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
             <Label fx:id="crystal_Label" layoutX="483.0" layoutY="25.0" prefHeight="50.0" prefWidth="103.0" textFill="#0073ff">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+
+      <AnchorPane fx:id="cardObject_Pane2" layoutX="149.0" layoutY="112.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../media/desBack.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="231.0" fitWidth="379.0" layoutX="200.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/des.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="objectDes_Label2" alignment="TOP_LEFT" layoutX="212.0" layoutY="103.0" prefHeight="209.0" prefWidth="346.0" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <ImageView fitHeight="100.0" fitWidth="129.0" layoutX="385.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/crystal_1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="objectName_Label2" layoutX="212.0" layoutY="9.0" prefHeight="82.0" prefWidth="164.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Button fx:id="objectDownButton2" layoutX="223.0" layoutY="338.0" mnemonicParsing="false" onAction="#putDownCard" prefHeight="42.0" prefWidth="110.0" text="Down">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="play_Button2" cancelButton="true" onAction="#play" layoutX="394.0" layoutY="342.0"  mnemonicParsing="false" prefHeight="43.0" prefWidth="116.0" text="Play It">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="objectCard_Img2" fitHeight="263.0" fitWidth="164.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="crystal_Label2" layoutX="483.0" layoutY="25.0" prefHeight="50.0" prefWidth="103.0" textFill="#0073ff">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+
+      <AnchorPane fx:id="cardObject_Pane3" layoutX="149.0" layoutY="112.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../media/desBack.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="231.0" fitWidth="379.0" layoutX="200.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/des.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="objectDes_Label3" alignment="TOP_LEFT" layoutX="212.0" layoutY="103.0" prefHeight="209.0" prefWidth="346.0" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <ImageView fitHeight="100.0" fitWidth="129.0" layoutX="385.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/crystal_1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="objectName_Label3" layoutX="212.0" layoutY="9.0" prefHeight="82.0" prefWidth="164.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Button fx:id="objectDownButton3" layoutX="223.0" layoutY="338.0" mnemonicParsing="false" onAction="#putDownCard" prefHeight="42.0" prefWidth="110.0" text="Down">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="play_Button3" cancelButton="true" onAction="#play3" layoutX="394.0" layoutY="342.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="116.0" text="Play It">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="objectCard_Img3" fitHeight="263.0" fitWidth="164.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="crystal_Label3" layoutX="483.0" layoutY="25.0" prefHeight="50.0" prefWidth="103.0" textFill="#0073ff">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Label>
