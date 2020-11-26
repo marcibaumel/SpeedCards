@@ -114,7 +114,7 @@
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button fx:id="play_Button" cancelButton="true" layoutX="394.0" layoutY="342.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="116.0" text="Play It">
+            <Button fx:id="play_Button" cancelButton="true" onAction="#play2" layoutX="394.0" layoutY="342.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="116.0" text="Play It">
                <font>
                   <Font size="20.0" />
                </font>

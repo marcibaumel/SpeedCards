@@ -141,6 +141,22 @@ public class PlayGroundViewController implements Initializable {
     AffectCard ac2=new AffectCard("Give +1 dmg for ground unite", 1, 0, 10, "Booster", "src\\project\\media\\card1.jpg");
     ClipManager clipManager=new ClipManager();
 
+    public void playThat(int bonus, Button button,int i) {
+        //int bonus=acCard.getModderAttack();
+        int base=this.groundObject1.getAttackPoint();
+        this.groundObject1.setAttackPoint(bonus+base);
+        //this.groundObject1.setHealth(groundObject1.getHealth() + object.getModderHealth());
+        button.setVisible(false);
+        cardObject_Pane.setVisible(false);
+        System.out.println(bonus);
+        System.out.println(groundObject1.getAttackPoint());
+    }
+
+    @FXML
+    public void play2(ActionEvent event){
+        System.out.println(ac2.getModderAttack());
+        playThat(2, card2,2);
+    }
 
 
     private void setCardStyle(Button button, String path)
@@ -262,12 +278,10 @@ public class PlayGroundViewController implements Initializable {
     }
 
 
-
     @FXML
     public void openCardObject(ActionEvent event) {
             LabelWithoutObject(ac1);
             cardObject_Pane.setVisible(true);
-
     }
 
 
@@ -289,13 +303,6 @@ public class PlayGroundViewController implements Initializable {
 
     }
 
-    /*
-    public void card2IsPlayed()
-    {
-        int e=co2.counter();
-        System.out.println(e);
-    }
-    */
 
 
 }
