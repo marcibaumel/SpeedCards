@@ -179,8 +179,8 @@ public class PlayGroundViewController implements Initializable {
 
     CardObject groundObject1=new CardObject(10,15,"Pista","src\\project\\media\\gb.jpg", "Solider Ground Unite");
     CardObject airCard=new CardObject(0, 3, "Air Card", "src\\project\\media\\air.jpg", "Air Unite");
-    AffectCard ac1=new AffectCard("Give +3 dmg for ground unite", 3, 0, 75, "Booster", "src\\project\\media\\card2.jpg");
-    AffectCard ac2=new AffectCard("Give +1 dmg for ground unite", 1, 0, 10, "Booster", "src\\project\\media\\card1.jpg");
+    AffectCard ac1=new AffectCard("Give +3 dmg for ground unite", 1, 0, 75, "Booster", "src\\project\\media\\card2.jpg");
+    AffectCard ac2=new AffectCard("Give +1 dmg for ground unite", 3, 0, 10, "Booster", "src\\project\\media\\card1.jpg");
     ClipManager clipManager=new ClipManager();
 
     public void playThat(int bonus, Button button) {
