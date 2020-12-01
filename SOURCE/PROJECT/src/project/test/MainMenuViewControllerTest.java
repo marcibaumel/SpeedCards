@@ -27,7 +27,7 @@ public class MainMenuViewControllerTest {
     }
 
     @Test
-    public void exitButtonTest() throws Exception{
+    public void exitButtonTest(){
         int actual=MainMenuViewController.exitButtonTest();
         Assert.assertEquals(0, 0);
     }

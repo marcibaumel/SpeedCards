@@ -134,6 +134,14 @@
                 <td width="160">Baumel Márton</td>
             </tr>
         </tbody>
+        <tbody>
+            <tr valign="top">
+                <td width="90">2020.12.01</td>
+                <td width="60">1.2</td>
+                <td width="300">Tesztek Attribútumokkal Kiegészítve</td>
+                <td width="160">Baumel Márton</td>
+            </tr>
+        </tbody>
     </table>
 <body>
     <p>
@@ -285,7 +293,10 @@ Adathiba:
       <tr valign="top">
         <th width="300">Csoport Név</th>
         <th width="500">Funkció Név</th>
+        <th width="200">Elvárt érték</th>
+        <th width="200">Aktuális érték</th>
         <th width="500">Funkció Leírás</th>
+        
         
       </tr>
     </thead>
@@ -293,15 +304,19 @@ Adathiba:
         <tr valign="top">
         <td >MainMenuViewController Tesztek</td>
         <td >playFunctionTest()</td>
-        <td >A playButton működéséről bizonyosodik meg</td>
+        <td>False</td>
+        <td>isPlaying</td>
+        <td >Létrehozzunk egy példányt a MainMenuViewController-ből ami tárol egy isPlaying boolean változót ami false, ha a felhasználó rányom a Play Gombra akkor a isPlaying értéke megváltozik true-ra. A teszt megvizsgálj, hogy jelen pillanatban false-e a isPlaying azaz nem volt még megnyomva a Play Gomb 
+        </td>
       </tr>
     </tbody>
     <tbody>
         <tr valign="top">
         <td >MainMenuViewController Tesztek</td>
-        <td >functionTest()
-        </td>
-        <td >A menü betöltéséről bizonyosodik meg
+        <td >functionTest()</td>
+        <td>"Running"</td>
+        <td>menuIsRunning</td>
+        <td >A menü betöltéséről bizonyosodik meg, úgy, hogy a MainMenuViewController példányosításakor létrejön egy publikus string változó aminek a neve menuIsRunning aminek az értéke “Running”, a teszt meggyőződik róla, hogy elindult a program mivel ennek a változónak létre kell jönni vagy nem indult el a program 
         </td>
       </tr>
     </tbody>
@@ -309,97 +324,119 @@ Adathiba:
         <tr valign="top">
         <td >MainMenuViewController Tesztek</td>
         <td >imgLoadTest()</td>
-        <td >A képek betöltéséről bizonyosodik meg</td>
+        <td>True</td>
+        <td>resultMainImage</td>
+        <td >A fájl eléréséről bizonyosodik meg, a teszt megkapja a MainMenuViewController példányból a existingFile() függvényt ami boolean értékkel tér vissza, attól függően, hogy megtalálja-e a fájlt ha igen akkor true, ha nem akkor false, ennek az értékét a resultMainImage veszi fel
+        </td>
       </tr>
     </tbody>
     <tbody>
         <tr valign="top">
         <td >MainMenuViewController Tesztek</td>
         <td >exitButtonTest()</td>
-        <td >Az exit button button működését teszteli le</td>
+        <td>False</td>
+        <td>testExit</td>
+        <td >A program lezárásáról bizonyosodik meg, úgy, hogy MainMenuViewController-ből létrehozunk egy példányt aminek megvizsgáljuk doYouQuit függvényt ami akkor ad vissza true-t ha a játékos megnyomta az Exit gombot. Ennél a testExit néven létrehozunk egy boolean változót, ami az doYouQuit értékét tárolja, teszt akkor lesz igaz ha false értéket kapunk vissza</td>
       </tr>
     </tbody>
     <tbody>
         <tr valign="top">
         <td >OptionsViewController Tesztek</td>
         <td >choiceBoxTest()</td>
-        <td >A choice box működéséről bizonyosodik meg</td>
+        <td>True</td>
+        <td>Resolution.contains(testResolution)</td>
+        <td >A choice box működéséről bizonyosodik meg, úgy, hogy megvizsgálja a choiceBox elemeit, hogy van-e benne testResolution érték a Resolution listában.
+        </td>
       </tr>
     </tbody>
     <tbody>
         <tr valign="top">
         <td >OptionsViewController Tesztek</td>
         <td >sliderTest()</td>
-        <td >A slider működéséről bizonyosodik meg</td>
+        <td>False</td>
+        <td>isInRange(newBadValue)</td>
+        <td >A slider működéséről bizonyosodik meg, úgy, hogy megadunk egy rossz értéket a newBadValue változóként amit nem tud felvenni a mi slider-rünk az isInRange függvény miatt mert a slider csak 0-1 között tud értéket felvenni, ezért ez a függvény false-al kell visszatérnie. </td>
       </tr>
     </tbody>
     <tbody>
         <tr valign="top">
         <td >OptionsViewController Tesztek</td>
         <td >valueOfVolumeTest()</td>
-        <td >A hangnak az értékét vizsgálja meg
+        <td>ValueOfVolume</td>
+        <td>TestValueOfVolume=10</td>
+        <td >A hangnak az értékét vizsgálja meg, úgy, hogy meg adunk egy int TestValueOfVolume változót aminek az értékét elosztjuk százzal, hogy fel lehessen venni a slider-ön és beállítjuk mint új ValueOfVolume. A teszt kimenetele akkor pozitív ha mind a két érték megegyezik, azaz az elvárt és az aktuális érték értéke azonos lett.
         </td>
       </tr>
     </tbody>
     <tbody>
         <tr valign="top">
         <td >PlayGroundViewController Tesztek</td>
-        <td >buttonTestFunction()
+        <td >buttonTestFunction()</td>
+        <td>MintaPlayer</td>
+        <td>RealPlayer</td>
+        <td >Arról bizonyosodik meg, hogy rendes adatokat tölt-e be a program, ezt úgy tudjuk megnézni, hogy csinálunk egy példányt PlayGroundViewController-ből és megnézzük, hogy a Player értékei megegyeznek az általunk vártakkal. A MintaPlayer adatai (10, 750) és a PlayGroundViewController.getPlayer adatait a Player típusú RealPlayer változónak adjuk át 
         </td>
-        <td >Arról bizonyosodik meg, hogy rendes adatokat tölt-e be a program</td>
       </tr>
     </tbody>
     <tbody>
         <tr valign="top">
         <td >PlayGroundViewController Tesztek</td>
-        <td >startTest()
-        </td>
-        <td >Arról bizonyosodik meg, hogy elindult-e a játék</td>
+        <td >startTest()</td>
+        <td>"Started"</td>
+        <td>startResult</td>
+        <td >Elindul-e a program Play része, ezt úgy tudjuk ellenőrizni, hogy a program indításakor létrehozzunk egy publikus string változót startedPlay=”Started” értékkel, a tesztnél létrehozzunk egy példányt a PlayGroundViewController-ből ami megnézi, hogy egyezik a 2 változó értéke. PlayGroundViewController.getStartedPlay() értékét a startResult string változó fogja tárolni.</td>
       </tr>
     </tbody>
     <tbody>
         <tr valign="top">
         <td >PlayGroundViewController Tesztek</td>
         <td >endButtonTest()</td>
-        <td >A játék lezárásáról bizonyosodik meg
+        <td>False</td>
+        <td>testRun</td>
+        <td >A játék lezárásáról bizonyosodik meg, úgy, hogy PlayGroundViewController -ből létrehozunk egy példányt aminek megvizsgáljuk isRunning függvényt ami akkor ad vissza true-t ha a játék éppen fut, amíg nem fut addig false. Ennél a testRun néven létrehozunk egy boolean változót, ami az isRunning értékét tárolja, teszt akkor lesz igaz ha false értéket kapunk vissza 
         </td>
       </tr>
     </tbody>
-    <tbody>
-        <tr valign="top">
-        <td >PlayGroundViewController Tesztek</td>
-        <td >cardShowButtonTest()</td>
-        <td >A lapok mutatásáról bizonyosodik meg</td>
-      </tr>
-    </tbody>
+    
     <tbody>
         <tr valign="top">
         <td >PlayGroundViewController Tesztek</td>
         <td >cardImgLoadTest()</td>
-        <td >A lapokon található kép betöltéséről/eléréséről bizonyosodik meg</td>
+        <td>True</td>
+        <td>resultImage</td>
+        <td >A lapokon található kép eléréséről bizonyosodik meg a teszt megkapja a existingImageFile() függvényt ami boolean értékkel tér vissza, attól függően, hogy megtalálja-e a fájlt ha igen akkor true, ha nem akkor false, ennek az értékét a resultImage veszi fel</td>
       </tr>
     </tbody>
+
     <tbody>
         <tr valign="top">
         <td >PlayGroundViewController Tesztek</td>
         <td >cardSetStyleTest()</td>
-        <td >A lapok stílusának a beállításáról bizonyosodik meg</td>
+        <td>True</td>
+        <td>testCardStyleResult</td>
+        <td >A lapok stílusának a beállításáról bizonyosodik meg, úgy, hogy a tesztben létrehozzunk egy új cardObject-et és és egy string változóként megadjuk a képe elérési útvonalát, ezek után meghívjuk a workingStyle függvényt ami egy boolean értékkel tér vissza. Akkor true, ha hiba nélkül végre tudja hajtani a setCardStyle funkcióit, ha valami hiba lép fel akkor false, ezt a értéket tovább adjuk a testCardStyleResult boolean változónak  
+        </td>
       </tr>
     </tbody>
+
     <tbody>
         <tr valign="top">
         <td >SoundObject Tesztek:</td>
         <td >loadSoundTest()</td>
-        <td >A hangot biztosító fájl eléréséről bizonyosodik meg
+        <td>True</td>
+        <td>resultSound</td>
+        <td >A fájl eléréséről bizonyosodik meg, a teszt megkapja a existingFile() függvényt ami boolean értékkel tér vissza, attól függően, hogy megtalálja-e a fájlt ha igen akkor true, ha nem akkor false, ennek az értékét a resultSound veszi fel
         </td>
       </tr>
     </tbody>
+
     <tbody>
         <tr valign="top">
         <td >ClipObject Tesztek</td>
         <td >loadClipTest()</td>
-        <td >A klip eléréséről bizonyosodik meg
-        </td>
+        <td>True</td>
+        <td>resultClip</td>
+        <td >A klip eléréséről bizonyosodik meg, a teszt megkapja a existingSound() függvényt ami boolean értékkel tér vissza, attól függően, hogy megtalálja-e a fájlt ha igen akkor true, ha nem akkor false, ennek az értékét a resultClip veszi fel</td>
       </tr>
     </tbody>
 

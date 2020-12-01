@@ -42,6 +42,30 @@ public class ClipManager {
         }
     }
 
+    public boolean exsistingSound(String musicLocation)
+    {
+
+        try {
+            File musicPath = new File(musicLocation);
+
+            if (musicPath.exists()) {
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+
+
+            } else {
+                return false;
+            }
+
+        } catch (Exception ex) {
+
+            ex.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+
 
 
 
